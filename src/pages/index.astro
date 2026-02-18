@@ -1,22 +1,132 @@
-<section class="hero-simple">
-  <div class="container hero-simple__inner">
-    <div class="hero-simple__content">
-      <div class="hero-simple__eyebrow">
-        Professional Humidity Control
-      </div>
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-      <h1>Crawlspace Dehumidifier Installation in Raleigh, NC</h1>
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Triangle Dehumidifiers, LLC",
+  "telephone": "(919) 555-0123",
+  "email": "info@triangledehumidifiers.com",
+  "url": "https://www.triangledehumidifiers.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "NC",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Holly Springs", "Raleigh", "Cary", "Apex", "Fuquay-Varina"],
+  "serviceType": ["Crawlspace Dehumidifier Installation", "Crawlspace Encapsulation", "Mold Treatment"],
+  "description": "Professional crawlspace dehumidifier installation and humidity control services across the Triangle region of North Carolina."
+};
+---
 
-      <p>
-        Humidity control for crawlspaces across the Triangle region. We design systems
-        to maintain 45–50% Relative Humidity (RH) — protecting your framing, subfloors,
-        and indoor air quality long-term.
-      </p>
+<BaseLayout
+  title="Crawlspace Dehumidifier Installation Raleigh NC | Triangle Dehumidifiers"
+  description="Professional crawlspace dehumidifier installation in Raleigh, NC. We maintain 45-50% RH to protect your home's framing, subfloors, and air quality. Serving Holly Springs, Cary, Apex, Fuquay-Varina."
+  canonical="/"
+>
 
-      <div class="hero-simple__actions">
-        <a href="/contact" class="btn btn-primary">Request Inspection</a>
-        <a href="/crawlspace-dehumidifier-installation-raleigh" class="btn btn-secondary">Our Services</a>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- HERO -->
+  <section class="hero-simple">
+    <div class="container hero-simple__inner">
+      <div class="hero-simple__content">
+        <div class="hero-simple__eyebrow">Professional Humidity Control</div>
+        <h1>Crawlspace Dehumidifier Installation in Raleigh, NC</h1>
+        <p>Humidity control for crawlspaces across the Triangle region. We design systems to maintain 45-50% Relative Humidity (RH) - protecting your framing, subfloors, and indoor air quality long-term.</p>
+        <div class="hero-simple__actions">
+          <a href="/contact" class="btn btn-green">Request Inspection</a>
+          <a href="/crawlspace-dehumidifier-installation-raleigh" class="btn btn-secondary">Our Services</a>
+        </div>
+        <div class="trust-pills">
+          <span class="pill">&#10003; Bonded &amp; Insured</span>
+          <span class="pill">&#10003; 45-50% RH Target</span>
+          <span class="pill">&#10003; Aprilaire WiFi Options</span>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- WHY HUMIDITY MATTERS -->
+  <section class="section">
+    <div class="container">
+      <h2>Why Crawlspace Humidity Matters</h2>
+      <p><strong class="answer-first">High crawlspace humidity affects the entire home due to the Stack Effect - warm air rising through the home pulls damp crawlspace air upward into your living areas.</strong></p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>The Stack Effect</h3>
+          <p>As warm air rises and exits through upper floors and attic, your home draws replacement air from the crawlspace. Moisture, mold spores, and odors follow that same path directly into your living space.</p>
+        </div>
+        <div class="card">
+          <h3>Musty Odors</h3>
+          <p>Persistent musty smells inside your home are often a sign of elevated crawlspace humidity. Odor-causing compounds travel upward with the Stack Effect.</p>
+        </div>
+        <div class="card">
+          <h3>Wood Moisture Concerns</h3>
+          <p>When wood framing and subfloor materials absorb excess moisture, they expand, warp, and become vulnerable to fungal growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR APPROACH -->
+  <section class="section-alt">
+    <div class="container">
+      <h2>Our Approach to Humidity Control</h2>
+      <p><strong class="answer-first">We size and install heavy-duty dehumidifiers designed specifically for sealed crawlspaces - calibrated for long-term RH control at 45-50%.</strong></p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Proper Sizing</h3>
+          <p>Equipment is sized based on your crawlspace square footage, current moisture levels, and whether the space is sealed or vented.</p>
+        </div>
+        <div class="card">
+          <h3>Sealed Vents</h3>
+          <p>Open crawlspace vents introduce warm, humid exterior air during summer months. Sealing vents is a foundational step in controlling RH effectively.</p>
+        </div>
+        <div class="card">
+          <h3>Continuous Drainage</h3>
+          <p>Collected water is routed via drain line to a sump or exterior drain - never to a bucket - allowing the system to run without interruption.</p>
+        </div>
+        <div class="card">
+          <h3>Monitoring</h3>
+          <p>We recommend digital hygrometers to verify your system is maintaining target RH.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREAS -->
+  <section class="section">
+    <div class="container">
+      <h2>Areas We Serve</h2>
+      <p><strong class="answer-first">We serve homeowners throughout the Triangle region of North Carolina with professional crawlspace humidity control systems.</strong></p>
+      <div class="city-grid">
+        {['Holly Springs', 'Raleigh', 'Cary', 'Apex', 'Fuquay-Varina'].map(city => (
+          <div class="city-card">
+            <h3>{city}</h3>
+            <p>Crawlspace dehumidifier installation in {city}, NC.</p>
+            <a href="/service-areas">Learn more</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE + CTA -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#122F5B"/>
+    </svg>
   </div>
-</section>
+  <section class="cta-section">
+    <div class="container">
+      <h2>Free Crawlspace Humidity Assessment</h2>
+      <p>Find out how we can make your home healthier and safer.</p>
+      <div class="cta-buttons">
+        <a href="tel:9195550123" class="btn btn-green">Call Now (919) 555-0123</a>
+        <a href="/contact" class="btn btn-green">Request Inspection</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
