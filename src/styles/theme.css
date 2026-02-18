@@ -449,10 +449,3 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   .hero-simple h1 { font-size: 1.9rem; }
   .hero-simple__actions { flex-direction: column; }
 }
-```
-
-Tell me when saved then push:
-```
-git add -A
-git commit -m "Premium hero refinement"
-git push origin main
