@@ -1,0 +1,109 @@
+---
+import '../styles/theme.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogTitle?: string;
+  ogDescription?: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogTitle,
+  ogDescription,
+} = Astro.props;
+
+const siteUrl = 'https://www.triangledehumidifiers.com';
+const fullCanonical = `${siteUrl}${canonical}`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a4f8a" />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={fullCanonical} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={fullCanonical} />
+  <meta property="og:title" content={ogTitle || title} />
+  <meta property="og:description" content={ogDescription || description} />
+  <meta property="og:site_name" content="Triangle Dehumidifiers" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={ogTitle || title} />
+  <meta name="twitter:description" content={ogDescription || description} />
+
+  <link rel="sitemap" href="/sitemap-index.xml" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo">Triangle <span>Dehumidifiers</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="site-nav" id="siteNav">
+        <li><a href="/crawlspace-dehumidifier-installation-raleigh">Crawlspace</a></li>
+        <li><a href="/encapsulated-crawlspace-dehumidifier-raleigh">Encapsulated</a></li>
+        <li><a href="/crawlspace-mold-treatment-raleigh">Mold Treatment</a></li>
+        <li><a href="/service-areas">Service Areas</a></li>
+        <li><a href="/contact" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main>
+    <slot />
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/crawlspace-dehumidifier-installation-raleigh">Crawlspace</a></li>
+        <li><a href="/encapsulated-crawlspace-dehumidifier-raleigh">Encapsulated</a></li>
+        <li><a href="/crawlspace-mold-treatment-raleigh">Mold Treatment</a></li>
+        <li><a href="/service-areas">Service Areas</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+      </ul>
+      <p>
+        &copy; {new Date().getFullYear()} Triangle Dehumidifiers, LLC &mdash; A Peak Energy, Inc. Company<br />
+        Serving Holly Springs, Raleigh, Cary, Apex, Fuquay-Varina &amp; the Triangle Region of NC<br />
+        <a href="tel:9195550123">(919) 555-0123</a> &bull;
+        <a href="mailto:info@triangledehumidifiers.com">info@triangledehumidifiers.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Mobile Nav Script -->
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('siteNav');
+    toggle?.addEventListener('click', () => {
+      nav?.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

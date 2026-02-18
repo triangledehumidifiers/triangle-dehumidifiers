@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact Triangle Dehumidifiers | Raleigh NC Crawlspace Humidity Control"
+  description="Contact Triangle Dehumidifiers to schedule a crawlspace humidity evaluation in Raleigh, Cary, Apex, Holly Springs, or Fuquay-Varina, NC. Call (919) 555-0123."
+  canonical="/contact"
+>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Contact Triangle Dehumidifiers</h1>
+      <p>
+        Schedule a crawlspace humidity evaluation or ask a question about your
+        specific situation. We serve the Triangle region of North Carolina.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <section class="section">
+    <div class="container">
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+
+        <!-- Contact Info -->
+        <div>
+          <h2>Get in Touch</h2>
+          <p>
+            <strong class="answer-first">We're available Monday through Friday to answer questions and schedule evaluations for homeowners across the Triangle region.</strong>
+          </p>
+
+          <div style="margin-top: 1.5rem;">
+            <h3>Phone</h3>
+            <p><a href="tel:9195550123" style="font-size: 1.25rem; font-weight: 700;">(919) 555-0123</a></p>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <h3>Email</h3>
+            <p><a href="mailto:info@triangledehumidifiers.com">info@triangledehumidifiers.com</a></p>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <h3>Service Area</h3>
+            <p>Holly Springs, Raleigh, Cary, Apex, Fuquay-Varina, and surrounding Triangle communities in North Carolina.</p>
+          </div>
+
+          <div style="margin-top: 1.5rem; padding: 1.25rem; background: var(--color-bg-section); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <h3>What to Expect</h3>
+            <p style="margin: 0;">
+              We'll review your situation, ask a few questions about your crawlspace, and
+              schedule an on-site evaluation. Most evaluations take 45–60 minutes.
+              We'll walk you through findings and recommendations before any work begins.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <h2>Request an Evaluation</h2>
+          <form class="contact-form" style="margin-top: 1rem;" name="contact" method="POST" data-netlify="true">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required placeholder="(919) 000-0000" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required placeholder="you@email.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="city">Your City</label>
+              <select id="city" name="city" required>
+                <option value="">Select your city</option>
+                <option value="Holly Springs">Holly Springs</option>
+                <option value="Raleigh">Raleigh</option>
+                <option value="Cary">Cary</option>
+                <option value="Apex">Apex</option>
+                <option value="Fuquay-Varina">Fuquay-Varina</option>
+                <option value="Other">Other Triangle Area</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Situation</label>
+              <textarea id="message" name="message" placeholder="Describe what you're experiencing — musty odors, visible moisture, mold concerns, or just want a baseline evaluation..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-cta" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile stack fix -->
+  <style>
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
+</BaseLayout>

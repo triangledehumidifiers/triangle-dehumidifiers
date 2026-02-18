@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const cities = [
+  {
+    name: "Raleigh",
+    slug: "raleigh",
+    description: "Raleigh's mix of older ranch homes and newer construction means a wide range of crawlspace conditions — from unprotected bare soil to partially encapsulated spaces. High summer humidity regularly pushes untreated crawlspace RH above 75%, making active dehumidification essential for most Raleigh homes with crawlspace foundations."
+  },
+  {
+    name: "Cary",
+    slug: "cary",
+    description: "Many Cary neighborhoods were built in the 1980s and 1990s with vented crawlspace designs that were standard at the time. These spaces frequently show elevated moisture and early wood discoloration during humidity season. We serve homeowners throughout Cary with properly sized dehumidification systems and vapor barrier solutions."
+  },
+  {
+    name: "Apex",
+    slug: "apex",
+    description: "Apex's growth has brought a variety of home construction eras and crawlspace conditions. Whether your home has a vented or encapsulated crawlspace, we assess moisture levels and recommend the appropriate system to maintain 45–50% RH through the humid months typical to the Triangle region."
+  },
+  {
+    name: "Holly Springs",
+    slug: "holly-springs",
+    description: "Holly Springs homes often sit on clay-rich soil with high moisture retention. This increases the evaporative load on crawlspace environments and makes vapor barrier installation and active dehumidification especially important. We work with Holly Springs homeowners to design complete moisture control systems for their specific soil and construction conditions."
+  },
+  {
+    name: "Fuquay-Varina",
+    slug: "fuquay-varina",
+    description: "Fuquay-Varina's combination of older homes and rapid new development creates varied crawlspace challenges. Newer construction may meet modern encapsulation standards, while older homes often have exposed soil, open vents, and no active humidity control. We serve both with the right solution for each specific space."
+  }
+];
+---
+
+<BaseLayout
+  title="Crawlspace Dehumidifier Service Areas | Triangle NC | Triangle Dehumidifiers"
+  description="Crawlspace dehumidifier installation serving Raleigh, Cary, Apex, Holly Springs, Fuquay-Varina, and the surrounding Triangle region of North Carolina."
+  canonical="/service-areas"
+>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Crawlspace Humidity Control — Triangle Region Service Areas</h1>
+      <p>
+        We serve homeowners throughout the greater Raleigh area and surrounding
+        Triangle communities with professional crawlspace dehumidifier installation
+        and moisture control systems.
+      </p>
+      <a href="/contact" class="btn btn-primary">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- CITY SECTIONS -->
+  <section class="section">
+    <div class="container">
+      <h2>Communities We Serve</h2>
+      <p>
+        <strong class="answer-first">Triangle Dehumidifiers serves the greater Raleigh metro area — including Cary, Apex, Holly Springs, and Fuquay-Varina — with crawlspace humidity control systems sized and installed for each home's specific conditions.</strong>
+      </p>
+
+      <div class="city-grid" style="margin-top: 2rem;">
+        {cities.map(city => (
+          <div class="city-card">
+            <h3>{city.name}, NC</h3>
+            <p>{city.description}</p>
+            <a href="/crawlspace-dehumidifier-installation-raleigh">
+              Learn about our installation process &rarr;
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY TRIANGLE -->
+  <section class="section-alt">
+    <div class="container">
+      <h2>Why the Triangle Region Needs Crawlspace Humidity Control</h2>
+      <p>
+        <strong class="answer-first">North Carolina's climate produces hot, humid summers that regularly push outdoor RH above 85% — conditions that drive crawlspace humidity to damaging levels without active control.</strong>
+      </p>
+      <p>
+        The Triangle region — Raleigh, Durham, Chapel Hill and surrounding communities —
+        experiences a humid subtropical climate with long summers and mild winters.
+        Average summer RH in the Raleigh area frequently exceeds 80% during evening
+        hours, and untreated crawlspaces track closely with outdoor humidity levels
+        when vents are open.
+      </p>
+      <p>
+        This regional climate makes crawlspace humidity control not a luxury item,
+        but a practical necessity for most homes with crawlspace foundations. The
+        question is not whether to address humidity — it is how to address it correctly.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Serving Your Neighborhood</h2>
+      <p>If you're in the Triangle area and have a crawlspace, we can help. Contact us to schedule an evaluation.</p>
+      <a href="/contact" class="btn btn-primary">Request an Evaluation</a>
+    </div>
+  </section>
+
+</BaseLayout>
