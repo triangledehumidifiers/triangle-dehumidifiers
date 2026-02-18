@@ -65,7 +65,7 @@ ul, ol { padding-left: 1.5rem; margin-bottom: var(--space-sm); }
 li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--font-size-lg); }
 
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-md); }
-.section { padding: var(--space-xl) 0; }
+.section { padding: var(--space-xl) 0; background-color: var(--color-bg-white); }
 .section-alt { background-color: var(--color-bg-section); padding: var(--space-xl) 0; }
 .section-dark { background-color: var(--color-primary); padding: var(--space-xl) 0; color: var(--color-text-inverse); }
 .section-dark h2, .section-dark h3, .section-dark p, .section-dark li { color: var(--color-text-inverse); }
@@ -117,11 +117,7 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   flex-shrink: 0;
 }
 .logo-img { height: 64px; width: auto; display: block; }
-.logo-text-block {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
+.logo-text-block { display: flex; flex-direction: column; line-height: 1.15; }
 .logo-name-top {
   font-family: var(--font-heading);
   font-size: 1.3rem;
@@ -173,7 +169,7 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
 .nav-toggle span { display: block; width: 24px; height: 2px; background-color: var(--color-text); transition: all 0.3s; }
 
 /* ============================================
-   HERO — LIGHT BRIGHT CLEAN
+   HERO
    ============================================ */
 
 .hero-simple {
@@ -235,6 +231,82 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
 }
 
 /* ============================================
+   TRUST BAR
+   ============================================ */
+
+.trust-bar {
+  background-color: var(--color-primary);
+  padding: 1rem 0;
+}
+.trust-bar-inner {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.trust-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.92);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.trust-icon {
+  color: var(--color-accent);
+  font-size: 0.6rem;
+}
+
+/* ============================================
+   WAVE DIVIDERS
+   ============================================ */
+
+.wave-hero { display: block; line-height: 0; background-color: var(--color-primary); }
+.wave-hero svg { width: 100%; height: 70px; display: block; }
+.wave-green { display: block; line-height: 0; background-color: var(--color-bg-section); }
+.wave-green svg { width: 100%; height: 70px; display: block; }
+.wave-divider { display: block; line-height: 0; background-color: var(--color-bg-white); }
+.wave-divider svg { width: 100%; height: 70px; display: block; }
+
+/* ============================================
+   TWO COLUMN LAYOUT
+   ============================================ */
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.two-col-text h2 { margin-bottom: var(--space-sm); }
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-sm) 0;
+}
+.check-list li {
+  padding: 0.4rem 0 0.4rem 1.75rem;
+  position: relative;
+  color: var(--color-text-light);
+  font-size: var(--font-size-lg);
+}
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+.section-photo {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+  max-height: 380px;
+}
+
+/* ============================================
    BUTTONS
    ============================================ */
 
@@ -285,21 +357,12 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
 .btn-secondary:hover { background: rgba(18,47,91,0.08); text-decoration: none; }
 
 /* ============================================
-   WAVE DIVIDERS
-   ============================================ */
-
-.wave-hero { display: block; line-height: 0; background-color: #122F5B; }
-.wave-hero svg { width: 100%; height: 70px; display: block; }
-.wave-divider { display: block; line-height: 0; background-color: var(--color-bg-section); }
-.wave-divider svg { width: 100%; height: 70px; display: block; }
-
-/* ============================================
    CARDS
    ============================================ */
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: var(--space-md);
   margin-top: var(--space-lg);
 }
@@ -319,26 +382,6 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
 .faq-list { margin-top: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md); }
 .faq-item { background-color: var(--color-bg-white); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-md); }
 .faq-item h3 { color: var(--color-primary); font-size: var(--font-size-lg); margin-bottom: var(--space-xs); }
-
-/* ============================================
-   CTA SECTION
-   ============================================ */
-
-.cta-section {
-  background-color: var(--color-primary);
-  color: var(--color-text-inverse);
-  text-align: center;
-  padding: var(--space-xl) 0;
-}
-.cta-section h2 { color: var(--color-text-inverse); margin-bottom: var(--space-sm); }
-.cta-section p { color: rgba(255,255,255,0.88); margin-bottom: var(--space-lg); }
-.cta-buttons {
-  display: flex;
-  gap: var(--space-sm);
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: var(--space-md);
-}
 
 /* ============================================
    CONTACT FORM
@@ -364,6 +407,51 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
 .form-group select:focus,
 .form-group textarea:focus { outline: none; border-color: var(--color-primary); }
 .form-group textarea { min-height: 140px; resize: vertical; }
+
+/* ============================================
+   BOTTOM CTA BAR
+   ============================================ */
+
+.cta-bottom {
+  background-color: var(--color-primary);
+  padding: 2rem 0;
+}
+.cta-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.cta-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cta-bottom-left strong {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: #ffffff;
+  display: block;
+}
+.cta-bottom-left p {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.9rem;
+  margin: 0;
+}
+.cta-logo { height: 52px; width: auto; }
+.cta-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.cta-phone {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
 
 /* ============================================
    FOOTER
@@ -399,19 +487,6 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   margin-bottom: var(--space-sm);
   display: block;
 }
-.city-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--space-md);
-  margin-top: var(--space-lg);
-}
-.city-card {
-  background-color: var(--color-bg-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-}
-.city-card h3 { color: var(--color-primary); margin-bottom: var(--space-xs); }
 
 /* ============================================
    MOBILE
@@ -443,4 +518,9 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   .hero-simple h1 { font-size: 1.9rem; }
   .hero-simple__actions { flex-direction: column; }
   .logo-text-block { display: none; }
+  .two-col { grid-template-columns: 1fr; }
+  .trust-bar-inner { gap: 1.5rem; }
+  .cta-bottom-inner { flex-direction: column; text-align: center; }
+  .cta-bottom-left { flex-direction: column; text-align: center; }
+  .cta-bottom-right { justify-content: center; }
 }
