@@ -47,8 +47,15 @@ const schema = {
     </div>
   </section>
 
+  <!-- NAVY WAVE AFTER HERO -->
+  <div class="wave-hero">
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#eaebf0"/>
+    </svg>
+  </div>
+
   <!-- WHY HUMIDITY MATTERS -->
-  <section class="section">
+  <section class="section-alt">
     <div class="container">
       <h2>Why Crawlspace Humidity Matters</h2>
       <p><strong class="answer-first">High crawlspace humidity affects the entire home due to the Stack Effect - warm air rising through the home pulls damp crawlspace air upward into your living areas.</strong></p>
@@ -70,7 +77,7 @@ const schema = {
   </section>
 
   <!-- OUR APPROACH -->
-  <section class="section-alt">
+  <section class="section">
     <div class="container">
       <h2>Our Approach to Humidity Control</h2>
       <p><strong class="answer-first">We size and install heavy-duty dehumidifiers designed specifically for sealed crawlspaces - calibrated for long-term RH control at 45-50%.</strong></p>
@@ -96,7 +103,7 @@ const schema = {
   </section>
 
   <!-- SERVICE AREAS -->
-  <section class="section">
+  <section class="section-alt">
     <div class="container">
       <h2>Areas We Serve</h2>
       <p><strong class="answer-first">We serve homeowners throughout the Triangle region of North Carolina with professional crawlspace humidity control systems.</strong></p>
@@ -112,12 +119,14 @@ const schema = {
     </div>
   </section>
 
-  <!-- WAVE + CTA -->
+  <!-- GREEN WAVE BEFORE CTA -->
   <div class="wave-divider">
-    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#122F5B"/>
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#122F5B"/>
     </svg>
   </div>
+
+  <!-- CTA -->
   <section class="cta-section">
     <div class="container">
       <h2>Free Crawlspace Humidity Assessment</h2>
@@ -130,3 +139,10 @@ const schema = {
   </section>
 
 </BaseLayout>
+```
+
+Tell me when saved then push:
+```
+git add -A
+git commit -m "Updated hero, topbar, waves"
+git push origin main
