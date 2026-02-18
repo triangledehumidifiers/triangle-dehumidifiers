@@ -523,4 +523,16 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   .cta-bottom-inner { flex-direction: column; text-align: center; }
   .cta-bottom-left { flex-direction: column; text-align: center; }
   .cta-bottom-right { justify-content: center; }
+  /* WAVE: Hero into Trust Bar */
+.wave-hero-trust {
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.wave-hero-trust svg {
+  width: 100%;
+  height: 70px;
+  display: block;
+}
 }
