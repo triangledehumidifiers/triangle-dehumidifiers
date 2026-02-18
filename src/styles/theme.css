@@ -4,30 +4,40 @@
    ============================================ */
 
 :root {
-  /* Primary Colors */
-  --color-primary: #1a4f8a;
-  --color-primary-dark: #123a6b;
-  --color-primary-light: #2a6fc4;
+  /* Primary Colors — Logo Navy */
+  --color-primary: #122F5B;
+  --color-primary-dark: #0E2446;
+  --color-primary-light: #5A6E8D;
+
+  /* Accent — Logo Green */
+  --color-accent: #6AA43A;
+  --color-accent-dark: #4F7D2A;
+  --color-accent-light: #82c24e;
+
+  /* Secondary — Logo Drop Blue */
+  --color-accent-blue: #2072B4;
 
   /* Backgrounds */
-  --color-bg: #f5f7fa;
+  --color-bg: #F1EFF1;
   --color-bg-white: #ffffff;
-  --color-bg-section: #eef1f6;
+  --color-bg-section: #eaebf0;
 
   /* Text */
-  --color-text: #1c2a3a;
+  --color-text: #122F5B;
   --color-text-light: #4a5a6a;
   --color-text-inverse: #ffffff;
 
   /* Borders */
   --color-border: #d0d9e4;
 
-  /* Accent / CTA */
-  --color-cta: #1a4f8a;
-  --color-cta-hover: #123a6b;
+  /* CTA Buttons — Green */
+  --color-cta: #6AA43A;
+  --color-cta-hover: #4F7D2A;
 
   /* Typography */
-  --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-main: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Montserrat', system-ui, sans-serif;
+
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.375rem;
@@ -44,7 +54,7 @@
 
   /* Layout */
   --max-width: 1100px;
-  --header-height: 64px;
+  --header-height: 70px;
 
   /* Radius */
   --radius-sm: 4px;
@@ -99,6 +109,7 @@ a:hover {
    ============================================ */
 
 h1, h2, h3, h4 {
+  font-family: var(--font-heading);
   color: var(--color-text);
   line-height: 1.25;
   font-weight: 700;
@@ -126,7 +137,7 @@ li {
 }
 
 /* ============================================
-   LAYOUT UTILITIES
+   LAYOUT
    ============================================ */
 
 .container {
@@ -147,7 +158,6 @@ li {
 .section-dark {
   background-color: var(--color-primary);
   padding: var(--space-xl) 0;
-  color: var(--color-text-inverse);
 }
 
 .section-dark h2,
@@ -179,15 +189,27 @@ li {
 }
 
 .site-logo {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   text-decoration: none;
   flex-shrink: 0;
 }
 
-.site-logo span {
-  color: var(--color-text);
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+
+.logo-slogan {
+  font-family: var(--font-main);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--color-primary-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 2px;
 }
 
 .site-nav {
@@ -200,7 +222,8 @@ li {
 }
 
 .site-nav a {
-  font-size: 0.95rem;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--color-text);
   text-decoration: none;
@@ -213,18 +236,19 @@ li {
 }
 
 .nav-cta {
-  background-color: var(--color-cta);
+  background-color: var(--color-cta) !important;
   color: var(--color-text-inverse) !important;
   padding: 0.5rem 1.25rem;
   border-radius: var(--radius-sm);
   transition: background-color 0.2s !important;
+  font-family: var(--font-heading) !important;
 }
 
 .nav-cta:hover {
   background-color: var(--color-cta-hover) !important;
+  color: var(--color-text-inverse) !important;
 }
 
-/* Mobile nav toggle */
 .nav-toggle {
   display: none;
   background: none;
@@ -244,7 +268,7 @@ li {
 }
 
 /* ============================================
-   HERO SECTION
+   HERO
    ============================================ */
 
 .hero {
@@ -252,6 +276,16 @@ li {
   color: var(--color-text-inverse);
   padding: var(--space-xl) 0;
   text-align: center;
+}
+
+.hero-tagline {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-light);
+  margin-bottom: 0.75rem;
 }
 
 .hero h1 {
@@ -278,6 +312,7 @@ li {
   display: inline-block;
   padding: 0.85rem 2rem;
   border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
@@ -292,12 +327,13 @@ li {
 }
 
 .btn-primary {
-  background-color: var(--color-bg-white);
-  color: var(--color-primary);
+  background-color: var(--color-cta);
+  color: var(--color-text-inverse);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-bg-section);
+  background-color: var(--color-cta-hover);
+  color: var(--color-text-inverse);
 }
 
 .btn-cta {
@@ -467,7 +503,7 @@ li {
 }
 
 /* ============================================
-   CITY LIST
+   CITY GRID
    ============================================ */
 
 .city-grid {
@@ -496,7 +532,6 @@ li {
 @media (max-width: 768px) {
   h1, .hero h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
-
   .hero p { font-size: 1rem; }
 
   .nav-toggle {
@@ -527,5 +562,9 @@ li {
 
   .section, .section-alt, .section-dark {
     padding: var(--space-lg) 0;
+  }
+
+  .logo-slogan {
+    display: none;
   }
 }
