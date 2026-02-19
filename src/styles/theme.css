@@ -173,8 +173,12 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
    ============================================ */
 
 .hero-simple {
-  position: relative;
-  padding: 70px 0 80px;
+position: relative;
+  min-height: 55vh;
+  max-height: 680px;
+  padding: clamp(40px, 6vh, 90px) 0;
+  display: flex;
+  align-items: center;
   background-image:
     linear-gradient(90deg,
       rgba(255,255,255,0.97) 0%,
@@ -185,6 +189,7 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
     url("/images/hero-crawlspace.webp");
   background-size: cover;
   background-position: right center;
+  background-repeat: no-repeat;
 }
 .hero-simple__inner { display: flex; align-items: center; }
 .hero-simple__content { max-width: 600px; }
@@ -655,7 +660,7 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   .site-header { position: relative; }
   .section, .section-alt, .section-dark { padding: var(--space-lg) 0; }
   .cta-buttons { flex-direction: column; align-items: center; }
-  .hero-simple { padding: 50px 0 60px; }
+  .hero-simple {min-height: 60vh; padding: 40px 0;}
   .hero-simple h1 { font-size: 1.9rem; }
   .hero-simple__actions { flex-direction: column; }
   .logo-text-block { display: none; }
