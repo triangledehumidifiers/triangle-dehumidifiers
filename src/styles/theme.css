@@ -665,10 +665,3 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   .why-grid { grid-template-columns: 1fr; }
   .approach-grid { grid-template-columns: 1fr; }
 }
-```
-
-**Ctrl+S** to save. Then push it live:
-```
-git add -A
-git commit -m "Redesign homepage with new layout and stripes"
-git push origin main
