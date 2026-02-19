@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Triangle Dehumidifiers, LLC",
+  "telephone": "(919) 555-0123",
+  "email": "info@triangledehumidifiers.com",
+  "url": "https://www.triangledehumidifiers.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "NC",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Holly Springs", "Raleigh", "Cary", "Apex", "Fuquay-Varina"],
+  "serviceType": ["Crawlspace Dehumidifier Installation", "Crawlspace Encapsulation", "Mold Treatment"],
+  "description": "Professional crawlspace dehumidifier installation and humidity control services across the Triangle region of North Carolina."
+};
+---
+
+<BaseLayout
+  title="Crawlspace Dehumidifier Installation Raleigh NC | Triangle Dehumidifiers"
+  description="Professional crawlspace dehumidifier installation in Raleigh, NC. We maintain 45-50% RH to protect your home's framing, subfloors, and air quality. Serving Holly Springs, Cary, Apex, Fuquay-Varina."
+  canonical="/"
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- HERO -->
+  <section class="hero-simple">
+    <div class="container hero-simple__inner">
+      <div class="hero-simple__content">
+        <div class="hero-simple__eyebrow">Professional Humidity Control</div>
+        <h1>Crawlspace Dehumidifier Installation in Raleigh, NC</h1>
+        <p>Humidity control for crawlspaces across the Triangle region. We design systems to maintain 45-50% Relative Humidity (RH) - protecting your framing, subfloors, and indoor air quality long-term.</p>
+        <div class="hero-simple__actions">
+          <a href="/contact" class="btn btn-green">Request Inspection</a>
+          <a href="/crawlspace-dehumidifier-installation-raleigh" class="btn btn-secondary">Our Services</a>
+        </div>
+        <div class="trust-pills">
+          <span class="pill">&#10003; Bonded &amp; Insured</span>
+          <span class="pill">&#10003; 45-50% RH Target</span>
+          <span class="pill">&#10003; Aprilaire WiFi Options</span>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- WAVE: Hero into Trust Bar -->
+<div class="wave-hero-trust">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <rect width="1440" height="5" fill="#6AA43A"/>
+    <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#122F5B"/>
+  </svg>
+</div>
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container trust-bar-inner">
+      <div class="trust-bar-item">
+        <span class="trust-icon">&#9679;</span>
+        <span>Bonded &amp; Insured</span>
+      </div>
+      <div class="trust-bar-item">
+        <span class="trust-icon">&#9679;</span>
+        <span>Over 10 Years Experience</span>
+      </div>
+      <div class="trust-bar-item">
+        <span class="trust-icon">&#9679;</span>
+        <span>Locally Owned &amp; Operated</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAVE AFTER TRUST BAR -->
+  <div class="wave-hero">
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#eaebf0"/>
+    </svg>
+  </div>
+
+  <!-- WHY HUMIDITY MATTERS — TWO COLUMN -->
+  <section class="section-alt">
+    <div class="container two-col">
+      <div class="two-col-text">
+        <h2>Why Crawlspace Humidity Matters</h2>
+        <p>High crawlspace humidity affects the entire home due to the Stack Effect - warm air rising through the home pulls damp crawlspace air upward into your living areas.</p>
+        <ul class="check-list">
+          <li>The Stack Effect pulls moisture into living areas</li>
+          <li>Persistent musty odors throughout your home</li>
+          <li>Wood rot, mold, and structural damage over time</li>
+          <li>Higher HVAC energy costs from excess humidity</li>
+        </ul>
+        <a href="/contact" class="btn btn-green" style="margin-top:1rem;display:inline-block;">Request Inspection</a>
+      </div>
+      <div class="two-col-image">
+        <img src="/images/hero-crawlspace.webp" alt="Sealed crawlspace with dehumidifier installed" class="section-photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- GREEN WAVE -->
+  <div class="wave-green">
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,35 C360,0 1080,70 1440,35 L1440,70 L0,70 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+
+  <!-- OUR APPROACH -->
+  <section class="section">
+    <div class="container">
+      <h2>Our Approach to Humidity Control</h2>
+      <p><strong class="answer-first">We size and install heavy-duty dehumidifiers designed specifically for sealed crawlspaces - calibrated for long-term RH control at 45-50%.</strong></p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Proper Sizing</h3>
+          <p>Equipment is sized based on your crawlspace square footage, current moisture levels, and whether the space is sealed or vented.</p>
+        </div>
+        <div class="card">
+          <h3>Sealed Vents</h3>
+          <p>Open crawlspace vents introduce warm, humid exterior air during summer months. Sealing vents is a foundational step in controlling RH effectively.</p>
+        </div>
+        <div class="card">
+          <h3>Continuous Drainage</h3>
+          <p>Collected water is routed via drain line to a sump or exterior drain - never to a bucket - allowing the system to run without interruption.</p>
+        </div>
+        <div class="card">
+          <h3>Monitoring</h3>
+          <p>We recommend digital hygrometers to verify your system is maintaining target RH.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE BEFORE CTA -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#122F5B"/>
+    </svg>
+  </div>
+
+  <!-- BOTTOM CTA BAR -->
+  <section class="cta-bottom">
+    <div class="container cta-bottom-inner">
+      <div class="cta-bottom-left">
+        <img src="/logo.png" alt="Triangle Dehumidifiers" class="cta-logo" />
+        <div>
+          <strong>Schedule Your Free Crawlspace Inspection Today</strong>
+          <p>Protect your home with professional crawlspace dehumidifier installation.</p>
+        </div>
+      </div>
+      <div class="cta-bottom-right">
+        <span class="cta-phone">(919) 555-0123</span>
+        <a href="/contact" class="btn btn-green">Request Inspection</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

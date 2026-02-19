@@ -46,13 +46,7 @@ const schema = {
       </div>
     </div>
   </section>
-<!-- WAVE: Hero into Trust Bar -->
-<div class="wave-hero-trust">
-  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <rect width="1440" height="5" fill="#6AA43A"/>
-    <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#122F5B"/>
-  </svg>
-</div>
+
   <!-- TRUST BAR -->
   <div class="trust-bar">
     <div class="container trust-bar-inner">
@@ -71,70 +65,96 @@ const schema = {
     </div>
   </div>
 
-  <!-- WAVE AFTER TRUST BAR -->
-  <div class="wave-hero">
-    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#eaebf0"/>
+  <!-- STRIPES: After Trust Bar -->
+  <div class="stripes">
+    <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <rect width="1440" height="20" fill="#6AA43A"/>
+      <rect y="20" width="1440" height="20" fill="#A8D4F0"/>
     </svg>
   </div>
 
-  <!-- WHY HUMIDITY MATTERS — TWO COLUMN -->
-  <section class="section-alt">
-    <div class="container two-col">
-      <div class="two-col-text">
-        <h2>Why Crawlspace Humidity Matters</h2>
-        <p>High crawlspace humidity affects the entire home due to the Stack Effect - warm air rising through the home pulls damp crawlspace air upward into your living areas.</p>
-        <ul class="check-list">
-          <li>The Stack Effect pulls moisture into living areas</li>
-          <li>Persistent musty odors throughout your home</li>
-          <li>Wood rot, mold, and structural damage over time</li>
-          <li>Higher HVAC energy costs from excess humidity</li>
-        </ul>
-        <a href="/contact" class="btn btn-green" style="margin-top:1rem;display:inline-block;">Request Inspection</a>
-      </div>
-      <div class="two-col-image">
-        <img src="/images/hero-crawlspace.webp" alt="Sealed crawlspace with dehumidifier installed" class="section-photo" />
+  <!-- WHY HUMIDITY MATTERS -->
+  <section class="why-section">
+    <div class="container why-inner">
+      <h2>Why Crawlspace Humidity Matters</h2>
+      <p class="why-intro">Crawlspace humidity affects the entire home due to the Stack Effect — warm air rising through the home pulls damp crawlspace air upward into your living areas.</p>
+      <div class="why-grid">
+        <div class="why-cards">
+          <div class="why-card">
+            <h3><span class="card-icon">↑</span> The Stack Effect</h3>
+            <p>As warm air rises and exits your attic, damp crawlspace air is pulled up into your home's living areas.</p>
+          </div>
+          <div class="why-card">
+            <h3><span class="card-icon">~</span> Musty Odors</h3>
+            <p>Persistent musty smells inside typically indicate high crawlspace humidity and potential mold growth.</p>
+          </div>
+          <div class="why-card">
+            <h3><span class="card-icon">⬡</span> Wood Moisture Concerns</h3>
+            <p>Excessive humidity can cause moisture damage and mold growth in subflooring and structural framing.</p>
+          </div>
+          <div class="why-card">
+            <h3><span class="card-icon">⚡</span> Energy Inefficiency</h3>
+            <p>A damp crawlspace increases the load on your HVAC system. Reducing humidity lowers overall moisture and improves efficiency.</p>
+          </div>
+        </div>
+        <div class="why-right">
+          <div class="why-image-box">
+            <img src="/images/hero-crawlspace.webp" alt="Sealed crawlspace with dehumidifier installed" class="why-photo" />
+          </div>
+          <div class="why-summary">
+            <h3>Why Humidity Control Matters</h3>
+            <p class="summary-sub">Proper crawlspace humidity control is essential for a healthy home environment.</p>
+            <ul class="summary-list">
+              <li><span class="check">&#10004;</span> Prevent wood rot, mold, and musty odors</li>
+              <li><span class="check">&#10004;</span> Improve indoor air quality throughout your home</li>
+              <li><span class="check">&#10004;</span> Increase HVAC efficiency and lower energy bills</li>
+            </ul>
+            <a href="/contact" class="btn btn-green">Request Inspection</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- GREEN WAVE -->
-  <div class="wave-green">
-    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,35 C360,0 1080,70 1440,35 L1440,70 L0,70 Z" fill="#ffffff"/>
+  <!-- STRIPES: Before Approach -->
+  <div class="stripes">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <rect width="1440" height="12" fill="#A8D4F0"/>
+      <rect y="12" width="1440" height="12" fill="#6AA43A"/>
+      <rect y="24" width="1440" height="36" fill="#122F5B"/>
     </svg>
   </div>
 
   <!-- OUR APPROACH -->
-  <section class="section">
-    <div class="container">
-      <h2>Our Approach to Humidity Control</h2>
-      <p><strong class="answer-first">We size and install heavy-duty dehumidifiers designed specifically for sealed crawlspaces - calibrated for long-term RH control at 45-50%.</strong></p>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Proper Sizing</h3>
-          <p>Equipment is sized based on your crawlspace square footage, current moisture levels, and whether the space is sealed or vented.</p>
+  <section class="approach-section">
+    <div class="container approach-inner">
+      <h2>Our Approach to Crawlspace Dehumidification</h2>
+      <div class="approach-grid">
+        <div class="approach-card">
+          <div class="step-icon">🔒</div>
+          <h3>Seal the Crawlspace</h3>
+          <p>Proper crawlspace sealing reduces outside moisture entry and lowers humidity levels effectively.</p>
         </div>
-        <div class="card">
-          <h3>Sealed Vents</h3>
-          <p>Open crawlspace vents introduce warm, humid exterior air during summer months. Sealing vents is a foundational step in controlling RH effectively.</p>
+        <div class="approach-card">
+          <div class="step-icon">⚙️</div>
+          <h3>Install Dehumidifiers</h3>
+          <p>We install high-performance, crawlspace-rated dehumidifiers calibrated to maintain 45–50% RH.</p>
         </div>
-        <div class="card">
-          <h3>Continuous Drainage</h3>
-          <p>Collected water is routed via drain line to a sump or exterior drain - never to a bucket - allowing the system to run without interruption.</p>
-        </div>
-        <div class="card">
-          <h3>Monitoring</h3>
-          <p>We recommend digital hygrometers to verify your system is maintaining target RH.</p>
+        <div class="approach-card">
+          <div class="step-icon">📊</div>
+          <h3>Drain &amp; Monitor</h3>
+          <p>Continuous drainage and digital hygrometers ensure your system runs optimally without maintenance hassle.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WAVE BEFORE CTA -->
-  <div class="wave-divider">
-    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#122F5B"/>
+  <!-- STRIPES: Before CTA -->
+  <div class="stripes">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <rect width="1440" height="12" fill="#A8D4F0"/>
+      <rect y="12" width="1440" height="12" fill="#6AA43A"/>
+      <rect y="24" width="1440" height="36" fill="#122F5B"/>
     </svg>
   </div>
 
