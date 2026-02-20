@@ -161,7 +161,7 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
    ============================================ */
 
 .hero-simple {
- position: relative;
+  position: relative;
   padding: clamp(60px, 8vw, 110px) 0 clamp(70px, 9vw, 120px);
   background-image: url("/images/hero-crawlspace.webp");
   background-size: cover;
@@ -175,17 +175,16 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   pointer-events: none;
   background:
     linear-gradient(90deg,
-      rgba(255,255,255,0.97) 0%,
-      rgba(255,255,255,0.85) 22%,
-      rgba(255,255,255,0.20) 50%,
-      rgba(255,255,255,0.00) 65%
+      rgba(255,255,255,0.98) 0%,
+      rgba(255,255,255,0.92) 25%,
+      rgba(255,255,255,0.60) 42%,
+      rgba(255,255,255,0.00) 62%
     ),
     linear-gradient(270deg,
-      rgba(255,255,255,0.90) 0%,
-      rgba(255,255,255,0.55) 20%,
-      rgba(255,255,255,0.00) 48%
-    ),
-    rgba(255,255,255,0.30);
+      rgba(255,255,255,0.70) 0%,
+      rgba(255,255,255,0.30) 18%,
+      rgba(255,255,255,0.00) 45%
+    );
 }
 .hero-simple__inner {
   position: relative;
@@ -198,10 +197,12 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   position: relative;
   z-index: 1;
   max-width: 600px;
+  background: rgba(255,255,255,0.72);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
-.hero-simple__inner { display: flex; align-items: center; width: 100%; }
-.hero-simple__content { max-width: 600px; }
-
 .hero-brand {
   font-family: var(--font-heading);
   font-size: 0.95rem;
@@ -276,19 +277,12 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   font-size: 1.05rem;
   font-weight: 600;
 }
-.trust-icon {
-  color: var(--color-accent);
-  font-size: 0.7rem;
-}
+.trust-icon { color: var(--color-accent); font-size: 0.7rem; }
 
 /* ============================================
    STRIPES — 3 Variants
    ============================================ */
 
-/*
-  Below Trust Bar:
-  Green (solid, 20px) → Light Blue (solid, 20px) → fades to white
-*/
 .stripes-below-trust {
   display: block;
   height: 50px;
@@ -301,11 +295,6 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   );
 }
 
-/*
-  Middle (top of section going down):
-  White fades to Light Blue → Green → Navy
-  Navy is same thickness as Light Blue + Green combined
-*/
 .stripes-mid {
   display: block;
   height: 80px;
@@ -320,10 +309,6 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   );
 }
 
-/*
-  Above CTA/Footer:
-  White fades to Light Blue → Green (equal widths)
-*/
 .stripes-above-cta {
   display: block;
   height: 50px;
@@ -364,11 +349,7 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   gap: 2.5rem;
   align-items: start;
 }
-.why-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+.why-cards { display: flex; flex-direction: column; gap: 1rem; }
 .why-card {
   background: #f7f9fc;
   border-left: 4px solid var(--color-accent);
@@ -413,17 +394,8 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   border: 2px solid var(--color-border);
   border-top: 3px solid var(--color-accent);
 }
-.why-summary h3 {
-  color: var(--color-primary);
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-}
-.why-summary .summary-sub {
-  color: var(--color-text-light);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
+.why-summary h3 { color: var(--color-primary); font-size: 1.2rem; margin-bottom: 0.5rem; font-weight: 700; }
+.why-summary .summary-sub { color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1rem; }
 .summary-list {
   list-style: none;
   padding: 0;
@@ -432,35 +404,17 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   gap: 0.6rem;
   margin-bottom: 1.5rem;
 }
-.summary-list li {
-  color: #333;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-}
+.summary-list li { color: #333; font-size: 0.95rem; display: flex; align-items: flex-start; gap: 0.6rem; }
 .check { color: var(--color-accent); font-weight: 700; font-size: 1.2rem; flex-shrink: 0; }
 
 /* ============================================
    APPROACH SECTION
    ============================================ */
 
-.approach-section {
-  background-color: var(--color-bg-white);
-  padding: var(--space-xl) 0;
-}
+.approach-section { background-color: var(--color-bg-white); padding: var(--space-xl) 0; }
 .approach-inner { text-align: center; }
-.approach-inner h2 {
-  font-size: var(--font-size-2xl);
-  color: var(--color-primary);
-  margin-bottom: 2.5rem;
-  font-weight: 800;
-}
-.approach-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
-}
+.approach-inner h2 { font-size: var(--font-size-2xl); color: var(--color-primary); margin-bottom: 2.5rem; font-weight: 800; }
+.approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
 .approach-card {
   background: #fff;
   border-radius: 12px;
@@ -480,18 +434,8 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   margin-bottom: 1rem;
   font-size: 1.4rem;
 }
-.approach-card h3 {
-  font-size: 1.15rem;
-  color: var(--color-primary);
-  margin-bottom: 0.6rem;
-  font-weight: 700;
-}
-.approach-card p {
-  font-size: 0.9rem;
-  color: var(--color-text-light);
-  line-height: 1.5;
-  margin-bottom: 0;
-}
+.approach-card h3 { font-size: 1.15rem; color: var(--color-primary); margin-bottom: 0.6rem; font-weight: 700; }
+.approach-card p { font-size: 0.9rem; color: var(--color-text-light); line-height: 1.5; margin-bottom: 0; }
 
 /* ============================================
    BUTTONS
@@ -510,8 +454,6 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   border: none;
 }
 .btn:hover { text-decoration: none; transform: translateY(-1px); }
-.btn-primary { background-color: var(--color-cta); color: #ffffff !important; }
-.btn-primary:hover { background-color: var(--color-cta-hover); }
 .btn-green {
   background-color: var(--color-cta);
   color: #ffffff !important;
@@ -547,19 +489,8 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
    CARDS (legacy)
    ============================================ */
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--space-md);
-  margin-top: var(--space-lg);
-}
-.card {
-  background-color: var(--color-bg-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-  box-shadow: var(--shadow-sm);
-}
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-md); margin-top: var(--space-lg); }
+.card { background-color: var(--color-bg-white); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-md); box-shadow: var(--shadow-sm); }
 .card h3 { color: var(--color-primary); margin-bottom: var(--space-xs); }
 
 /* ============================================
@@ -599,81 +530,29 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
    BOTTOM CTA BAR
    ============================================ */
 
-.cta-bottom {
-  background-color: #122F5B;
-  padding: 2.5rem 0;
-}
-.cta-bottom-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.cta-bottom-left {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.cta-bottom-left strong {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  color: #ffffff;
-  display: block;
-}
-.cta-bottom-left p {
-  color: rgba(255,255,255,0.75);
-  font-size: 0.9rem;
-  margin: 0;
-}
+.cta-bottom { background-color: #122F5B; padding: 2.5rem 0; }
+.cta-bottom-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+.cta-bottom-left { display: flex; align-items: center; gap: 1rem; }
+.cta-bottom-left strong { font-family: var(--font-heading); font-size: 1.15rem; color: #ffffff; display: block; }
+.cta-bottom-left p { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin: 0; }
 .cta-logo { height: 52px; width: auto; }
-.cta-bottom-right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-.cta-phone {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #ffffff;
-}
+.cta-bottom-right { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.cta-phone { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: #ffffff; }
 
 /* ============================================
    FOOTER
    ============================================ */
 
-.site-footer {
-  background-color: #122F5B;
-  color: rgba(255,255,255,0.8);
-  padding: var(--space-lg) 0;
-  text-align: center;
-  font-size: 0.9rem;
-}
+.site-footer { background-color: #122F5B; color: rgba(255,255,255,0.8); padding: var(--space-lg) 0; text-align: center; font-size: 0.9rem; }
 .site-footer a { color: rgba(255,255,255,0.8); }
 .site-footer a:hover { color: #ffffff; }
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-md);
-  list-style: none;
-  padding: 0;
-  margin-bottom: var(--space-sm);
-  flex-wrap: wrap;
-}
+.footer-links { display: flex; justify-content: center; gap: var(--space-md); list-style: none; padding: 0; margin-bottom: var(--space-sm); flex-wrap: wrap; }
 
 /* ============================================
    UTILITIES
    ============================================ */
 
-.answer-first {
-  font-weight: 700;
-  color: var(--color-text) !important;
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--space-sm);
-  display: block;
-}
+.answer-first { font-weight: 700; color: var(--color-text) !important; font-size: var(--font-size-lg); margin-bottom: var(--space-sm); display: block; }
 
 /* ============================================
    MOBILE
@@ -702,6 +581,7 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   .section, .section-alt, .section-dark { padding: var(--space-lg) 0; }
   .cta-buttons { flex-direction: column; align-items: center; }
   .hero-simple { padding: 50px 0 60px; }
+  .hero-simple__content { padding: 1.5rem; }
   .hero-simple h1 { font-size: 1.8rem; }
   .hero-simple__actions { flex-direction: column; }
   .trust-bar-inner { gap: 1.5rem; }
