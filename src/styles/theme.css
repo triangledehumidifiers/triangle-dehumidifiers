@@ -118,7 +118,6 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
   flex-shrink: 0;
 }
 .logo-img { height: 68px; width: auto; display: block; }
-
 .site-nav {
   display: flex;
   gap: 1.2rem;
@@ -162,48 +161,54 @@ li { margin-bottom: 0.4rem; color: var(--color-text-light); font-size: var(--fon
 
 .hero-simple {
   position: relative;
+  overflow: hidden;
   padding: clamp(60px, 8vw, 110px) 0 clamp(70px, 9vw, 120px);
-  background-image: url("/images/hero-crawlspace.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 35% 65%;
 }
+
+/* Background image layer */
+.hero-simple::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/hero-crawlspace.webp") 80% 45% / cover no-repeat;
+  filter: saturate(0.85) contrast(0.92) brightness(1.04) blur(1px);
+  transform: scale(1.03);
+  z-index: 0;
+}
+
+/* Two-zone overlay — subtle left, strong right */
 .hero-simple::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
+  z-index: 1;
   background:
-    linear-gradient(90deg,
-      rgba(255,255,255,0.85) 0%,
-      rgba(255,255,255,0.70) 20%,
-      rgba(255,255,255,0.10) 48%,
-      rgba(255,255,255,0.00) 62%
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0.55) 0%,
+      rgba(255,255,255,0.25) 30%,
+      rgba(255,255,255,0.00) 52%
     ),
-    linear-gradient(270deg,
-      rgba(255,255,255,0.96) 0%,
-      rgba(255,255,255,0.80) 22%,
-      rgba(255,255,255,0.30) 45%,
-      rgba(255,255,255,0.00) 62%
-    ),
-    rgba(255,255,255,0.15);
+    linear-gradient(
+      to left,
+      rgba(245,247,250,0.84) 0%,
+      rgba(245,247,250,0.40) 25%,
+      rgba(245,247,250,0.00) 52%
+    );
 }
+
 .hero-simple__inner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
   width: 100%;
 }
 .hero-simple__content {
   position: relative;
-  z-index: 1;
-  max-width: 600px;
-  background: rgba(255,255,255,0.72);
-  padding: 2rem 2.5rem;
-  border-radius: 12px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  z-index: 2;
+  max-width: 580px;
 }
 .hero-brand {
   font-family: var(--font-heading);
