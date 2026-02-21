@@ -2,20 +2,25 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const schema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Triangle Dehumidifiers, LLC",
-  "telephone": "(919) 555-0123",
-  "email": "info@triangledehumidifiers.com",
-  "url": "https://www.triangledehumidifiers.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "NC",
-    "addressCountry": "US"
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Triangle Dehumidifiers, LLC',
+  telephone: '(919) 555-0123',
+  email: 'info@triangledehumidifiers.com',
+  url: 'https://www.triangledehumidifiers.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: 'NC',
+    addressCountry: 'US',
   },
-  "areaServed": ["Holly Springs", "Raleigh", "Cary", "Apex", "Fuquay-Varina"],
-  "serviceType": ["Crawlspace Dehumidifier Installation", "Crawlspace Encapsulation", "Mold Treatment"],
-  "description": "Professional dehumidifier installation and humidity control services across the Triangle region of North Carolina."
+  areaServed: ['Holly Springs', 'Raleigh', 'Cary', 'Apex', 'Fuquay-Varina'],
+  serviceType: [
+    'Crawlspace Dehumidifier Installation',
+    'Crawlspace Encapsulation',
+    'Mold Treatment',
+  ],
+  description:
+    'Pro dehumidifier installation and humidity control services across the Triangle region of North Carolina.',
 };
 ---
 
@@ -24,7 +29,6 @@ const schema = {
   description="Professional dehumidifier installation in Raleigh, NC. We maintain 45-50% RH to protect your home's framing, subfloors, and air quality. Serving Holly Springs, Cary, Apex, Fuquay-Varina."
   canonical="/"
 >
-
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 
   <!-- HERO -->
@@ -34,10 +38,16 @@ const schema = {
         <div class="hero-brand">Triangle Dehumidifiers</div>
         <div class="hero-simple__eyebrow">Professional Humidity Control</div>
         <h1>Dehumidifier<br />Installation in<br />Raleigh, NC</h1>
-        <p>Humidity control for homes across the Triangle region. We design systems to maintain 45-50% Relative Humidity (RH) — protecting your framing, subfloors, and indoor air quality long-term.</p>
+        <p>
+          Humidity control for homes across the Triangle region. We design systems to maintain
+          45-50% Relative Humidity (RH) — protecting your framing, subfloors, and indoor air quality
+          long-term.
+        </p>
         <div class="hero-simple__actions">
           <a href="/contact" class="btn btn-green">Request Inspection</a>
-          <a href="/crawlspace-dehumidifier-installation-raleigh" class="btn btn-secondary">Our Services</a>
+          <a href="/crawlspace-dehumidifier-installation-raleigh" class="btn btn-secondary"
+            >Our Services</a
+          >
         </div>
         <div class="trust-pills">
           <span class="pill">&#10003; Bonded &amp; Insured</span>
@@ -73,37 +83,65 @@ const schema = {
   <section class="why-section">
     <div class="container why-inner">
       <h2>How High Indoor Humidity<br />Affects Your Home</h2>
-      <p class="why-intro">Excess indoor moisture can lead to mold growth, structural wood damage, poor air quality, and increased HVAC strain throughout the home.</p>
+      <p class="why-intro">
+        Excess indoor moisture can lead to mold growth, structural wood damage, poor air quality,
+        and increased HVAC strain throughout the home.
+      </p>
       <div class="why-grid">
         <div class="why-cards">
           <div class="why-card">
             <h3><span class="card-icon">↑</span> The Stack Effect</h3>
-            <p>As warm air rises and exits your attic, damp crawlspace air is pulled up into your home's living areas.</p>
+            <p>
+              As warm air rises and exits your attic, damp crawlspace air is pulled up into your
+              home's living areas.
+            </p>
           </div>
           <div class="why-card">
             <h3><span class="card-icon">~</span> Musty Odors</h3>
-            <p>Persistent musty smells inside typically indicate high humidity and potential mold growth.</p>
+            <p>
+              Persistent musty smells inside typically indicate high humidity and potential mold
+              growth.
+            </p>
           </div>
           <div class="why-card">
             <h3><span class="card-icon">⬡</span> Wood Moisture Concerns</h3>
-            <p>Excessive humidity can cause moisture damage and mold growth in subflooring and structural framing.</p>
+            <p>
+              Excessive humidity can cause moisture damage and mold growth in subflooring and
+              structural framing.
+            </p>
           </div>
           <div class="why-card">
             <h3><span class="card-icon">⚡</span> Energy Inefficiency</h3>
-            <p>A damp home increases the load on your HVAC system. Reducing humidity lowers overall moisture and improves efficiency.</p>
+            <p>
+              A damp home increases the load on your HVAC system. Reducing humidity lowers overall
+              moisture and improves efficiency.
+            </p>
           </div>
         </div>
         <div class="why-right">
           <div class="why-image-box">
-            <img src="/images/hero-crawlspace.webp" alt="Professional dehumidifier installation" class="why-photo" />
+            <img
+              src="/images/wet-window.webp"
+              alt="Professional dehumidifier installation"
+              class="why-photo"
+            />
           </div>
           <div class="why-summary">
             <h3>Professional Humidity Control Systems</h3>
-            <p class="summary-sub">Properly designed and installed dehumidification systems maintain stable Relative Humidity (RH) levels to protect your home and improve indoor comfort.</p>
+            <p class="summary-sub">
+              Properly designed and installed dehumidification systems maintain stable Relative
+              Humidity (RH) levels to protect your home and improve indoor comfort.
+            </p>
             <ul class="summary-list">
-              <li><span class="check">&#10004;</span> Prevent wood rot, mold, and musty odors</li>
-              <li><span class="check">&#10004;</span> Improve indoor air quality throughout your home</li>
-              <li><span class="check">&#10004;</span> Increase HVAC efficiency and lower energy bills</li>
+              <li>
+                <span class="check">&#10004;</span> Prevent wood rot, mold, and musty odors
+              </li>
+              <li>
+                <span class="check">&#10004;</span> Improve indoor air quality throughout your home
+              </li>
+              <li>
+                <span class="check">&#10004;</span> Increase HVAC efficiency and lower energy bills
+              </li>
             </ul>
             <a href="/contact" class="btn btn-green">Request Inspection</a>
           </div>
@@ -123,17 +161,26 @@ const schema = {
         <div class="approach-card">
           <div class="step-icon">🔒</div>
           <h3>Assess &amp; Plan</h3>
-          <p>We inspect your home and identify moisture sources to design a system that fits your specific needs.</p>
+          <p>
+            We inspect your home and identify moisture sources to design a system that fits your
+            specific needs.
+          </p>
         </div>
         <div class="approach-card">
           <div class="step-icon">⚙️</div>
           <h3>Install Dehumidifiers</h3>
-          <p>We install high-performance dehumidifiers calibrated to maintain 45–50% RH throughout your home.</p>
+          <p>
+            We install high-performance dehumidifiers calibrated to maintain 45–50% RH throughout
+            your home.
+          </p>
         </div>
         <div class="approach-card">
           <div class="step-icon">📊</div>
           <h3>Drain &amp; Monitor</h3>
-          <p>Continuous drainage and digital hygrometers ensure your system runs optimally without maintenance hassle.</p>
+          <p>
+            Continuous drainage and digital hygrometers ensure your system runs optimally without
+            maintenance hassle.
+          </p>
         </div>
       </div>
     </div>
@@ -158,5 +205,4 @@ const schema = {
       </div>
     </div>
   </section>
-
 </BaseLayout>
