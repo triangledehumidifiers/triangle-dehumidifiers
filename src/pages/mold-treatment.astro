@@ -1,137 +1,334 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'HomeAndConstructionBusiness',
+  name: 'Triangle Dehumidifiers, LLC',
+  telephone: '(919) 555-0123',
+  url: 'https://www.triangledehumidifiers.com',
+  areaServed: ['Raleigh', 'Holly Springs', 'Cary', 'Apex', 'Fuquay-Varina'],
+  serviceType: 'Crawlspace Mold Treatment',
+  description:
+    'Crawlspace mold treatment in Raleigh, NC. Moisture correction first, then professional botanical surface treatment.',
+};
 ---
 
 <BaseLayout
   title="Crawlspace Mold Treatment Raleigh NC | Triangle Dehumidifiers"
-  description="Surface mold treatment for crawlspaces in Raleigh, NC. Moisture correction first, then professional cleaning and treatment. Serving Holly Springs, Cary, Apex, Fuquay-Varina."
-  canonical="/crawlspace-mold-treatment-raleigh"
+  description="Professional crawlspace mold treatment in Raleigh, NC. Botanical and low-toxicity products. Moisture correction first, then surface treatment. Serving the Triangle region."
+  canonical="/mold-treatment"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="svc-hero">
     <div class="container">
-      <h1>Crawlspace Mold Treatment in Raleigh, NC</h1>
-      <p>
-        Surface mold treatment for crawlspace framing and structural materials.
-        We correct the moisture source first — then treat existing growth to
-        prevent recurrence.
+      <h1>Crawlspace Mold Treatment<br />in Raleigh, NC</h1>
+      <span class="svc-hero__direct"
+        >Mold is a symptom of a moisture problem. We correct the humidity source first — then treat
+        existing surface growth to prevent recurrence.</span
+      >
+      <p class="svc-hero__sub">
+        Mold growth accelerates when crawlspace Relative Humidity (RH) exceeds 60%. We provide
+        professional crawlspace mold treatment using botanical and low-toxicity antimicrobial
+        products designed for professional restoration environments.
       </p>
-      <a href="/contact" class="btn btn-primary">Request an Evaluation</a>
+      <div class="svc-hero__actions">
+        <a href="/contact" class="btn btn-green">Schedule Crawlspace Mold Inspection</a>
+        <a href="tel:9195550123" class="btn btn-secondary">Call (919) 555-0123</a>
+      </div>
+      <p style="font-size:0.85rem; color:#4a5a6a; margin-top:0.75rem;">
+        Botanical-based treatment options available. Licensed &amp; insured.
+      </p>
     </div>
   </section>
 
   <!-- MOISTURE FIRST -->
   <section class="section">
     <div class="container">
-      <h2>Moisture Correction Comes First</h2>
-      <p>
-        <strong class="answer-first">Treating mold without correcting the moisture source is temporary — growth will return as long as relative humidity remains above 60% in the crawlspace.</strong>
-      </p>
-      <p>
-        Mold is a symptom of a moisture problem, not the problem itself. In most
-        North Carolina crawlspaces, that moisture comes from one or more of the
-        following sources:
-      </p>
-      <ul>
-        <li>Ground moisture evaporating through unprotected soil</li>
-        <li>Humid exterior air entering through open crawlspace vents</li>
-        <li>Plumbing leaks or condensation on cold pipes</li>
-        <li>Poor drainage directing surface water toward the foundation</li>
-        <li>Inadequate or missing vapor barrier coverage</li>
-      </ul>
-      <p>
-        We identify and address the moisture source as part of every mold treatment
-        engagement. Treatment without remediation of the source is not a service
-        we recommend or provide independently.
-      </p>
-    </div>
-  </section>
-
-  <!-- CLEANING AND TREATMENT -->
-  <section class="section-alt">
-    <div class="container">
-      <h2>Surface Cleaning and Treatment</h2>
-      <p>
-        <strong class="answer-first">After moisture is controlled, surface mold on crawlspace framing is treated with EPA-registered antimicrobial solutions applied directly to affected wood surfaces.</strong>
-      </p>
-      <p>
-        Our treatment process for surface mold on framing members and sheathing includes:
-      </p>
-      <div class="card-grid">
-        <div class="card">
-          <h3>HEPA Vacuuming</h3>
-          <p>Loose surface mold and debris are removed with HEPA-filtered vacuum equipment before treatment application.</p>
+      <div class="svc-split">
+        <div>
+          <h2>Moisture Correction Comes First</h2>
+          <span class="answer-first"
+            >Treating mold without correcting the moisture source is temporary — growth will return
+            as long as RH remains above 60% in the crawlspace.</span
+          >
+          <p>
+            Most crawlspace mold returns because humidity was never corrected. We address both the
+            mold and the moisture source — targeting 45–50% RH to eliminate the conditions mold
+            needs to survive.
+          </p>
+          <div class="icon-cards">
+            <div class="icon-card">
+              <span class="icon-card__icon">🌱</span>
+              <div>
+                <strong>Ground Moisture</strong>
+                <p>Evaporation through unprotected soil raises crawlspace RH continuously</p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon">💨</span>
+              <div>
+                <strong>Humid Exterior Air</strong>
+                <p>Open crawlspace vents allow high-humidity air to enter freely</p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon">🔧</span>
+              <div>
+                <strong>Plumbing & Condensation</strong>
+                <p>Leaks or condensation on cold pipes add direct moisture to the space</p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon">🚫</span>
+              <div>
+                <strong>Missing Vapor Barrier</strong>
+                <p>Inadequate vapor barrier coverage dramatically increases moisture load</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h3>Antimicrobial Application</h3>
-          <p>EPA-registered treatment products are applied to affected surfaces. We follow manufacturer specifications for dwell time and coverage.</p>
-        </div>
-        <div class="card">
-          <h3>Post-Treatment Documentation</h3>
-          <p>We document treated areas with photos before and after. This provides a baseline for future inspections and confirms scope of work.</p>
-        </div>
-        <div class="card">
-          <h3>Encapsulation Recommendation</h3>
-          <p>Where appropriate, we recommend encapsulation and dehumidification following treatment to prevent recurrence.</p>
+        <div class="svc-split__image">
+          <div class="img-box img-box--tall">
+            <span class="img-box__icon">🖼</span>
+            <span class="img-box__text"
+              >Crawlspace mold on<br />floor joists before treatment<br /><small
+                >mold-before.webp</small
+              ></span
+            >
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WOOD PRESERVATION -->
+  <!-- TREATMENT PROCESS -->
   <section class="section">
     <div class="container">
-      <h2>Wood Preservation After Treatment</h2>
-      <p>
-        <strong class="answer-first">Surface mold treated at early stages leaves wood structurally intact — the goal of treatment is to halt active growth and prevent the conditions that allowed it to develop.</strong>
-      </p>
-      <p>
-        Surface mold (typically appearing as white, gray, or black discoloration on
-        wood framing) is different from wood rot, which involves structural degradation
-        of the wood fiber itself. Surface mold treated before it penetrates deep into
-        the wood grain typically does not compromise structural integrity.
-      </p>
-      <p>
-        Following treatment, maintaining RH at 45–50% creates an environment where
-        mold cannot sustain growth on wood surfaces — even if spores are present.
-        This is why humidity control and mold treatment go together as a system,
-        not as separate, one-time interventions.
-      </p>
+      <div class="svc-split">
+        <div>
+          <h2>Our Mold Treatment Process</h2>
+          <span class="answer-first"
+            >After moisture is controlled, surface mold on crawlspace framing is treated with
+            EPA-registered antimicrobial solutions applied directly to affected wood surfaces.</span
+          >
+          <p>
+            We apply treatment by targeted surface cleaning or controlled fogging to reach framing
+            areas within the crawlspace.
+          </p>
+          <div class="svc-steps">
+            <div class="svc-step">
+              <div class="svc-step__num">1</div>
+              <div class="svc-step__body">
+                <h3>Moisture Source Evaluation</h3>
+                <p>
+                  We identify and document all active moisture sources before any treatment begins.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">2</div>
+              <div class="svc-step__body">
+                <h3>HEPA Vacuuming</h3>
+                <p>
+                  Loose surface mold and debris removed with HEPA-filtered equipment before
+                  treatment application.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">3</div>
+              <div class="svc-step__body">
+                <h3>Botanical Antimicrobial Application</h3>
+                <p>
+                  EPA-registered botanical treatment products applied to affected surfaces — no
+                  bleach, no harsh chemical fumes.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">4</div>
+              <div class="svc-step__body">
+                <h3>Before & After Documentation</h3>
+                <p>
+                  Treated areas documented with photos before and after — providing a baseline for
+                  future inspections.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">5</div>
+              <div class="svc-step__body">
+                <h3>Humidity Control Recommendation</h3>
+                <p>
+                  We recommend dehumidification and encapsulation following treatment to prevent
+                  recurrence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="svc-split__image">
+          <div class="img-box img-box--tall">
+            <span class="img-box__icon">🖼</span>
+            <span class="img-box__text"
+              >Technician treating<br />crawlspace mold<br /><small>mold-treatment.webp</small
+              ></span
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- STRUCTURAL -->
-  <section class="section-alt">
+  <!-- BOTANICAL TREATMENT -->
+  <section class="section">
     <div class="container">
-      <h2>When Structural Repair Is Needed</h2>
-      <p>
-        <strong class="answer-first">When moisture exposure has progressed beyond surface mold to actual wood decay, structural repair or replacement of framing members may be required — a scope beyond mold treatment alone.</strong>
-      </p>
-      <p>
-        Signs that structural assessment may be needed include:
-      </p>
-      <ul>
-        <li>Soft, spongy, or crumbling wood when pressed</li>
-        <li>Visible fungal growth with a shelf-like or 3D structure (not flat discoloration)</li>
-        <li>Sagging floors above the crawlspace</li>
-        <li>Visible separation or cracking along the wood grain</li>
-      </ul>
-      <p>
-        If we observe these conditions during evaluation, we will document them and
-        recommend that you engage a licensed structural contractor to assess the
-        framing before proceeding with any moisture control work.
+      <div class="svc-split">
+        <div>
+          <h2>Safer, Botanical Mold Treatment Options</h2>
+          <span class="answer-first"
+            >We use professional-grade botanical and non-bleach mold control products that are safer
+            for homes, families, and pets.</span
+          >
+          <p>
+            We use EPA-registered products including Benefect Botanical Decon 30 and Concrobium Mold
+            Control, both commonly used in restoration settings.
+          </p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Benefect Botanical Decon 30 — plant-based disinfectant formulated with thymol,
+                derived from thyme oil</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >No bleach, ammonia, or harsh chemical fumes</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span>No strong synthetic fragrances</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Safe for wood framing, subflooring, and structural materials</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Concrobium Mold Control eliminates mold and leaves a protective barrier to help
+                prevent regrowth</span>
+            </div>
+          </div>
+        </div>
+        <div class="svc-split__image">
+          <div class="img-box img-box--tall">
+            <span class="img-box__icon">🖼</span>
+            <span class="img-box__text"
+              >Botanical mold treatment<br />products used on-site<br /><small
+                >mold-products.webp</small
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCOPE -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>What We Do — and What We Don't Do</h2>
+      <span class="answer-first"
+        >We treat crawlspace mold and correct the moisture conditions that allow it to grow.</span
+      >
+      <div class="clarification-box">
+        <p><strong>We do not:</strong></p>
+        <ul style="padding-left:1.25rem; margin-top:0.5rem;">
+          <li style="font-size:0.9rem; color:#4a5a6a; margin-bottom:0.35rem;">
+            Perform full structural tear-out remediation
+          </li>
+          <li style="font-size:0.9rem; color:#4a5a6a; margin-bottom:0.35rem;">
+            Treat mold inside living areas
+          </li>
+          <li style="font-size:0.9rem; color:#4a5a6a;">Clean HVAC duct systems</li>
+        </ul>
+      </div>
+      <p style="margin-top:1.25rem;">
+        If your situation requires full remediation or structural repair, we will document what we
+        observe and recommend the appropriate licensed contractor.
       </p>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Concerned About Mold in Your Crawlspace?</h2>
-      <p>We evaluate moisture conditions and visible mold growth — and give you an honest assessment of what's needed.</p>
-      <a href="/contact" class="btn btn-primary">Schedule an Evaluation</a>
+  <!-- SURFACE MOLD VS ROT -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Surface Mold vs. Structural Wood Rot</h2>
+      <span class="answer-first"
+        >Surface mold treated at early stages leaves wood structurally intact — the goal is to halt
+        active growth and eliminate the conditions that allowed it to develop.</span
+      >
+      <p>
+        Surface mold — typically appearing as white, gray, or black discoloration on wood framing —
+        is different from wood rot, which involves structural degradation of the wood fiber itself.
+        Crawlspace mold removal performed before mold penetrates deep into the wood grain typically
+        does not compromise structural integrity.
+      </p>
+      <p>Signs that structural assessment may be needed:</p>
+      <div class="signs-grid" style="grid-template-columns: repeat(2,1fr);">
+        <div class="sign-card">
+          <span class="sign-card__icon">🪵</span><p>Soft, spongy, or crumbling wood when pressed</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">🍄</span><p>
+            Fungal growth with a shelf-like or 3D structure
+          </p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">🏠</span><p>Sagging floors above the crawlspace</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">⚠️</span><p>
+            Visible separation or cracking along the wood grain
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- PREVENTION -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Mold Prevention Through Humidity Control</h2>
+      <span class="answer-first"
+        >Mold prevention through humidity control is the most effective long-term strategy — not
+        repeated surface treatments.</span
+      >
+      <p>
+        Most crawlspace mold problems return because humidity was never corrected. We address both
+        the mold and the moisture source — maintaining 45–50% RH creates an environment where mold
+        cannot sustain growth on wood surfaces, even if spores are present.
+      </p>
+      <p>
+        For vented crawlspaces see our <a href="/crawlspace-vented"
+          >professional crawlspace dehumidifier installation in Raleigh</a
+        >. For sealed systems see our <a href="/crawlspace-encapsulated"
+          >encapsulated crawlspace dehumidifier installation</a
+        > page.
+      </p>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="svc-cta">
+    <div class="container svc-cta__inner">
+      <h2>Stop Crawlspace Mold at the Source — Not Just the Surface</h2>
+      <p>
+        Serving Raleigh and Wake County, including Cary, Apex, Holly Springs, and Fuquay-Varina.
+      </p>
+      <a href="/contact" class="btn btn-green">Schedule Crawlspace Mold Inspection</a>
+      <span class="svc-cta__trust">Licensed &amp; insured. Serving the Triangle region.</span>
+    </div>
+  </section>
 </BaseLayout>
