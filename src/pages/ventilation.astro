@@ -1,170 +1,301 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'HomeAndConstructionBusiness',
+  name: 'Triangle Dehumidifiers, LLC',
+  telephone: '(919) 555-0123',
+  url: 'https://www.triangledehumidifiers.com',
+  areaServed: ['Raleigh', 'Holly Springs', 'Cary', 'Apex', 'Fuquay-Varina'],
+  serviceType: 'ERV Installation',
+  description:
+    'Professional ERV installation in Raleigh, NC. Balanced fresh-air ventilation designed for humid climates.',
+};
 ---
 
 <BaseLayout
-  title="ERV Installation Raleigh NC | Fresh Air Ventilation | Triangle Dehumidifiers"
-  description="ERV installation in Raleigh and the Triangle for controlled fresh-air ventilation. Balanced airflow with humidity-aware ventilation strategy for comfort and indoor air quality."
-  canonical="/erv-installation-raleigh"
+  title="ERV Installation Raleigh NC | Energy Recovery Ventilator | Triangle Dehumidifiers"
+  description="Professional energy recovery ventilator installation in Raleigh, NC. Balanced fresh-air ventilation designed for humid climates. Serving the Triangle region."
+  canonical="/ventilation"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 
-  <section class="hero">
+  <!-- HERO -->
+  <section class="svc-hero">
     <div class="container">
-      <h1>ERV Installation in Raleigh — Fresh Air Ventilation</h1>
-      <p>
-        Balanced ventilation that brings in fresh air while exchanging heat and moisture.
-        Done right, ERVs improve indoor air quality without creating a humidity problem.
+      <h1>ERV Installation in Raleigh, NC —<br />Fresh Air Ventilation</h1>
+      <span class="svc-hero__direct"
+        >Professional ERV installation designed for Wake County's humid climate.</span
+      >
+      <p class="svc-hero__sub">
+        An ERV (Energy Recovery Ventilator) brings fresh outdoor air into your home while
+        transferring heat and moisture between incoming and outgoing air streams — improving indoor
+        air quality without driving up humidity or energy costs.
       </p>
-      <a href="/contact" class="btn btn-primary">Request an Evaluation</a>
+      <div class="svc-hero__actions">
+        <a href="/contact" class="btn btn-green">Schedule Fresh-Air & Humidity Evaluation</a>
+        <a href="tel:9195550123" class="btn btn-secondary">Call (919) 555-0123</a>
+      </div>
     </div>
   </section>
 
+  <!-- WHY ERV MATTERS -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Why ERV Installation Matters in This Area</h2>
+      <span class="answer-first"
+        >In Wake County's humid climate, outdoor air can raise indoor humidity if introduced without
+        control.</span
+      >
+      <p>
+        An ERV uses energy recovery technology to exchange air efficiently while moderating
+        temperature and moisture — improving indoor air quality without making humidity worse. This
+        makes balanced fresh air ventilation in the Triangle region fundamentally different from
+        simply opening a window or adding an intake fan.
+      </p>
+      <p>
+        ERVs improve ventilation and energy performance, but because humid outdoor air can still
+        raise indoor moisture, they are often paired with whole-home dehumidification systems for
+        balanced comfort and humidity control.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHAT AN ERV DOES -->
   <section class="section">
     <div class="container">
-      <h2>What an ERV Does</h2>
-      <p>
-        <strong class="answer-first">An ERV provides balanced fresh-air ventilation while transferring heat and moisture between incoming and outgoing air — improving indoor air quality without spiking humidity.</strong>
-      </p>
-      <p>
-        In tight homes, ventilation matters. An ERV helps control stale air, odors, and
-        indoor pollutants without the "open a window" approach that can drive humidity
-        to damaging levels during North Carolina summers.
-      </p>
-    </div>
-  </section>
-
-  <section class="section-alt">
-    <div class="container">
-      <h2>When an ERV Makes Sense</h2>
-      <p>
-        <strong class="answer-first">ERVs are most useful when the home is tight or when indoor air quality issues persist despite other measures.</strong>
-      </p>
-      <ul>
-        <li>Newer or tighter homes with poor natural air exchange</li>
-        <li>Odors that linger — cooking, pets, musty smells</li>
-        <li>Condensation concerns on windows or vents</li>
-        <li>Allergy-sensitive households</li>
-        <li>Homes adding whole-home dehumidification for stable RH control</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>Humidity and Ventilation in Raleigh</h2>
-      <p>
-        <strong class="answer-first">Fresh air is valuable — until it brings in moisture faster than your systems can remove it. We design ventilation with humidity in mind from the start.</strong>
-      </p>
-      <p>
-        If your crawlspace is damp, the Stack Effect can also pull moisture upward
-        into the living area. ERV installation works best when humidity sources are
-        controlled and indoor RH targets are realistic — typically 45–50% Relative
-        Humidity for Triangle-area homes.
-      </p>
-    </div>
-  </section>
-
-  <section class="section-alt">
-    <div class="container">
-      <h2>How We Install and Commission ERVs</h2>
-      <p>
-        <strong class="answer-first">We size airflow, plan duct routes, and verify balanced performance — so the ERV actually does what it's supposed to do.</strong>
-      </p>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Airflow Sizing</h3>
-          <p>Proper ventilation rates based on home size and occupancy — not a one-size-fits-all approach.</p>
+      <div class="svc-split">
+        <div>
+          <h2>What an ERV Does</h2>
+          <span class="answer-first"
+            >An ERV provides balanced fresh-air ventilation while transferring heat and moisture
+            between incoming and outgoing air — improving indoor air quality without spiking
+            humidity.</span
+          >
+          <p>
+            In tight homes, ventilation matters. An ERV helps control stale air, odors, and indoor
+            pollutants without the "open a window" approach that can drive humidity to damaging
+            levels during North Carolina summers.
+          </p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Recovers heat and moisture between outgoing and incoming air for energy efficiency</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Supplies fresh air year-round without opening windows</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Reduces indoor pollutants like VOCs, odors, dust, and allergens</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Reduces overall humidity load compared to open intake ventilation</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Often paired with whole-home dehumidification for stable RH control</span>
+            </div>
+          </div>
+          <p style="margin-top:1.25rem;">
+            For example, the AprilAire Model 8100 ERV provides constant, controlled fresh air to the
+            whole home, features an energy-recovery core to retain heat or coolness, and can help
+            reduce excess indoor humidity as part of a balanced ventilation system.
+          </p>
         </div>
-        <div class="card">
-          <h3>Duct Routing</h3>
-          <p>Intake and exhaust locations planned to avoid short-circuiting and to prevent pulling air from attics or crawlspaces.</p>
-        </div>
-        <div class="card">
-          <h3>HVAC Integration</h3>
-          <p>Standalone ducting or proper tie-in to existing HVAC — evaluated for your specific system configuration.</p>
-        </div>
-        <div class="card">
-          <h3>Commissioning</h3>
-          <p>Airflow verification and balanced performance confirmed at installation, with a clear maintenance plan.</p>
+        <div class="svc-split__image">
+          <div class="img-box img-box--tall">
+            <span class="img-box__icon">🖼</span>
+            <span class="img-box__text"
+              >ERV unit installed<br />in mechanical room<br /><small>erv-unit.webp</small></span
+            >
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- WHEN IT MAKES SENSE -->
   <section class="section">
     <div class="container">
-      <h2>Common Problems We Prevent</h2>
-      <p>
-        <strong class="answer-first">Most ERV problems come from bad ducting, incorrect sizing, or installing ventilation without enough dehumidification capacity to handle the added moisture load.</strong>
-      </p>
-      <ul>
-        <li>Unbalanced airflow causing pressure problems in the home</li>
-        <li>Pulling air from attic or crawlspace locations (contamination risk)</li>
-        <li>Adding ventilation without sufficient dehumidification capacity</li>
-        <li>Poor filter access leading to neglected maintenance</li>
-      </ul>
+      <div class="svc-split">
+        <div>
+          <h2>When an ERV Makes Sense</h2>
+          <span class="answer-first"
+            >ERVs are most useful when the home is tight or when indoor air quality issues persist
+            despite other measures.</span
+          >
+          <div class="icon-cards">
+            <div class="icon-card">
+              <span class="icon-card__icon">🏠</span>
+              <div>
+                <strong>Tight Construction</strong>
+                <p>Newer or tighter homes with poor natural air exchange</p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon">👃</span>
+              <div>
+                <strong>Persistent Odors</strong>
+                <p>Odors that linger — cooking, pets, musty smells</p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon">🪟</span>
+              <div>
+                <strong>Condensation Issues</strong>
+                <p>Condensation concerns on windows or vents</p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon">💧</span>
+              <div>
+                <strong>Paired With Dehumidification</strong>
+                <p>
+                  Homes adding whole-home dehumidification for stable RH control alongside fresh-air
+                  ventilation
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="svc-split__image">
+          <div class="img-box img-box--tall">
+            <span class="img-box__icon">🖼</span>
+            <span class="img-box__text"
+              >ERV ductwork installation<br />in attic<br /><small>erv-install.webp</small></span
+            >
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section-alt">
+  <!-- HUMIDITY AND VENTILATION -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Humidity and Ventilation in the Triangle Region</h2>
+      <span class="answer-first"
+        >Fresh air is valuable — until it brings in moisture faster than your systems can remove it.
+        We design ventilation with humidity in mind from the start.</span
+      >
+      <p>
+        Uncontrolled outdoor air can raise indoor Relative Humidity (RH) above 60% in humid climates
+        without proper design. Ventilation without humidity control creates the exact conditions
+        where mold becomes active and comfort suffers. If your crawlspace is also damp, the Stack
+        Effect pulls additional moisture upward — compounding the problem.
+      </p>
+      <p>
+        ERV installation works best when humidity sources are controlled and indoor RH targets are
+        realistic — typically 45–50% for homes in this area.
+      </p>
+    </div>
+  </section>
+
+  <!-- INSTALLATION PROCESS -->
+  <section class="section">
     <div class="container">
+      <h2>How We Install and Commission ERVs</h2>
+      <span class="answer-first"
+        >We size airflow, plan duct routes, and verify balanced performance — so the ERV actually
+        does what it's supposed to do.</span
+      >
+      <p style="max-width:780px; margin-bottom:1.5rem;">
+        We verify airflow rates, static pressure, and humidity targets before commissioning to
+        ensure balanced performance.
+      </p>
+      <div class="two-col">
+        <div class="two-col-card">
+          <h3>Airflow Sizing</h3>
+          <p>
+            Proper ventilation rates based on home size and occupancy — not a one-size-fits-all
+            approach.
+          </p>
+        </div>
+        <div class="two-col-card">
+          <h3>Duct Routing</h3>
+          <p>
+            Intake and exhaust locations planned to avoid short-circuiting and to prevent pulling
+            air from attics or crawlspaces.
+          </p>
+        </div>
+        <div class="two-col-card">
+          <h3>HVAC Integration</h3>
+          <p>
+            Standalone ducting or proper tie-in to existing HVAC — evaluated for your specific
+            system configuration.
+          </p>
+        </div>
+        <div class="two-col-card">
+          <h3>Commissioning</h3>
+          <p>
+            Airflow verification and balanced performance confirmed at installation, with a clear
+            maintenance plan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
       <h2>Frequently Asked Questions</h2>
       <div class="faq-list">
         <div class="faq-item">
           <h3>Will an ERV lower humidity?</h3>
-          <p>It can reduce humidity load compared to straight outside-air ventilation, but it is not a dehumidifier. In most Triangle-area homes, dedicated dehumidification is still needed alongside an ERV.</p>
+          <p>
+            It can reduce humidity load compared to straight outside-air ventilation, but it is not
+            a dehumidifier. In most Triangle-area homes, dedicated dehumidification is still needed
+            alongside an ERV.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Does an ERV replace a dehumidifier?</h3>
+          <p>
+            No. In humid climates like North Carolina, ERVs and dedicated dehumidification often
+            work together. An ERV manages fresh air. A dehumidifier controls RH. Both serve
+            different functions.
+          </p>
         </div>
         <div class="faq-item">
           <h3>Do I need an ERV or an HRV?</h3>
-          <p>In humid climates like North Carolina, ERVs are generally preferred because they transfer some moisture between airstreams. Final choice depends on the home, the HVAC system, and your specific goals.</p>
+          <p>
+            In humid climates, ERVs are generally preferred because they transfer some moisture
+            between airstreams. Final choice depends on the home, the HVAC system, and your specific
+            goals.
+          </p>
         </div>
         <div class="faq-item">
           <h3>Where does it vent?</h3>
-          <p>We plan intake and exhaust locations carefully to avoid pulling contaminants and to keep airflow balanced across the home.</p>
+          <p>
+            We plan intake and exhaust locations carefully to avoid pulling contaminants and to keep
+            airflow balanced across the home.
+          </p>
         </div>
         <div class="faq-item">
           <h3>How often do filters need changing?</h3>
-          <p>Depends on conditions and usage, but plan on regular filter checks. Easy maintenance access is part of every install we do.</p>
+          <p>
+            Depends on conditions and usage, but plan on regular filter checks. Easy maintenance
+            access is part of every install we do.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Related Services -->
-  <section class="section">
-    <div class="container">
-      <h2>Related Services</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Whole-Home Dehumidifiers</h3>
-          <p>Ducted dehumidification for house-wide humidity control — often paired with ERV systems.</p>
-          <a href="/whole-home-dehumidifier-installation-raleigh">Learn more &rarr;</a>
-        </div>
-        <div class="card">
-          <h3>Crawlspace Dehumidifiers</h3>
-          <p>Control the moisture source before it reaches your living area through the Stack Effect.</p>
-          <a href="/crawlspace-dehumidifier-installation-raleigh">Learn more &rarr;</a>
-        </div>
-        <div class="card">
-          <h3>Encapsulated Crawlspaces</h3>
-          <p>Sealed crawlspace systems that reduce moisture migration into the home.</p>
-          <a href="/encapsulated-crawlspace-dehumidifier-raleigh">Learn more &rarr;</a>
-        </div>
-        <div class="card">
-          <h3>Mold Treatment</h3>
-          <p>Surface mold treatment for crawlspaces after moisture is corrected.</p>
-          <a href="/crawlspace-mold-treatment-raleigh">Learn more &rarr;</a>
-        </div>
-      </div>
+  <!-- BOTTOM CTA -->
+  <section class="svc-cta">
+    <div class="container svc-cta__inner">
+      <h2>Balanced Fresh Air — Without Creating a Humidity Problem</h2>
+      <p>
+        Serving Raleigh and Wake County, including Cary, Apex, Holly Springs, and Fuquay-Varina.
+      </p>
+      <a href="/contact" class="btn btn-green">Schedule Fresh-Air & Humidity Evaluation</a>
+      <span class="svc-cta__trust">Licensed &amp; insured. Serving the Triangle region.</span>
     </div>
   </section>
-
-  <section class="cta-section">
-    <div class="container">
-      <h2>Get Fresh-Air Ventilation That Works With Your Humidity Control</h2>
-      <p>We'll recommend the right approach for your home and your air quality goals.</p>
-      <a href="/contact" class="btn btn-primary">Contact Us Today</a>
-    </div>
-  </section>
-
 </BaseLayout>
