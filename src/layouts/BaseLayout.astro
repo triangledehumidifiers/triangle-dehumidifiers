@@ -4,14 +4,11 @@ import '../styles/theme.css';
 interface Props {
   title: string;
   description: string;
-  canonical: string;
-  ogTitle?: string;
-  ogDescription?: string;
+  canonical?: string;
 }
 
-const { title, description, canonical, ogTitle, ogDescription } = Astro.props;
-const siteUrl = 'https://www.triangledehumidifiers.com';
-const fullCanonical = `${siteUrl}${canonical}`;
+const { title, description, canonical } = Astro.props;
+const canonicalURL = canonical ? `https://www.triangledehumidifiers.com${canonical}` : undefined;
 ---
 
 <!doctype html>
@@ -19,32 +16,19 @@ const fullCanonical = `${siteUrl}${canonical}`;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#122F5B" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={fullCanonical} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={fullCanonical} />
-    <meta property="og:title" content={ogTitle || title} />
-    <meta property="og:description" content={ogDescription || description} />
-    <meta property="og:site_name" content="Triangle Dehumidifiers" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content={ogTitle || title} />
-    <meta name="twitter:description" content={ogDescription || description} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    {canonicalURL && <link rel="canonical" href={canonicalURL} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-
   <body>
     <!-- TOP BAR -->
     <div class="topbar">
       <div class="container topbar-inner">
-        <span class="topbar-left">Serving the Triangle Region of NC</span>
+        <span class="topbar-left"
+          >Serving Raleigh, Holly Springs, Cary, Apex &amp; Fuquay-Varina</span
+        >
         <span class="topbar-right">(919) 555-0123</span>
       </div>
     </div>
@@ -55,20 +39,25 @@ const fullCanonical = `${siteUrl}${canonical}`;
         <a href="/" class="site-logo">
           <img src="/logo.png" alt="Triangle Dehumidifiers" class="logo-img" />
         </a>
-
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
-
-        <ul class="site-nav" id="siteNav">
-          <li><a href="/crawlspace-vented">Vented Crawlspaces</a></li>
-          <li><a href="/crawlspace-closed">Closed Crawlspaces</a></li>
-          <li><a href="/whhole-home">Whole-Home</a></li>
-          <li><a href="/erv">ERV</a></li>
-          <li><a href="/mold-treatment">Mold Treatment</a></li>
-          <li><a href="/service-areas">Service Areas</a></li>
-          <li><a href="/contact" class="nav-cta">Contact Us</a></li>
-        </ul>
+        <nav>
+          <ul class="site-nav" id="site-nav">
+            <li><a href="/crawlspace-vented">Vented Crawlspace</a></li>
+            <li>
+              <a href="/crawlspace-encapsulated"
+                >Encapsulated Crawlspace <li>
+                  <a href="/crawlspace-vented">Vented Crawlspace</a>
+                </li></a>
+            </li>
+            <li><a href="/whole-home">Whole-Home</a></li>
+            <li><a href="/ventilation">Ventilation</a></li>
+            <li><a href="/mold-treatment">Mold Treatment</a></li>
+            <li><a href="/service-areas">Service Areas</a></li>
+            <li><a href="/contact" class="nav-cta">Get Inspection</a></li>
+          </ul>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
       </div>
     </header>
 
@@ -82,30 +71,23 @@ const fullCanonical = `${siteUrl}${canonical}`;
       <div class="container">
         <ul class="footer-links">
           <li><a href="/">Home</a></li>
-          <li><a href="/crawlspace-vented">Crawlspace</a></li>
-          <li><a href="/crawlspace-closed">Encapsulated</a></li>
+          <li><a href="/crawlspace-vented">VentedCrawlspace</a></li>
+          <li><a href="/crawlspace-encapsulated">Encapsulated Crawlspace</a></li>
+          <li><a href="/whole-home">Whole-Home</a></li>
+          <li><a href="/ventilation">Ventilation</a></li>
           <li><a href="/mold-treatment">Mold Treatment</a></li>
           <li><a href="/service-areas">Service Areas</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/privacy">Privacy Policy</a></li>
         </ul>
-        <p>
-          &copy; {new Date().getFullYear()} Triangle Dehumidifiers, LLC &mdash; A Peak Energy, Inc. Company<br
-          />
-          Serving Holly Springs, Raleigh, Cary, Apex, Fuquay-Varina &amp; the Triangle Region of NC<br
-          />
-          <a href="tel:9195550123">(919) 555-0123</a> &bull;
-          <a href="mailto:info@triangledehumidifiers.com">info@triangledehumidifiers.com</a>
-        </p>
+        <p>&copy; {new Date().getFullYear()} Triangle Dehumidifiers, LLC. All rights reserved.</p>
       </div>
     </footer>
 
     <script>
-      const toggle = document.getElementById('navToggle');
-      const nav = document.getElementById('siteNav');
-      toggle?.addEventListener('click', () => {
-        nav?.classList.toggle('open');
-      });
+      const toggle = document.getElementById('nav-toggle');
+      const nav = document.getElementById('site-nav');
+      toggle?.addEventListener('click', () => nav?.classList.toggle('open'));
     </script>
   </body>
 </html>
