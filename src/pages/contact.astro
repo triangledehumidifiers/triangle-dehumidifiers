@@ -43,7 +43,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div style="margin-top:1.5rem;">
             <h3>Email</h3>
             <p>
-              <a href="mailto:info@triangledehumidifiers.com">info@triangledehumidifiers.com</a>
+              <a href="mailto:service@triangledehumidifiers.com"
+                >service@triangledehumidifiers.com</a>
             </p>
           </div>
 
@@ -73,14 +74,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <form
             class="contact-form"
             style="margin-top:1rem;"
-            name="contact"
             method="POST"
-            action="/thank-you"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
+            action="https://api.web3forms.com/submit"
           >
-            <input type="hidden" name="form-name" value="contact" />
-            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="access_key" value="0f16e7c8-0038-4937-ba56-11e3dc9fecaa" />
+            <input
+              type="hidden"
+              name="subject"
+              value="New Inspection Request — Triangle Dehumidifiers"
+            />
+            <input type="hidden" name="from_name" value="Triangle Dehumidifiers Website" />
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://triangle-dehumidifiers.pages.dev/thank-you"
+            />
+            <input type="checkbox" name="botcheck" style="display:none;" />
 
             <div class="form-group">
               <label for="name">Full Name</label>
