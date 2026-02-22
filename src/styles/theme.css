@@ -789,13 +789,13 @@ li {
 
 .site-footer {
   background-color: #122f5b;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
   padding: 1.5rem 0 1.25rem;
   text-align: center;
   font-size: 0.9rem;
 }
 .site-footer a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
 }
 .site-footer a:hover {
   color: #ffffff;
@@ -1107,7 +1107,7 @@ li {
   margin-bottom: 0.75rem;
 }
 .svc-cta__inner p {
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
   margin-bottom: 1.75rem;
   font-size: 1rem;
 }
