@@ -3,20 +3,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'HomeAndConstructionBusiness',
-  name: 'Triangle Dehumidifiers, LLC',
-  telephone: '(919) 555-0123',
-  url: 'https://www.triangledehumidifiers.com',
-  areaServed: ['Raleigh', 'Holly Springs', 'Cary', 'Apex', 'Fuquay-Varina'],
-  serviceType: 'Crawlspace Dehumidifier Installation',
-  description:
-    'Professional crawlspace dehumidifier installation in Wake County and the Raleigh area. Maintain 45–50% RH to prevent mold and wood rot.',
+  '@graph': [
+    {
+      '@type': 'HomeAndConstructionBusiness',
+      name: 'Triangle Dehumidifiers, LLC',
+      telephone: '(919) 555-0123',
+      url: 'https://www.triangledehumidifiers.com',
+      areaServed: [
+        { '@type': 'City', name: 'Raleigh' },
+        { '@type': 'City', name: 'Holly Springs' },
+        { '@type': 'City', name: 'Cary' },
+        { '@type': 'City', name: 'Apex' },
+        { '@type': 'City', name: 'Fuquay-Varina' },
+      ],
+      serviceType: 'Crawlspace Dehumidifier Installation',
+    },
+    {
+      '@type': 'Service',
+      name: 'Crawlspace Dehumidifier Installation',
+      provider: { '@type': 'HomeAndConstructionBusiness', name: 'Triangle Dehumidifiers, LLC' },
+      areaServed: [
+        { '@type': 'City', name: 'Raleigh' },
+        { '@type': 'City', name: 'Holly Springs' },
+        { '@type': 'City', name: 'Cary' },
+        { '@type': 'City', name: 'Apex' },
+        { '@type': 'City', name: 'Fuquay-Varina' },
+      ],
+      description:
+        'Professional crawlspace dehumidifier installation in Wake County and the Raleigh area. Maintain 45–50% RH to prevent mold and wood rot.',
+    },
+  ],
 };
 ---
 
 <BaseLayout
-  title="Crawlspace Dehumidifier Installation | Wake County & Raleigh Area"
-  description="Professional crawlspace dehumidifier installation in Wake County and the Raleigh area. Maintain 45–50% RH to prevent mold, wood rot, and musty odors. Free evaluations available."
+  title="Crawlspace Dehumidifier Installation | Raleigh NC"
+  description="Professional crawlspace dehumidifier installation in Raleigh, NC. Maintains 45–50% RH to prevent mold, wood rot & musty odors. Serving Wake County. Free evaluation."
   canonical="/crawlspace-dehumidifier-installation-raleigh"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
@@ -245,6 +267,9 @@ const schema = {
           <img
             src="/images/vented-crawlspace-open-foundation-vent-raleigh-nc.webp"
             alt="Open foundation vent on a vented crawlspace in Raleigh NC"
+            width="780"
+            height="320"
+            fetchpriority="high"
             style="width:100%;height:320px;object-fit:cover;border-radius:var(--radius-md);display:block;"
           />
         </div>

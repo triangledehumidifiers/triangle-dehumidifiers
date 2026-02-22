@@ -23,7 +23,13 @@ const schema = {
       '@type': 'Service',
       name: 'Energy Recovery Ventilator (ERV) Installation',
       provider: { '@type': 'HomeAndConstructionBusiness', name: 'Triangle Dehumidifiers, LLC' },
-      areaServed: 'Raleigh, NC and Wake County',
+      areaServed: [
+        { '@type': 'City', name: 'Raleigh' },
+        { '@type': 'City', name: 'Holly Springs' },
+        { '@type': 'City', name: 'Cary' },
+        { '@type': 'City', name: 'Apex' },
+        { '@type': 'City', name: 'Fuquay-Varina' },
+      ],
       description:
         "Professional ERV installation in Raleigh, NC. Balanced fresh-air ventilation designed for Wake County's humid climate.",
     },
@@ -208,6 +214,9 @@ const schema = {
           <img
             src="/images/erv-installation-raleigh-nc.webp"
             alt="ERV installation in Raleigh NC"
+            width="780"
+            height="320"
+            fetchpriority="high"
             style="width:100%;height:320px;object-fit:cover;border-radius:var(--radius-md);display:block;"
           />
         </div>

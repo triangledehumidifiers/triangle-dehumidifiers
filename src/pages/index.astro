@@ -13,7 +13,13 @@ const schema = {
     addressRegion: 'NC',
     addressCountry: 'US',
   },
-  areaServed: ['Holly Springs', 'Raleigh', 'Cary', 'Apex', 'Fuquay-Varina'],
+  areaServed: [
+    { '@type': 'City', name: 'Holly Springs' },
+    { '@type': 'City', name: 'Raleigh' },
+    { '@type': 'City', name: 'Cary' },
+    { '@type': 'City', name: 'Apex' },
+    { '@type': 'City', name: 'Fuquay-Varina' },
+  ],
   serviceType: [
     'Crawlspace Dehumidifier Installation',
     'Crawlspace Encapsulation',
