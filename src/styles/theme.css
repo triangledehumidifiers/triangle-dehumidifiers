@@ -181,9 +181,11 @@ li {
   flex-shrink: 0;
 }
 .logo-img {
-  height: 68px;
-  width: auto;
+  width: 79px;
+  height: 65px;
   display: block;
+  /* Prevents any font/layout shift from resizing the logo */
+  flex-shrink: 0;
 }
 .site-nav {
   display: flex;
@@ -1519,4 +1521,60 @@ a.site-logo,
 .site-nav a,
 .footer-links a {
   text-decoration: none;
+}
+
+/* ============================================
+   CONTACT INFO BLOCK
+   ============================================ */
+
+.contact-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+  /* Reserve space so content below doesn't shift on load */
+  min-height: 160px;
+  contain: layout;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  /* Lock row height to prevent reflow */
+  min-height: 44px;
+}
+
+/* Lock SVG icon dimensions explicitly — unsized SVGs cause CLS */
+.contact-info-icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  stroke: var(--color-accent);
+  /* Prevent icon from affecting layout flow while loading */
+  display: block;
+}
+
+.contact-info-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  margin-bottom: 2px;
+  /* Reserve line height so text swap doesn't shift layout */
+  line-height: 1.2;
+  min-height: 1em;
+}
+
+.contact-info-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  line-height: 1.4;
+  display: block;
 }

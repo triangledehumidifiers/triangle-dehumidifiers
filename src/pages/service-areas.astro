@@ -42,11 +42,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </p>
         <img
           src="/images/service-map.webp"
-          alt="Triangle Dehumidifiers service area map — Raleigh, Wake County, Cary, Apex, Holly Springs, Fuquay-Varina, and surrounding Triangle communities"
+          srcset="/images/service-map.webp 1062w"
+          sizes="(max-width: 600px) 100vw, 531px"
+          alt="Map of Triangle Dehumidifiers service area covering Wake County and the greater Raleigh NC area"
           width="531"
           height="335"
-          loading="lazy"
-          style="width:100%; max-width:531px; height:auto; display:block; margin:0 auto;"
+          fetchpriority="high"
+          style="width:100%;height:auto;display:block;border-radius:var(--radius-md);"
         />
       </div>
       <p style="max-width:900px; margin:0 auto; font-size:1rem; color:#4a5a6a; line-height:1.8;">
