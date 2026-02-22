@@ -7,15 +7,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Thank you for contacting Triangle Dehumidifiers. We will be in touch shortly."
   canonical="/thank-you"
 >
-  <section class="svc-hero" style="text-align:center;">
+  <style>
+    .svc-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centers items horizontally */
+      justify-content: center; /* Centers items vertically if there is extra height */
+      text-align: center;
+      padding: 4rem 1rem;
+      min-height: 60vh; /* Gives the page some vertical breathing room */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto; /* Ensures the box itself stays in the middle of the screen */
+    }
+
+    .svc-hero__actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center; /* Centers the two buttons */
+      margin-top: 2rem;
+    }
+
+    /* Stack buttons on mobile */
+    @media (max-width: 600px) {
+      .svc-hero__actions {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+
+  <section class="svc-hero">
     <div class="container">
       <h1>Thank You</h1>
-      <span class="svc-hero__direct">Your request was sent. We will be in touch shortly.</span>
+      <span
+        class="svc-hero__direct"
+        style="display: block; font-weight: bold; margin-bottom: 1rem;"
+      >
+        Your request was sent. We will be in touch shortly.
+      </span>
       <p class="svc-hero__sub">
         If you need to reach us immediately, call us directly at (919) 567-5329. Most evaluations
         are scheduled within 1–2 business days.
       </p>
-      <div class="svc-hero__actions" style="justify-content:center;">
+      <div class="svc-hero__actions">
         <a href="tel:9195675329" class="btn btn-green">Call (919) 567-5329</a>
         <a href="/" class="btn btn-secondary">Back to Home</a>
       </div>
