@@ -1509,3 +1509,14 @@ li {
   width: 1.5rem;
   height: 1.5rem;
 }
+/* Accessibility: links must not rely on color alone */
+a {
+  text-decoration: underline;
+}
+a.btn,
+a.nav-cta,
+a.site-logo,
+.site-nav a,
+.footer-links a {
+  text-decoration: none;
+}
