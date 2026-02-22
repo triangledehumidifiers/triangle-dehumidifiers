@@ -19,9 +19,25 @@ const canonicalURL = canonical ? `https://www.triangledehumidifiers.com${canonic
     <title>{title}</title>
     <meta name="description" content={description} />
     {canonicalURL && <link rel="canonical" href={canonicalURL} />}
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    {canonicalURL && <meta property="og:url" content={canonicalURL} />}
+    <meta property="og:site_name" content="Triangle Dehumidifiers, LLC" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Performance -->
+    <link rel="preload" as="image" href="/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
+
   <body>
     <!-- TOP BAR -->
     <div class="topbar">
@@ -35,15 +51,21 @@ const canonicalURL = canonical ? `https://www.triangledehumidifiers.com${canonic
     <header class="site-header">
       <div class="container header-inner">
         <a href="/" class="site-logo">
-          <img src="/logo.png" alt="Triangle Dehumidifiers" class="logo-img" />
+          <img
+            src="/logo.png"
+            alt="Triangle Dehumidifiers LLC — Crawlspace Dehumidifier Installation Raleigh NC"
+            class="logo-img"
+          />
         </a>
-        <nav>
+        <nav aria-label="Primary Navigation">
           <ul class="site-nav" id="site-nav">
-            <li><a href="/crawlspace-vented">Vented Crawlspace</a></li>
-            <li><a href="/crawlspace-encapsulated">Encapsulated Crawlspace</a></li>
-            <li><a href="/whole-home">Whole-Home</a></li>
-            <li><a href="/ventilation">Ventilation</a></li>
-            <li><a href="/mold-treatment">Mold Treatment</a></li>
+            <li><a href="/crawlspace-dehumidifier-installation-raleigh">Vented Crawlspace</a></li>
+            <li>
+              <a href="/encapsulated-crawlspace-dehumidifier-raleigh-nc">Encapsulated Crawlspace</a>
+            </li>
+            <li><a href="/whole-house-dehumidifier-raleigh">Whole-Home</a></li>
+            <li><a href="/erv-installation-raleigh-nc">Ventilation</a></li>
+            <li><a href="/crawlspace-mold-treatment-raleigh">Mold Treatment</a></li>
             <li><a href="/service-areas">Service Areas</a></li>
             <li><a href="/contact" class="nav-cta">Get Inspection</a></li>
           </ul>
@@ -62,25 +84,34 @@ const canonicalURL = canonical ? `https://www.triangledehumidifiers.com${canonic
     <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container">
+        <div class="footer-nap">
+          <p><strong>Triangle Dehumidifiers, LLC</strong></p>
+          <p>Raleigh, NC</p>
+          <p>Phone: (919) 555-0123</p>
+          <p>Serving Raleigh, Holly Springs, Cary, Apex, Fuquay-Varina &amp; the Triangle region</p>
+        </div>
+
         <ul class="footer-links">
           <li><a href="/">Home</a></li>
-          <li><a href="/crawlspace-vented">Vented Crawlspace</a></li>
-          <li><a href="/crawlspace-encapsulated">Encapsulated Crawlspace</a></li>
-          <li><a href="/whole-home">Whole-Home</a></li>
-          <li><a href="/ventilation">Ventilation</a></li>
-          <li><a href="/mold-treatment">Mold Treatment</a></li>
-          <li><a href="/service-areas">Service Areas</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/crawlspace-dehumidifier-installation-raleigh">Vented Crawlspace</a></li>
+          <li>
+            <a href="/encapsulated-crawlspace-dehumidifier-raleigh-nc">Encapsulated Crawlspace</a>
+          </li><a href="/whole-house-dehumidifier-raleigh">Whole-Home</a>
         </ul>
-        <p>&copy; {new Date().getFullYear()} Triangle Dehumidifiers, LLC. All rights reserved.</p>
+        <li><a href="/erv-installation-raleigh-nc">Ventilation</a></li>
+        <li><a href="/crawlspace-mold-treatment-raleigh">Mold Treatment</a></li>
+        <li><a href="/service-areas">Service Areas</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
       </div>
-    </footer>
 
-    <script>
-      const toggle = document.getElementById('nav-toggle');
-      const nav = document.getElementById('site-nav');
-      toggle?.addEventListener('click', () => nav?.classList.toggle('open'));
-    </script>
+      <p>&copy; {new Date().getFullYear()} Triangle Dehumidifiers, LLC. All rights reserved.</p>
+    </footer>
   </body>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('site-nav');
+    toggle?.addEventListener('click', () => nav?.classList.toggle('open'));
+  </script>
 </html>

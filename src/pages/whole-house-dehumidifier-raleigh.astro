@@ -1,0 +1,566 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'HomeAndConstructionBusiness',
+      name: 'Triangle Dehumidifiers, LLC',
+      telephone: '(919) 555-0123',
+      url: 'https://www.triangledehumidifiers.com',
+      areaServed: [
+        { '@type': 'City', name: 'Raleigh' },
+        { '@type': 'City', name: 'Holly Springs' },
+        { '@type': 'City', name: 'Cary' },
+        { '@type': 'City', name: 'Apex' },
+        { '@type': 'City', name: 'Fuquay-Varina' },
+      ],
+      serviceType: 'Whole-House Dehumidifier Installation Raleigh NC',
+    },
+    {
+      '@type': 'Service',
+      name: 'Whole-House Dehumidifier Installation',
+      provider: { '@type': 'HomeAndConstructionBusiness', name: 'Triangle Dehumidifiers, LLC' },
+      areaServed: 'Raleigh, NC and Wake County',
+      description:
+        'Ducted and independent whole-house dehumidifier installation. Maintains 45–50% RH year-round.',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What RH should my home be in Raleigh?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Industry guidance references 40–60% RH as a recommended indoor range. We typically target 45–50% RH for comfort and mold-risk reduction in Raleigh homes.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can a whole-house dehumidifier run without the AC?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Whole-house dehumidifiers operate independently of cooling, maintaining stable RH even when the AC is off during mild weather.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'HVAC integrated vs. independent — which is better?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Both work well. HVAC integrated systems use existing ductwork for distribution. Independent systems have their own dedicated ductwork and airflow, making them suitable when HVAC duct access is limited.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do whole-house dehumidifiers need a drain?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Continuous drainage is standard for whole-house systems — gravity drain or condensate pump. No manual emptying required.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How long do whole-house dehumidifiers last?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Properly installed and maintained whole-house dehumidifiers typically last 8–12 years.',
+          },
+        },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Whole-House Dehumidifier Installation | Raleigh NC"
+  description="Whole-house dehumidifier installation in Raleigh, NC. Ducted or standalone systems that maintain 45–50% Relative Humidity (RH) when AC can't. Inspection-based sizing."
+  canonical="/whole-house-dehumidifier-raleigh"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- HERO -->
+  <section class="svc-hero">
+    <div class="container">
+      <h1>Whole-House Dehumidifier Installation<br />in Raleigh, NC</h1>
+      <span class="svc-hero__direct"
+        >If your HVAC system cannot keep indoor humidity below 50%, a whole-house dehumidifier
+        provides dedicated moisture control year-round.</span
+      >
+      <p class="svc-hero__sub">
+        Air conditioners are designed to cool, not continuously control humidity. We install
+        HVAC-integrated and dedicated whole-house dehumidifier systems that maintain 45–50% Relative
+        Humidity (RH) across Raleigh and the Triangle region — even when the AC is not running.
+      </p>
+      <div class="svc-hero__actions">
+        <a href="/contact" class="btn btn-green">Request Home Evaluation</a>
+        <a href="tel:9195550123" class="btn btn-secondary">Call (919) 555-0123</a>
+      </div>
+      <div style="display:flex; gap:1.5rem; margin-top:1.25rem; flex-wrap:wrap;">
+        <span style="font-size:0.85rem; color:#4a5a6a;">✓ Inspection-based sizing</span>
+        <span style="font-size:0.85rem; color:#4a5a6a;">✓ Continuous drainage — no buckets</span>
+        <span style="font-size:0.85rem; color:#4a5a6a;">✓ Verified RH performance</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY HVAC IS NOT ENOUGH -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-split">
+        <div>
+          <h2>Why HVAC Alone Is Not Enough</h2>
+          <span class="answer-first"
+            >Air conditioning removes moisture only while actively cooling.</span
+          >
+          <p>
+            During mild spring and fall weather, your AC short-cycles or doesn't run at all —
+            leaving indoor humidity uncontrolled. High-efficiency systems cool so quickly they don't
+            run long enough to remove meaningful moisture from the air.
+          </p>
+          <p>
+            Indoor humidity above 60% increases mold growth risk. Indoor RH routinely stays at
+            55–65% during shoulder seasons — well above the threshold where mold becomes active and
+            dust mites thrive.
+          </p>
+          <div class="icon-cards">
+            <div class="icon-card">
+              <span class="icon-card__icon">❄️</span>
+              <div>
+                <strong>Short Cycling</strong>
+                <p>AC turns off before removing enough moisture — especially in spring and fall</p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon">⚡</span>
+              <div>
+                <strong>High-Efficiency Systems</strong>
+                <p>
+                  Modern units cool so fast they don't run long enough for meaningful
+                  dehumidification
+                </p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon">💦</span>
+              <div>
+                <strong>Clammy Feel</strong>
+                <p>
+                  High RH makes 72°F feel uncomfortable — humidity control fixes what cooling cannot
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="svc-split__image" style="padding-top:0;">
+          <img
+            src="/images/whole-house-dehumidifier-installation-raleigh-nc.webp"
+            alt="Whole-house dehumidifier installation in Raleigh NC"
+            style="width:100%;height:320px;object-fit:cover;border-radius:var(--radius-md);display:block;"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT DOES -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-split">
+        <div>
+          <h2>What a Whole-House Dehumidifier Does</h2>
+          <span class="answer-first"
+            >A whole-house dehumidifier removes moisture independently from cooling, helping keep
+            the home in a healthier humidity range even when the AC isn't running.</span
+          >
+          <p>
+            Unlike portable units, whole-house systems treat all the air in your home continuously.
+            They maintain 45–50% RH year-round, protecting wood floors, trim, and finishes while
+            reducing mold risk throughout the home.
+          </p>
+          <p>
+            Balanced humidity helps reduce conditions that support mold and moisture-related damage
+            to woodwork and finishes. Many whole-house models include built-in digital control and
+            low-maintenance designs intended for continuous operation.
+          </p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Operates independently — works when AC is off</span
+              >
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span>Maintains 45–50% RH year-round</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Continuous drainage — no buckets, no overflow</span
+              >
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Protects hardwood floors, trim, and cabinetry</span
+              >
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Reduces mold and dust mite conditions throughout home</span
+              >
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Improves comfort without lowering temperature</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="svc-split__image" style="padding-top:0;">
+          <img
+            src="/images/whole-house-dehumidifier-basement-installation-raleigh-nc.webp"
+            alt="Whole-house dehumidifier basement installation in Raleigh NC"
+            style="width:100%;height:320px;object-fit:cover;border-radius:var(--radius-md);display:block;"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HVAC INTEGRATED VS INDEPENDENT -->
+  <section class="section">
+    <div class="container">
+      <h2>HVAC Integrated vs. Dedicated Whole-House Dehumidifier Systems Systems</h2>
+      <span class="answer-first"
+        >Systems can integrate into existing HVAC ductwork or operate with their own dedicated
+        ductwork — the right choice depends on your home's layout and duct access.</span
+      >
+      <div class="two-col">
+        <div class="two-col-card">
+          <h3>HVAC Integrated</h3>
+          <ul class="svc-list">
+            <li>Connected to existing return and supply ductwork</li>
+            <li>Distributes conditioned air through existing vents</li>
+            <li>Hidden installation — no visible equipment in living areas</li>
+            <li>Ideal for homes with accessible forced-air duct systems</li>
+            <li>Controls can integrate with existing HVAC thermostat</li>
+          </ul>
+        </div>
+        <div class="two-col-card">
+          <h3>Independent Systems</h3>
+          <ul class="svc-list">
+            <li>Operates with its own dedicated ductwork — not tied to HVAC</li>
+            <li>Installed in mechanical room, basement, or crawlspace</li>
+            <li>Self-contained airflow independent of heating and cooling</li>
+            <li>Ideal when HVAC duct access is limited or unavailable</li>
+            <li>Flexible placement and airflow design options</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:1.25rem; font-size:0.95rem; color:#4a5a6a;">
+        Many whole-house dehumidifiers are designed to integrate with forced-air systems and can
+        also be installed to operate on their own, depending on the layout of the home.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHOLE-HOME VS PORTABLE -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Whole-House Dehumidification vs. Portable Units</h2>
+      <span class="answer-first"
+        >A whole-house system treats your home's air through dedicated airflow and drains
+        continuously — portable units only manage a single room and require frequent attention.</span
+      >
+      <div class="two-col" style="margin-top:1.25rem;">
+        <div class="two-col-card">
+          <h3>Whole-House System</h3>
+          <ul class="svc-list">
+            <li>Treats entire home — not just one room</li>
+            <li>Continuous drainage — fully automatic</li>
+            <li>Stable RH control strategy year-round</li>
+            <li>Air conditioned and distributed with HVAC equipment</li>
+          </ul>
+        </div>
+        <div class="two-col-card">
+          <h3>Portable Unit</h3>
+          <ul class="svc-list">
+            <li>Room-limited coverage only</li>
+            <li>Manual bucket emptying required</li>
+            <li>Inconsistent RH control</li>
+            <li>Not designed for continuous operation</li>
+            <li>Less energy efficient than whole-house systems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNS YOU MAY NEED ONE -->
+  <section class="section">
+    <div class="container">
+      <h2>Signs You May Need a Whole-House Dehumidifier</h2>
+      <span class="answer-first"
+        >If indoor Relative Humidity consistently exceeds 55%, dedicated dehumidification may be
+        necessary.</span
+      >
+      <div class="signs-grid">
+        <div class="sign-card">
+          <span class="sign-card__icon">🪟</span><p>Windows sweating or fogging on the inside</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 5c1 1 1 2 0 3s-1 2 0 3" stroke="#7b5ea7" stroke-width="1.5"></path>
+              <path d="M10 4c1 1.5 1 3 0 4.5s-1 3 0 4.5" stroke="#7b5ea7" stroke-width="1.5"></path>
+              <path d="M14 5c1 1 1 2 0 3s-1 2 0 3" stroke="#7b5ea7" stroke-width="1.5"></path>
+              <path d="M18 4c1 1.5 1 3 0 4.5s-1 3 0 4.5" stroke="#7b5ea7" stroke-width="1.5"></path>
+              <path
+                d="M9 16c0-1.66 1.34-3 3-3s3 1.34 3 3c0 1-.5 1.5-1 2H10c-.5-.5-1-1-1-2z"
+                fill="#e8dff5"
+                stroke="#7b5ea7"
+                stroke-width="1.5"></path>
+              <line x1="12" y1="13" x2="12" y2="10" stroke="#7b5ea7" stroke-width="1.5"></line>
+            </svg></span
+          ><p>Musty odors present inside the home</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">🏠</span><p>Hardwood floors cupping or warping</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">❄️</span><p>
+            AC runs constantly but house still feels humid
+          </p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">🌡️</span><p>Basement or lower level humidity rising</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">🤧</span><p>
+            Allergy or respiratory symptoms worsen at home
+          </p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon"
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M5 5C3 7.5 3 11 5 12.5C7 11 7 7.5 5 5Z"
+                fill="#4a9fd4"
+                stroke="#1a6fa8"
+                stroke-width="0.8"
+                stroke-linejoin="round"></path>
+              <path
+                d="M12 2C8.5 6 8.5 13.5 12 15.5C15.5 13.5 15.5 6 12 2Z"
+                fill="#4a9fd4"
+                stroke="#1a6fa8"
+                stroke-width="0.8"
+                stroke-linejoin="round"></path>
+              <path
+                d="M19 5C17 7.5 17 11 19 12.5C21 11 21 7.5 19 5Z"
+                fill="#4a9fd4"
+                stroke="#1a6fa8"
+                stroke-width="0.8"
+                stroke-linejoin="round"></path>
+            </svg></span
+          ><p>Condensation or mildew visible on interior surfaces</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALLATION PROCESS -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-split">
+        <div>
+          <h2>Our Whole-House Dehumidifier Installation Process</h2>
+          <span class="answer-first"
+            >We size the unit, design airflow, install continuous drainage, integrate controls, then
+            verify performance before we leave.</span
+          >
+          <div class="svc-steps">
+            <div class="svc-step">
+              <div class="svc-step__num">1</div>
+              <div class="svc-step__body">
+                <h3>Evaluate Humidity Patterns</h3>
+                <p>
+                  Assess problem areas — basement, crawlspace, main level — and identify moisture
+                  sources driving elevated RH.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">2</div>
+              <div class="svc-step__body">
+                <h3>Select System Type</h3>
+                <p>
+                  Determine HVAC integrated or independent approach based on duct access, home
+                  layout, and moisture load.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">3</div>
+              <div class="svc-step__body">
+                <h3>Proper Sizing</h3>
+                <p>
+                  Size for square footage, insulation levels, occupancy, and local climate data —
+                  not guesswork.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">4</div>
+              <div class="svc-step__body">
+                <h3>Install Continuous Drainage</h3>
+                <p>
+                  Gravity drain or condensate pump installed. No manual emptying. Fully automatic
+                  operation.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">5</div>
+              <div class="svc-step__body">
+                <h3>Configure Controls &amp; Verify RH</h3>
+                <p>
+                  System programmed and tested to maintain 45–50% RH. Verified before completion.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="svc-split__image">
+          <div class="img-box img-box--tall">
+            <span class="img-box__icon">🖼</span>
+            <span class="img-box__text"
+              >Whole-house dehumidifier<br />installation process<br /><small
+                >whole-home-process.webp</small
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPMENT SIZING -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Equipment Selection and Sizing</h2>
+      <span class="answer-first"
+        >Proper sizing is based on square footage, volume, HVAC equipment, insulation levels, and
+        moisture load — not guesswork.</span
+      >
+      <p>
+        We perform a load calculation for every installation — accounting for home size,
+        construction type, number of occupants, and local climate data. Industry guidance commonly
+        references 40–60% RH as a recommended indoor range; we typically target 45–50% RH for
+        comfort and mold-risk reduction in Raleigh homes.
+      </p>
+      <p>
+        An undersized unit runs continuously without reaching target RH. An oversized unit
+        short-cycles and wastes energy. All systems include continuous drainage and professional
+        integration into existing controls where applicable — calibrated to 45–50% RH before we
+        leave the job.
+      </p>
+      <p>
+        If your crawlspace is the primary driver of whole-home humidity, see our <a
+          href="/encapsulated-crawlspace-dehumidifier-raleigh-nc"
+          >encapsulated crawlspace dehumidifier installation</a
+        > page.
+      </p>
+    </div>
+  </section>
+
+  <!-- LIFESPAN -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>How Long Does a Whole-House Dehumidifier Last?</h2>
+      <span class="answer-first"
+        >Properly installed whole-house dehumidifiers typically last 8–12 years.</span
+      >
+      <p>
+        Lifespan depends on correct sizing, continuous drainage, and annual maintenance. Units that
+        are oversized short-cycle and wear faster. A correctly installed system with routine coil
+        cleaning and filter changes will perform reliably for 8–12 years.
+      </p>
+      <p>
+        For crawlspace humidity specifically, see our <a
+          href="/crawlspace-dehumidifier-installation-raleigh"
+          >crawlspace dehumidifier installation in Raleigh</a
+        > and <a href="/encapsulated-crawlspace-dehumidifier-raleigh-nc"
+          >encapsulated crawlspace dehumidifier installation</a
+        > pages.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>What RH should my home be in Raleigh?</h3>
+          <p>
+            Industry guidance references 40–60% RH as a recommended indoor range. We typically
+            target 45–50% RH for comfort and mold-risk reduction in Raleigh homes.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Can a whole-house dehumidifier run without the AC?</h3>
+          <p>
+            Yes. Whole-house dehumidifiers operate independently of cooling, maintaining stable RH
+            even when the AC is off during mild weather.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>HVAC integrated vs. independent — which is better?</h3>
+          <p>
+            Both work well. HVAC integrated systems use existing ductwork for distribution.
+            Independent systems have their own dedicated ductwork and airflow, making them suitable
+            when HVAC duct access is limited.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Do whole-house dehumidifiers need a drain?</h3>
+          <p>
+            Yes. Continuous drainage is standard — gravity drain or condensate pump. No manual
+            emptying required.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>How long do whole-house dehumidifiers last?</h3>
+          <p>
+            Properly installed and maintained whole-house dehumidifiers typically last 8–12 years.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="svc-cta">
+    <div class="container svc-cta__inner">
+      <h2>Schedule Your Home Evaluation</h2>
+      <p>
+        Serving Raleigh, Holly Springs, Cary, Apex, Fuquay-Varina, and surrounding Triangle
+        communities.
+      </p>
+      <a href="/contact" class="btn btn-green">Request Home Evaluation</a>
+      <span class="svc-cta__trust"
+        >Fully Insured and Locally Owned. Serving the Triangle region.</span
+      >
+    </div>
+  </section>
+</BaseLayout>
+```
+

@@ -1,0 +1,410 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'HomeAndConstructionBusiness',
+      name: 'Triangle Dehumidifiers, LLC',
+      telephone: '(919) 555-0123',
+      url: 'https://www.triangledehumidifiers.com',
+      areaServed: [
+        { '@type': 'City', name: 'Raleigh' },
+        { '@type': 'City', name: 'Holly Springs' },
+        { '@type': 'City', name: 'Cary' },
+        { '@type': 'City', name: 'Apex' },
+        { '@type': 'City', name: 'Fuquay-Varina' },
+      ],
+      serviceType: 'Crawlspace Mold Treatment',
+    },
+    {
+      '@type': 'Service',
+      name: 'Crawlspace Mold Treatment',
+      url: 'https://www.triangledehumidifiers.com/crawlspace-mold-treatment-raleigh',
+      telephone: '(919) 555-0123',
+      provider: { '@type': 'HomeAndConstructionBusiness', name: 'Triangle Dehumidifiers, LLC' },
+      areaServed: [
+        { '@type': 'City', name: 'Raleigh' },
+        { '@type': 'City', name: 'Holly Springs' },
+        { '@type': 'City', name: 'Cary' },
+        { '@type': 'City', name: 'Apex' },
+        { '@type': 'City', name: 'Fuquay-Varina' },
+      ],
+      description:
+        'Crawlspace mold treatment in Raleigh, NC. EPA-registered products. Moisture correction first, then surface treatment.',
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Crawlspace Mold Treatment Raleigh NC | Triangle Dehumidifiers"
+  description="Professional crawlspace mold treatment in Raleigh, NC. EPA-registered products. Moisture correction first, then surface treatment. Serving Wake County and the Triangle region."
+  canonical="/crawlspace-mold-treatment-raleigh"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- HERO -->
+  <section class="svc-hero">
+    <div class="container">
+      <h1>Crawlspace Mold Treatment<br />in Raleigh, NC</h1>
+      <span class="svc-hero__direct"
+        >Mold is a symptom of a moisture problem. We correct the humidity source first — then treat
+        existing surface growth to prevent recurrence.</span
+      >
+      <p class="svc-hero__sub">
+        Mold risk increases when crawlspace Relative Humidity (RH) stays above ~65% for extended
+        periods. We provide professional crawlspace mold treatment using EPA-registered
+        antimicrobial products selected for crawlspace applications.
+      </p>
+      <div class="svc-hero__actions">
+        <a href="/contact" class="btn btn-green">Schedule Crawlspace Mold Inspection</a>
+        <a href="tel:9195550123" class="btn btn-secondary">Call (919) 555-0123</a>
+      </div>
+      <p class="hero-trust-line">EPA-registered products. Licensed &amp; insured.</p>
+    </div>
+  </section>
+
+  <!-- MOISTURE FIRST -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-split">
+        <div>
+          <h2>Moisture Correction Comes First</h2>
+          <span class="answer-first"
+            >Treating mold without correcting the moisture source is temporary — growth will return
+            as long as crawlspace RH remains above ~65% for extended periods.</span
+          >
+          <p>
+            Most crawlspace mold returns because humidity was never corrected. We address both the
+            mold and the moisture source — targeting 45–50% RH to reduce the conditions that support
+            regrowth.
+          </p>
+          <div class="icon-cards">
+            <div class="icon-card">
+              <span class="icon-card__icon icon-card__icon--svg">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <!-- gauge meter -->
+                  <path d="M5.1 19a9 9 0 1 1 13.8 0" stroke-linecap="round"></path>
+                  <path d="M12 11l-3.5 4" stroke-linecap="round"></path>
+                  <circle cx="12" cy="15.5" r="1.2" fill="currentColor"></circle>
+                  <line x1="7" y1="14" x2="8.2" y2="14.7" stroke-linecap="round"></line>
+                  <line x1="17" y1="14" x2="15.8" y2="14.7" stroke-linecap="round"></line>
+                  <line x1="12" y1="6" x2="12" y2="7.5" stroke-linecap="round"></line>
+                </svg>
+              </span>
+              <div>
+                <strong>Ground Moisture</strong>
+                <p>Evaporation through unprotected soil raises crawlspace RH continuously</p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon icon-card__icon--svg">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"
+                  ></path>
+                </svg>
+              </span>
+              <div>
+                <strong>Humid Exterior Air</strong>
+                <p>Open crawlspace vents allow high-humidity air to enter freely</p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon icon-card__icon--svg">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <!-- pipe with drip -->
+                  <rect x="3" y="9" width="18" height="4" rx="2"></rect>
+                  <path d="M7 13v2" stroke-linecap="round"></path>
+                  <path d="M7 15c0 1.5 1.5 2.5 1.5 4" stroke-linecap="round"></path>
+                  <path d="M12 13v3" stroke-linecap="round"></path>
+                  <path d="M12 16c0 1.5 1.5 2 1.5 3.5" stroke-linecap="round"></path>
+                </svg>
+              </span>
+              <div>
+                <strong>Plumbing &amp; Condensation</strong>
+                <p>Leaks or condensation on cold pipes add direct moisture to the space</p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon icon-card__icon--svg">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                </svg>
+              </span>
+              <div>
+                <strong>Missing Vapor Barrier</strong>
+                <p>Inadequate vapor barrier coverage dramatically increases moisture load</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="svc-split__image" style="padding-top:0;">
+          <img
+            src="/images/mold-crawlspace-raleigh-nc.webp"
+            alt="Mold on crawlspace floor joists in Raleigh NC"
+            style="width:100%;height:320px;object-fit:cover;border-radius:var(--radius-md);display:block;"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TREATMENT PROCESS -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-split">
+        <div>
+          <h2>Our Mold Treatment Process</h2>
+          <span class="answer-first"
+            >After moisture sources are identified, surface mold on crawlspace framing is treated
+            with EPA-registered antimicrobial solutions applied directly to affected wood surfaces.</span
+          >
+          <p>
+            We apply treatment by targeted surface cleaning or controlled fogging to reach framing
+            areas within the crawlspace.
+          </p>
+          <div class="svc-steps">
+            <div class="svc-step">
+              <div class="svc-step__num">1</div>
+              <div class="svc-step__body">
+                <h3>Moisture Source Evaluation</h3>
+                <p>
+                  Identify and document humidity drivers — ground moisture, air entry points,
+                  plumbing, and condensation sources.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">2</div>
+              <div class="svc-step__body">
+                <h3>Surface Preparation</h3>
+                <p>
+                  Prepare affected areas for treatment — targeted surface cleaning where practical
+                  before product application.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">3</div>
+              <div class="svc-step__body">
+                <h3>Antimicrobial Application</h3>
+                <p>
+                  EPA-registered products applied to affected surfaces using targeted application or
+                  controlled fogging as appropriate — no bleach-based approach.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">4</div>
+              <div class="svc-step__body">
+                <h3>Post-Treatment Documentation</h3>
+                <p>
+                  Treated areas photographed and documented — providing a baseline record for future
+                  reference.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">5</div>
+              <div class="svc-step__body">
+                <h3>Humidity Control Plan</h3>
+                <p>
+                  We recommend a dehumidification and vapor barrier strategy to keep crawlspace RH
+                  stable at 45–50% and reduce the conditions that support regrowth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="svc-split__image" style="padding-top:0;">
+          <img
+            src="/images/mold-remediation-crawlspace-raleigh-nc.webp"
+            alt="Mold remediation in a crawlspace in Raleigh NC"
+            style="width:100%;height:320px;object-fit:cover;border-radius:var(--radius-md);display:block;"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTANICAL TREATMENT -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-split">
+        <div>
+          <h2>EPA-Registered Mold Treatment Products</h2>
+          <span class="answer-first"
+            >We use EPA-registered antimicrobial products selected for crawlspace applications, with
+            application methods designed to minimize disruption.</span
+          >
+          <p>
+            We use EPA-registered products including Benefect Botanical Decon 30 and Concrobium Mold
+            Control, both commonly used in professional restoration settings.
+          </p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <span class="feature-check">✓</span>
+              <span
+                >Benefect Botanical Decon 30 — botanical, thymol-based, EPA-registered disinfectant
+                used in restoration workflows</span
+              >
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span>
+              <span
+                >Concrobium Mold Control — EPA-registered; used to inhibit mold growth and leaves a
+                residue barrier when applied per label</span
+              >
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span>
+              <span>No bleach-based shock approach</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span>
+              <span
+                >Material-compatible approach for crawlspace wood framing when applied correctly</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="svc-split__image" style="padding-top:0;">
+          <img
+            src="/images/mold-benefect-disinfectant-crawlspace.jpg"
+            alt="Benefect botanical disinfectant used for crawlspace mold treatment"
+            style="width:100%;height:320px;object-fit:cover;border-radius:var(--radius-md);display:block;"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCOPE -->
+  <section class="section">
+    <div class="container narrow">
+      <h2>What We Do — and What We Don't Do</h2>
+      <span class="answer-first"
+        >We provide crawlspace surface treatment and humidity correction. We do not provide mold
+        clearance testing or medical advice.</span
+      >
+      <div class="clarification-box">
+        <p><strong>We do not:</strong></p>
+        <ul class="clarification-list">
+          <li>Perform full structural tear-out remediation</li>
+          <li>Treat mold inside living areas</li>
+          <li>Clean HVAC duct systems</li>
+          <li>Provide mold clearance testing or air quality certification</li>
+        </ul>
+      </div>
+      <p class="section-top-sm">
+        If we observe conditions outside our scope — structural concerns or living-area
+        contamination — we document what we see and limit our work to crawlspace moisture control
+        and surface treatment within the crawlspace.
+      </p>
+    </div>
+  </section>
+
+  <!-- SURFACE MOLD VS ROT -->
+  <section class="section">
+    <div class="container narrow">
+      <h2>Surface Mold vs. Structural Wood Rot</h2>
+      <span class="answer-first"
+        >Surface mold treated at early stages leaves wood structurally intact — the goal is to halt
+        active growth and eliminate the conditions that allowed it to develop.</span
+      >
+      <p>
+        Surface mold — typically appearing as white, gray, or black discoloration on wood framing —
+        is different from wood rot, which involves structural degradation of the wood fiber itself.
+        Treatment performed before mold penetrates deep into the wood grain typically does not
+        compromise structural integrity.
+      </p>
+      <p>Signs that structural assessment may be needed:</p>
+      <div class="signs-grid signs-grid--2col section-top-sm">
+        <div class="sign-card">
+          <span class="sign-card__icon">🪵</span>
+          <p>Soft, spongy, or crumbling wood when pressed</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">⚠️</span>
+          <p>Fungal growth with a shelf-like or 3D structure</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">🏠</span>
+          <p>Sagging floors above the crawlspace</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">⚠️</span>
+          <p>Visible separation or cracking along the wood grain</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREVENTION -->
+  <section class="section">
+    <div class="container narrow">
+      <h2>Mold Prevention Requires Both Treatment + Humidity Control</h2>
+      <span class="answer-first"
+        >The most effective long-term approach is treating existing growth and controlling humidity
+        so it doesn't return.</span
+      >
+      <p>
+        Crawlspace mold is rarely solved by treatment alone, and humidity control alone doesn't
+        remove existing growth. We combine surface treatment with a humidity control plan designed
+        to keep crawlspace RH stable — typically 45–50% RH after corrective work — reducing the
+        conditions that support regrowth.
+      </p>
+      <p>
+        For vented crawlspaces see our <a href="/crawlspace-dehumidifier-installation-raleigh"
+          >professional crawlspace dehumidifier installation in Raleigh</a
+        >. For sealed systems see our <a href="/encapsulated-crawlspace-dehumidifier-raleigh-nc"
+          >encapsulated crawlspace dehumidifier installation</a
+        > page.
+      </p>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="svc-cta">
+    <div class="container svc-cta__inner">
+      <h2>Stop Crawlspace Mold at the Source — Not Just the Surface</h2>
+      <p>
+        Serving Raleigh and Wake County, including Cary, Apex, Holly Springs, and Fuquay-Varina.
+      </p>
+      <a href="/contact" class="btn btn-green">Schedule Crawlspace Mold Inspection</a>
+      <span class="svc-cta__trust">Licensed &amp; insured. Serving the Triangle region.</span>
+    </div>
+  </section>
+</BaseLayout>

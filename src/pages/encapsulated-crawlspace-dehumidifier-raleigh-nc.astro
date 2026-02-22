@@ -1,0 +1,805 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'HomeAndConstructionBusiness',
+      name: 'Triangle Dehumidifiers, LLC',
+      telephone: '(919) 555-0123',
+      url: 'https://www.triangledehumidifiers.com',
+      areaServed: [
+        { '@type': 'City', name: 'Raleigh' },
+        { '@type': 'City', name: 'Holly Springs' },
+        { '@type': 'City', name: 'Cary' },
+        { '@type': 'City', name: 'Apex' },
+        { '@type': 'City', name: 'Fuquay-Varina' },
+        { '@type': 'City', name: 'Morrisville' },
+      ],
+      serviceType: 'Encapsulated Crawlspace Dehumidifier Installation',
+    },
+    {
+      '@type': 'Service',
+      name: 'Encapsulated Crawlspace Dehumidifier Installation',
+      provider: { '@type': 'HomeAndConstructionBusiness', name: 'Triangle Dehumidifiers, LLC' },
+      areaServed: 'Raleigh, NC and Wake County',
+      description:
+        'Professional dehumidifier installation for sealed crawlspaces. Maintains 45–50% RH to prevent mold and structural damage.',
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Do encapsulated crawlspaces need ventilation?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sealed crawlspaces do not use traditional vents. Instead, they rely on a dehumidifier to control humidity and maintain 45–50% RH. Some sealed systems also incorporate a small supply of conditioned air from the HVAC system.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I use a store-bought dehumidifier in my crawlspace?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Retail units are not designed for continuous crawlspace operation. They require manual bucket emptying, lack continuous drainage, and are not rated for the low clearance and high humidity conditions typical of crawlspaces.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What happens if RH stays above 60%?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Mold becomes active above 60% RH on wood framing and subfloor materials. Prolonged exposure above 60% RH can lead to wood deterioration, mold growth, and structural damage over time.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How much does a crawlspace dehumidifier cost in Raleigh?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Cost depends on crawlspace size, moisture load, drainage requirements, and electrical setup. We provide inspection-based estimates.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you service Holly Springs, Cary, and Apex?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. We serve all of Wake County including Raleigh, Holly Springs, Cary, Apex, Fuquay-Varina, Morrisville, and surrounding Triangle communities.',
+          },
+        },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Encapsulated Crawlspace Dehumidifier | Raleigh NC"
+  description="Encapsulation alone doesn't control humidity. We install sealed crawlspace dehumidifiers in Raleigh, NC to maintain ~50% Relative Humidity (RH) and help prevent mold."
+  canonical="/encapsulated-crawlspace-dehumidifier-raleigh-nc"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <!-- HERO -->
+  <section class="svc-hero">
+    <div class="container">
+      <h1>Encapsulated Crawlspace Dehumidifier<br />Installation in Raleigh, NC</h1>
+      <span class="svc-hero__direct"
+        >Encapsulation alone does not control humidity. We install properly sized dehumidifiers to
+        maintain ~50% Relative Humidity (RH) inside sealed crawlspaces.</span
+      >
+      <p class="svc-hero__sub">
+        Even professionally encapsulated crawlspaces in Raleigh can exceed 60% RH without active
+        humidity removal. A sealed space can trap humidity unless it is mechanically removed.
+      </p>
+      <p class="svc-hero__sub" style="margin-top:0.5rem;">
+        We inspect, size, install, and verify humidity control performance.
+      </p>
+      <div class="svc-hero__actions">
+        <a href="/contact" class="btn btn-green">Request Crawlspace Inspection</a>
+        <a href="tel:9195550123" class="btn btn-secondary">Call (919) 555-0123</a>
+      </div>
+      <p style="font-size:0.85rem; color:#4a5a6a; margin-top:0.75rem;">
+        Serving Raleigh, Holly Springs, Cary, Apex, Fuquay-Varina, and the surrounding Triangle
+        region.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 1 -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-split">
+        <div>
+          <h2>Do Encapsulated Crawlspaces Still Need a Dehumidifier?</h2>
+          <span class="answer-first"
+            >Yes. Encapsulation reduces moisture infiltration but does not remove humidity. A sealed
+            crawlspace requires active moisture control to maintain safe RH levels. A dehumidifier
+            is the most effective solution.</span
+          >
+          <p>
+            Encapsulation is an important first step — it reduces ground moisture intrusion and
+            blocks soil vapor. But sealing the space does not regulate Relative Humidity. Moisture
+            in the air still enters through foundation walls, seasonal air leakage, and diffusion
+            through the liner itself.
+          </p>
+          <p>
+            In Raleigh's humid climate, summer exterior Relative Humidity (RH) often exceeds 80%,
+            increasing moisture load even in sealed systems. Without a dehumidifier, that moisture
+            load has nowhere to go — RH can build until condesation forms. Eventually, mold becomes
+            active on wood framing, HVAC equipment and ductwork, even behind foundation insulation
+            and under a clean vapor barrier.
+          </p>
+          <p>
+            Mold activates above 65% RH. The target range for a sealed crawlspace is 45–50% Relative
+            Humidity (RH) — maintained continuously by a properly sized dehumidifier.
+          </p>
+          <div class="icon-cards">
+            <div class="icon-card">
+              <span class="icon-card__icon">💧</span>
+              <div>
+                <strong>Moisture Through Foundation Walls</strong>
+                <p>
+                  Moisture can migrate through sections of concrete and block foundation walls
+                  regardless of encapsulation
+                </p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon">📅</span>
+              <div>
+                <strong>Seasonal Humidity Spikes</strong>
+                <p>
+                  NC summers regularly push exterior RH above 80% — sealed spaces absorb this load
+                </p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon">🔄</span>
+              <div>
+                <strong>Air Leakage & Stack Effect Pressure</strong>
+                <p>
+                  Air movement caused by pressure differences and the stack effect pulls humid air
+                  into the crawlspace. In a sealed system, that moisture has limited escape paths,
+                  allowing RH to gradually rise.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="svc-split__image" style="padding-top:0;">
+          <img
+            src="/images/encapsulated-crawlspace-raleigh-nc.webp"
+            alt="Encapsulated crawlspace with vapor barrier in Raleigh NC"
+            style="width:100%;height:320px;object-fit:cover;border-radius:var(--radius-md);display:block;"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>What Is the Ideal Relative Humidity (RH) for a Sealed Crawlspace?</h2>
+      <span class="answer-first"
+        >Most encapsulated crawlspaces should be maintained between 45–50% Relative Humidity (RH) to
+        reduce mold risk and protect wood framing.</span
+      >
+      <p>
+        At 45–50% RH, mold cannot sustain growth on wood surfaces — even if spores are present. Mold
+        growth risk increases rapidly above 65% RH, which is why we target a stable 45–50% range.
+        This range also protects subflooring from moisture-related swelling, cupping, and
+        delamination, and prevents condensation from forming on HVAC ductwork routed through the
+        crawlspace.
+      </p>
+      <p>
+        Long-term structural health depends on consistent humidity control. Wood framing held at
+        safe moisture content levels resists decay, maintains dimensional stability, and avoids the
+        conditions that lead to costly repairs.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-split">
+        <div>
+          <h2>How We Size Dehumidifiers for Encapsulated Crawlspaces</h2>
+          <span class="answer-first"
+            >Proper sizing is based on crawlspace volume, moisture load, and air exchange — not
+            square footage alone.</span
+          >
+          <p>
+            Sealed crawlspaces behave differently than vented ones. Lower air exchange rates mean
+            moisture accumulates more slowly — but also means a correctly sized unit is critical.
+            Undersized units run continuously without reaching target RH. Oversized units
+            short-cycle and waste energy.
+          </p>
+          <p>
+            We routinely work with 12-mil and 20-mil encapsulation systems and account for liner
+            integrity when evaluating moisture load.
+          </p>
+          <div class="svc-steps">
+            <div class="svc-step">
+              <div class="svc-step__num">1</div>
+              <div class="svc-step__body">
+                <h3>Calculate Crawlspace Volume</h3>
+                <p>
+                  Square footage and ceiling height determine total air volume the system must
+                  control.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">2</div>
+              <div class="svc-step__body">
+                <h3>Assess Moisture Load</h3>
+                <p>
+                  Foundation wall type, soil conditions, and vapor barrier quality — including
+                  12-mil and 20-mil systems — affect total moisture contribution.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">3</div>
+              <div class="svc-step__body">
+                <h3>Consider Air Exchange Rate</h3>
+                <p>
+                  Sealed systems have lower infiltration — we account for this when selecting unit
+                  capacity.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">4</div>
+              <div class="svc-step__body">
+                <h3>Install Continuous Drainage</h3>
+                <p>
+                  No bucket systems. Dedicated drain line or condensate pump required for unattended
+                  operation.
+                </p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <div class="svc-step__num">5</div>
+              <div class="svc-step__body">
+                <h3>Verify Target RH at 45–50%</h3>
+                <p>
+                  System tested and programmed before we leave. Digital hygrometer installed for
+                  ongoing monitoring.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="svc-split__image" style="padding-top:0;">
+          <img
+            src="/images/hvac-tech-measuring-humidity-encapsulated-crawlspace.webp"
+            alt="HVAC technician measuring humidity in an encapsulated crawlspace"
+            style="width:100%;height:320px;object-fit:cover;border-radius:var(--radius-md);display:block;"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-split">
+        <div>
+          <h2>Professional-Grade Equipment Designed for Sealed Crawlspaces</h2>
+          <span class="answer-first"
+            >We install crawlspace-rated systems built for sealed environments.</span
+          >
+          <p>
+            Consumer units from home improvement stores require manual bucket emptying and are not
+            rated for the low clearance and high humidity conditions typical of crawlspaces. We
+            install commercial-grade units built specifically for sealed, low-clearance environments
+            — calibrated to maintain 45–50% RH year-round.
+          </p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Built for low-clearance encapsulated crawlspace environments</span
+              >
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Continuous drainage — integrated pump or gravity drain</span
+              >
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >MERV filtration to protect internal coils</span
+              >
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span>Optional WiFi humidity monitoring</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Compatible with 6–20 mil vapor barrier systems</span
+              >
+            </div>
+            <div class="feature-item">
+              <span class="feature-check">✓</span><span
+                >Calibrated to maintain 45–50% RH target range</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="svc-split__image" style="padding-top:0;">
+          <img
+            src="/images/encapsulated-crawlspace-dehumidifier-20mil-liner-raleigh-nc.webp"
+            alt="Encapsulated crawlspace with 20 mil liner and dehumidifier in Raleigh NC"
+            style="width:100%;height:320px;object-fit:cover;border-radius:var(--radius-md);display:block;"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section class="section">
+    <div class="container">
+      <h2>Signs Your Encapsulated Crawlspace Has High Humidity</h2>
+      <span class="answer-first"
+        >If RH rises above 60%, mold growth and moisture damage can begin — even in sealed
+        crawlspaces.</span
+      >
+      <div class="signs-grid">
+        <div class="sign-card">
+          <span class="sign-card__icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M6 5c1 1 1 2 0 3s-1 2 0 3" stroke="#7b5ea7" stroke-width="1.5"></path>
+              <path d="M10 4c1 1.5 1 3 0 4.5s-1 3 0 4.5" stroke="#7b5ea7" stroke-width="1.5"></path>
+              <path d="M14 5c1 1 1 2 0 3s-1 2 0 3" stroke="#7b5ea7" stroke-width="1.5"></path>
+              <path d="M18 4c1 1.5 1 3 0 4.5s-1 3 0 4.5" stroke="#7b5ea7" stroke-width="1.5"></path>
+              <path
+                d="M9 16c0-1.66 1.34-3 3-3s3 1.34 3 3c0 1-.5 1.5-1 2H10c-.5-.5-1-1-1-2z"
+                fill="#e8dff5"
+                stroke="#7b5ea7"
+                stroke-width="1.5"></path>
+              <line x1="12" y1="13" x2="12" y2="10" stroke="#7b5ea7" stroke-width="1.5"></line>
+            </svg></span
+          ><p>Musty odors inside — even with encapsulation in place</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon"
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+              <!-- Left drop (small) -->
+              <path
+                d="M5 5C3 7.5 3 11 5 12.5C7 11 7 7.5 5 5Z"
+                fill="#4a9fd4"
+                stroke="#1a6fa8"
+                stroke-width="0.8"
+                stroke-linejoin="round"></path>
+              <!-- Center drop (large) -->
+              <path
+                d="M12 2C8.5 6 8.5 13.5 12 15.5C15.5 13.5 15.5 6 12 2Z"
+                fill="#4a9fd4"
+                stroke="#1a6fa8"
+                stroke-width="0.8"
+                stroke-linejoin="round"></path>
+              <!-- Right drop (small) -->
+              <path
+                d="M19 5C17 7.5 17 11 19 12.5C21 11 21 7.5 19 5Z"
+                fill="#4a9fd4"
+                stroke="#1a6fa8"
+                stroke-width="0.8"
+                stroke-linejoin="round"></path>
+            </svg></span
+          ><p>Condensation on ductwork, pipes, or structural members</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon"
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" fill="#eaf4e8" stroke="#4a7c3f" stroke-width="1"
+              ></circle>
+              <circle cx="12" cy="12" r="2.8" fill="#4a7c3f" stroke="#2d5a27" stroke-width="0.5"
+              ></circle>
+              <line x1="12" y1="9.2" x2="12" y2="6.5" stroke="#4a7c3f" stroke-width="0.8"></line>
+              <circle cx="12" cy="5.8" r="1.5" fill="#6aab5a" stroke="#2d5a27" stroke-width="0.5"
+              ></circle>
+              <line x1="14.8" y1="10.2" x2="17" y2="8.2" stroke="#4a7c3f" stroke-width="0.8"></line>
+              <circle cx="17.7" cy="7.6" r="1.5" fill="#6aab5a" stroke="#2d5a27" stroke-width="0.5"
+              ></circle>
+              <line x1="14.8" y1="13.8" x2="17" y2="15.8" stroke="#4a7c3f" stroke-width="0.8"
+              ></line>
+              <circle cx="17.7" cy="16.4" r="1.5" fill="#6aab5a" stroke="#2d5a27" stroke-width="0.5"
+              ></circle>
+              <line x1="9.2" y1="13.8" x2="7" y2="15.8" stroke="#4a7c3f" stroke-width="0.8"></line>
+              <circle cx="6.3" cy="16.4" r="1.5" fill="#6aab5a" stroke="#2d5a27" stroke-width="0.5"
+              ></circle>
+              <line x1="9.2" y1="10.2" x2="7" y2="8.2" stroke="#4a7c3f" stroke-width="0.8"></line>
+              <circle cx="6.3" cy="7.6" r="1.5" fill="#6aab5a" stroke="#2d5a27" stroke-width="0.5"
+              ></circle>
+              <circle cx="10" cy="16.5" r="0.6" fill="#4a7c3f"></circle>
+              <circle cx="14.5" cy="17" r="0.5" fill="#4a7c3f"></circle>
+              <circle cx="8" cy="11" r="0.5" fill="#4a7c3f"></circle>
+            </svg></span
+          ><p>Visible mold on floor joists or subfloor above the barrier</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">🏠</span><p>
+            Warped or cupped subflooring above the crawlspace
+          </p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">🌡️</span><p>
+            Elevated indoor humidity your HVAC cannot reduce
+          </p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon">⚡</span><p>
+            Dehumidifier running constantly or failing prematurely
+          </p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon"
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M3 7c3-3 6-3 9 0s6 3 9 0"
+                stroke="#4a7c3f"
+                stroke-width="1.5"
+                stroke-linecap="round"></path>
+              <path
+                d="M3 12c3-3 6-3 9 0s6 3 9 0"
+                stroke="#4a7c3f"
+                stroke-width="1.5"
+                stroke-linecap="round"></path>
+              <circle cx="5" cy="17" r="1" fill="#4a7c3f" opacity="0.5"></circle>
+              <circle cx="9" cy="18" r="1.4" fill="#4a7c3f" opacity="0.7"></circle>
+              <circle cx="14" cy="17.5" r="1" fill="#4a7c3f" opacity="0.5"></circle>
+              <circle cx="19" cy="18" r="1.4" fill="#4a7c3f" opacity="0.7"></circle>
+            </svg></span
+          ><p>Poor indoor air quality from airborne mold spores and particulates</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon"
+            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+              <rect
+                x="10.5"
+                y="3"
+                width="3"
+                height="11"
+                rx="1.5"
+                stroke="#7b5ea7"
+                stroke-width="1.5"
+                fill="#e8dff5"></rect>
+              <circle cx="12" cy="17" r="3" fill="#e8dff5" stroke="#7b5ea7" stroke-width="1.5"
+              ></circle>
+              <rect x="11.5" y="11" width="1" height="3" fill="#7b5ea7" rx="0.5"></rect>
+              <circle cx="12" cy="17" r="1.5" fill="#7b5ea7"></circle>
+              <path
+                d="M16 6c1-0.5 2-0.5 3 0"
+                stroke="#7b5ea7"
+                stroke-width="1.2"
+                stroke-linecap="round"></path>
+              <path
+                d="M16 9c1-0.5 2-0.5 3 0"
+                stroke="#7b5ea7"
+                stroke-width="1.2"
+                stroke-linecap="round"></path>
+              <path
+                d="M16 12c1-0.5 2-0.5 3 0"
+                stroke="#7b5ea7"
+                stroke-width="1.2"
+                stroke-linecap="round"></path>
+            </svg></span
+          ><p>Lower indoor comfort — rooms feel stuffy, clammy, or unusually warm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDOOR AIR QUALITY & COMFORT -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-split">
+        <div>
+          <h2>How Crawlspace Humidity Affects Indoor Air Quality and Home Comfort</h2>
+          <span class="answer-first"
+            >High crawlspace humidity doesn't stay in the crawlspace — it moves into your living
+            areas and directly impacts the air your family breathes.</span
+          >
+          <p>
+            Through the Stack Effect, warm air rising inside your home pulls damp crawlspace air
+            upward through subfloor gaps, plumbing penetrations, and HVAC pathways. Even in an
+            encapsulated crawlspace, uncontrolled humidity becomes a whole-home problem.
+          </p>
+          <p>
+            Elevated indoor relative humidity makes your home feel warmer than the thermostat reads,
+            forces your HVAC to work harder, and creates conditions where allergens, dust mites, and
+            mold thrive. In Raleigh's humid climate, shoulder seasons — spring and fall — are
+            particularly problematic, as outdoor humidity regularly exceeds 70–80% RH.
+          </p>
+          <div class="icon-cards">
+            <div class="icon-card">
+              <span class="icon-card__icon icon-card__icon--purple">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#7b5ea7"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"></path>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                </svg>
+              </span>
+              <div>
+                <strong>Reduced Indoor Comfort</strong>
+                <p>
+                  High humidity makes your home feel sticky and warm even at correct thermostat
+                  settings
+                </p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon icon-card__icon--blue">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#1a6fa8"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M17 2.1l4 4-4 4"></path>
+                  <path d="M3 12.2v-2a4 4 0 0 1 4-4h12.8"></path>
+                  <path d="M7 21.9l-4-4 4-4"></path>
+                  <path d="M21 11.8v2a4 4 0 0 1-4 4H4.2"></path>
+                </svg>
+              </span>
+              <div>
+                <strong>Increased HVAC Workload</strong>
+                <p>
+                  Your system works harder to cool humid air, raising energy bills and shortening
+                  equipment life
+                </p>
+              </div>
+            </div>
+            <div class="icon-card">
+              <span class="icon-card__icon icon-card__icon--green">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#4a7c3f"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M2 12h4"></path>
+                  <path d="M18 12h4"></path>
+                  <path d="M12 2v4"></path>
+                  <path d="M12 18v4"></path>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M8 8l1.5 1.5"></path>
+                  <path d="M14.5 14.5L16 16"></path>
+                  <path d="M16 8l-1.5 1.5"></path>
+                  <path d="M9.5 14.5L8 16"></path>
+                </svg>
+              </span>
+              <div>
+                <strong>Poor Indoor Air Quality</strong>
+                <p>
+                  Mold spores, dust mites, and allergens thrive in humid conditions and circulate
+                  through your HVAC system
+                </p>
+              </div>
+            </div>
+          </div>
+          <p style="margin-top:1.25rem;">
+            Maintaining 45–50% RH in your crawlspace and home creates a measurably more comfortable
+            living environment, reduces allergen activity, and allows your HVAC to operate
+            efficiently year-round. Homeowners across Raleigh, Cary, Apex, and Wake County
+            consistently report improved comfort after professional dehumidifier installation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>How Long Does a Dehumidifier Last in a Sealed Crawlspace?</h2>
+      <span class="answer-first"
+        >A properly sized and properly drained crawlspace dehumidifier typically lasts 7–10 years.</span
+      >
+      <p>
+        Most premature failures come from three installation mistakes: undersizing, poor drainage,
+        and lack of airflow design. Undersized units run continuously trying to reach target RH —
+        burning out the compressor years ahead of schedule.
+      </p>
+      <p>
+        Bucket-based drainage is the most common failure point. When buckets fill and the unit shuts
+        off, RH spikes. The unit cycles on and off under high load — exactly the conditions that
+        shorten compressor life fastest.
+      </p>
+      <p>
+        A continuous drain line or condensate pump eliminates this problem entirely. Combined with
+        correct sizing and proper airflow, your system should operate efficiently for 7–10 years
+        with only routine maintenance.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — STACK EFFECT -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Understanding the Stack Effect in Raleigh Homes</h2>
+      <span class="answer-first"
+        >Warm air rising in your home pulls air upward from the crawlspace, bringing moisture and
+        odors into the living space.</span
+      >
+      <p>
+        As warm air rises and exits through upper floors, it creates negative pressure at the base
+        of the home. This pressure imbalance pulls crawlspace air into the living space through
+        subfloor gaps, plumbing penetrations, and HVAC pathways.
+      </p>
+      <p>
+        In Raleigh's humid climate, this means an uncontrolled crawlspace directly affects the air
+        quality and humidity of your living areas. HVAC returns located in the crawlspace or lower
+        floors can pull this moisture directly into your system.
+      </p>
+      <p>
+        Controlling crawlspace humidity at the source — maintaining 45–50% RH — is the most
+        effective way to prevent the Stack Effect from degrading your indoor environment.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>Do encapsulated crawlspaces need ventilation?</h3>
+          <p>
+            Sealed crawlspaces do not use traditional vents. Instead, they rely on a dehumidifier to
+            control humidity and maintain 45–50% RH. Some sealed systems also incorporate a small
+            supply of conditioned air from the HVAC system.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I use a store-bought dehumidifier in my crawlspace?</h3>
+          <p>
+            Retail units are not designed for continuous crawlspace operation. They require manual
+            bucket emptying, lack continuous drainage, and are not rated for the low clearance and
+            high humidity conditions typical of crawlspaces.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>What happens if RH stays above 65%?</h3>
+          <p>
+            Mold becomes active above 65% RH on wood framing and subfloor materials. Prolonged
+            exposure above 65% RH can lead to wood deterioration, mold growth, and structural damage
+            over time.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>How much does a crawlspace dehumidifier cost in Raleigh?</h3>
+          <p>
+            Cost depends on crawlspace size, moisture load, drainage requirements, and electrical
+            setup. We provide inspection-based estimates that are typically in the $3,000–$5,000
+            range for crawlspaces in the Triangle area.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Do you service Holly Springs, Cary, and Apex?</h3>
+          <p>
+            Yes. We serve all of Wake County including Raleigh, Holly Springs, Cary, Apex,
+            Fuquay-Varina, Morrisville, and surrounding Triangle communities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERNAL LINKS -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Related Services</h2>
+      <span class="answer-first"
+        >Humidity control works best as a complete system — not a single fix.</span
+      >
+      <div class="feature-list" style="margin-top:1.25rem;">
+        <div class="feature-item">
+          <span class="feature-check">✓</span>
+          <span
+            >Vented crawlspace? See our <a href="/crawlspace-dehumidifier-installation-raleigh"
+              >crawlspace dehumidifier installation in Raleigh</a
+            > page.</span
+          >
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span>
+          <span
+            >Humidity affecting your whole home? See <a href="/whole-home"
+              >whole-home dehumidifier installation</a
+            >.</span
+          >
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span>
+          <span
+            >Visible mold on framing? See our <a href="/mold-treatment">crawlspace mold treatment</a
+            > service.</span
+          >
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span>
+          <span
+            >Check our <a href="/service-areas">service areas</a> to confirm we cover your location.</span
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLARIFICATION -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Do You Offer Crawlspace Encapsulation?</h2>
+      <div class="clarification-box">
+        <p>
+          We specialize in dehumidifier installation and humidity control for crawlspaces. If your
+          crawlspace is not yet encapsulated, encapsulation services are available through our
+          sister company, <strong>Peak Energy, Inc.</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREAS -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Service Areas in the Triangle</h2>
+      <span class="answer-first"
+        >We install encapsulated crawlspace dehumidifiers in Raleigh, Holly Springs, Cary, Apex,
+        Fuquay-Varina, and surrounding communities.</span
+      >
+      <p style="margin-top:0.75rem;">
+        See our full <a href="/service-areas">service areas page</a> for complete coverage details.
+      </p>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="svc-cta">
+    <div class="container svc-cta__inner">
+      <h2>Schedule Your Crawlspace Inspection</h2>
+      <p>
+        Serving Raleigh, Holly Springs, Cary, Apex, Fuquay-Varina, and the surrounding Triangle
+        region.
+      </p>
+      <p style="font-size:0.9rem; color:rgba(255,255,255,0.7); margin-bottom:1.5rem;">
+        Clear scope. Proper sizing. Verified installation before completion.
+      </p>
+      <a href="/contact" class="btn btn-green">Request Crawlspace Inspection</a>
+      <span class="svc-cta__trust">Fully Insured. Locally Owned.</span>
+    </div>
+  </section>
+</BaseLayout>
+```

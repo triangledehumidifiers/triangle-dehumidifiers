@@ -1163,8 +1163,13 @@ li {
 }
 .sign-card__icon {
   font-size: 1.8rem;
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 0.6rem;
+}
+.sign-card__icon svg {
+  width: 36px;
+  height: 36px;
 }
 .sign-card p {
   font-size: 0.88rem;
@@ -1482,4 +1487,101 @@ li {
     margin-right: auto;
     padding: 0;
   }
+}
+/* Narrow container */
+.narrow {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Proof strip */
+.proof-strip {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+.proof-strip span {
+  font-size: 0.85rem;
+  color: #4a5a6a;
+}
+
+/* Section spacing helpers */
+.section-top {
+  margin-top: 1.5rem;
+}
+.section-top-sm {
+  margin-top: 1rem;
+}
+
+/* FAQ accordion */
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+}
+.faq-item summary {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+.faq-item[open] summary::after {
+  content: '−';
+}
+.faq-item p {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #4a5a6a;
+  line-height: 1.7;
+}
+/* Signs grid 2-col override */
+.signs-grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Hero trust line */
+.hero-trust-line {
+  font-size: 0.85rem;
+  color: #4a5a6a;
+  margin-top: 0.75rem;
+}
+
+/* Clarification list */
+.clarification-list {
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+.clarification-list li {
+  font-size: 0.9rem;
+  color: #4a5a6a;
+  margin-bottom: 0.35rem;
+}
+
+/* SVG icon in icon-card */
+.icon-card__icon--svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+.icon-card__icon--svg svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
