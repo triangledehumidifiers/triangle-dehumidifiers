@@ -5,9 +5,10 @@ interface Props {
   title: string;
   description: string;
   canonical?: string;
+  heroImage?: string;
 }
 
-const { title, description, canonical } = Astro.props;
+const { title, description, canonical, heroImage } = Astro.props;
 const canonicalURL = canonical ? `https://www.triangledehumidifiers.com${canonical}` : undefined;
 ---
 
@@ -34,6 +35,7 @@ const canonicalURL = canonical ? `https://www.triangledehumidifiers.com${canonic
 
     <!-- Performance -->
     <link rel="preload" as="image" href="/logo.webp" />
+    {heroImage && <link rel="preload" as="image" href={heroImage} fetchpriority="high" />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
 

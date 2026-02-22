@@ -466,6 +466,19 @@ li {
   flex-direction: column;
   height: 100%;
 }
+.why-image-box {
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  line-height: 0;
+}
+.why-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 800 / 533;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
 .why-summary {
   background: #ffffff;
   padding: 1.75rem;
