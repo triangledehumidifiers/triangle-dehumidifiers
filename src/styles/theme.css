@@ -318,7 +318,7 @@ li {
   font-weight: 800;
 }
 .hero-simple p {
-  color: #4a5a6a;
+  color: #374151;
   font-size: 1.05rem;
   line-height: 1.6;
   margin-bottom: 18px;
@@ -805,6 +805,16 @@ li {
 }
 .footer-nap p {
   margin: 0.15rem 0;
+  color: #ffffff;
+}
+.footer-nap strong {
+  color: #ffffff;
+}
+.site-footer p {
+  color: #ffffff;
+}
+.site-footer strong {
+  color: #ffffff;
 }
 .site-footer > .container > p {
   margin: 0.75rem 0 0;
@@ -868,7 +878,7 @@ li {
   font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 600;
-  color: #4a5a6a;
+  color: #374151;
   line-height: 1.5;
 }
 .img-box__text small {
@@ -1418,7 +1428,7 @@ li {
 }
 .proof-strip span {
   font-size: 0.85rem;
-  color: #4a5a6a;
+  color: #374151;
 }
 
 /* Section spacing helpers */
@@ -1459,7 +1469,7 @@ li {
 .faq-item p {
   margin-top: 0.75rem;
   font-size: 0.95rem;
-  color: #4a5a6a;
+  color: #374151;
   line-height: 1.7;
 }
 /* Signs grid 2-col override */
@@ -1470,7 +1480,7 @@ li {
 /* Hero trust line */
 .hero-trust-line {
   font-size: 0.85rem;
-  color: #4a5a6a;
+  color: #374151;
   margin-top: 0.75rem;
 }
 
@@ -1481,7 +1491,7 @@ li {
 }
 .clarification-list li {
   font-size: 0.9rem;
-  color: #4a5a6a;
+  color: #374151;
   margin-bottom: 0.35rem;
 }
 
