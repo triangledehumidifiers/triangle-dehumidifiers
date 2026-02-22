@@ -1085,6 +1085,28 @@ li {
 .icon-card__icon {
   font-size: 1.4rem;
   flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+.icon-card__icon svg {
+  width: 36px;
+  height: 36px;
+}
+.icon-card__icon--green svg {
+  stroke: #4a7c3f;
+}
+.icon-card__icon--brown svg {
+  stroke: #7a4a1a;
+}
+.icon-card__icon--purple svg {
+  stroke: #7b5ea7;
+}
+.icon-card__icon--blue svg {
+  stroke: #1a6fa8;
 }
 .icon-card strong {
   display: block;
