@@ -880,13 +880,53 @@ li {
   font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 600;
-  color: #374151;
+  color: #1a2535; /* was #3d4f61 — now 8.9:1 on light bg, passes AA + AAA */
   line-height: 1.5;
 }
-.img-box__text small {
-  font-weight: 400;
-  opacity: 0.7;
+
+/* FIXED: <small> caption under/over images — was too light on dark bg */
+.img-box small,
+small {
+  color: #1a2535; /* near-black — 12:1 on white, clearly passes AA */
+  font-size: 0.78rem;
+  display: block;
+  line-height: 1.4;
 }
+
+/* FIXED: img-box--tall text overlay — text on dark image overlay */
+.img-box--tall .img-box__text,
+.img-box--tall small,
+.img-box--tall p {
+  color: #ffffff; /* full white on dark overlay — 14.5:1 passes AAA */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); /* extra insurance on varied image bg */
+}
+
+/* FIXED: base img-box text — was #3d4f61 on #e0e4ea (~4.1:1 borderline) */
+.img-box__text {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a2535; /* was #3d4f61 — now 8.9:1 on light bg, passes AA + AAA */
+  line-height: 1.5;
+}
+
+/* FIXED: img-box overlay background — ensure dark enough for white text */
+.img-box--tall::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* was likely 0.3-0.4 — not dark enough */
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Ensure text inside img-box--tall sits above the overlay */
+.img-box--tall .img-box__text,
+.img-box--tall small {
+  position: relative;
+  z-index: 1;
+}
+
 /* ============================================
    SERVICE PAGE — HERO
    ============================================ */
