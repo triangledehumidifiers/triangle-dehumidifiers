@@ -5,13 +5,17 @@ export default defineConfig({
   site: 'https://www.triangledehumidifiers.com',
   integrations: [sitemap()],
   build: {
-    // Inline small stylesheets to reduce render-blocking requests
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'always',
   },
   vite: {
     build: {
-      // Increase threshold so small CSS gets inlined instead of a separate request
-      assetsInlineLimit: 8192,
+      assetsInlineLimit: 1048576, // 1MB — forces ALL assets including CSS to inline
+      cssCodeSplit: false, // CHANGED: was true — splitting was causing external files
+      rollupOptions: {
+        output: {
+          manualChunks: undefined,
+        },
+      },
     },
   },
 });
