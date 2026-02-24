@@ -345,7 +345,7 @@ li {
 }
 .trust-pills {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
   margin-top: 10px;
 }
@@ -358,6 +358,17 @@ li {
   padding: 0.3rem 0.75rem;
   border-radius: 20px;
   border: 1px solid rgba(18, 47, 91, 0.18);
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .trust-pills {
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+  .pill {
+    font-size: 0.68rem;
+    padding: 0.25rem 0.55rem;
+  }
 }
 
 /* ============================================
