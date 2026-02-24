@@ -1237,6 +1237,25 @@ small {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .site-header {
+    height: 64px;
+  }
+  .header-inner {
+    height: 64px;
+  }
+  .logo-img {
+    width: 56px;
+    height: 46px;
+  }
+  .site-nav {
+    gap: 0.75rem;
+  }
+  .site-nav a {
+    font-size: 0.78rem;
+  }
+}
 /* ============================================
    SERVICE PAGE — MOBILE
    ============================================ */
