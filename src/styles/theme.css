@@ -1237,7 +1237,6 @@ small {
     grid-template-columns: 1fr;
   }
 }
-
 @media (max-width: 1100px) and (min-width: 901px) {
   .site-header {
     height: 64px;
@@ -1423,6 +1422,7 @@ small {
   .site-header {
     position: relative;
     height: 64px;
+    top: 0;
   }
   .header-inner {
     height: 64px;
