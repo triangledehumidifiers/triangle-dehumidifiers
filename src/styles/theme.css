@@ -1240,6 +1240,7 @@ small {
 @media (max-width: 1100px) and (min-width: 901px) {
   .site-header {
     height: 64px;
+    top: 0;
   }
   .header-inner {
     height: 64px;
