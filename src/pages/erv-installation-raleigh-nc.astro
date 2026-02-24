@@ -218,7 +218,7 @@ const schema = {
             width="780"
             height="320"
             fetchpriority="high"
-            style="width:100%;height:auto;max-height:420px;object-fit:contain;border-radius:var(--radius-md);display:block;background:#f7f9fc;"
+            style="width:100%;height:auto;max-height:420px;object-fit:cover;object-position:center top;border-radius:var(--radius-md);display:block;"
           />
         </div>
       </div>
@@ -247,7 +247,20 @@ const schema = {
               </div>
             </div>
             <div class="icon-card">
-              <span class="icon-card__icon">🌫️</span>
+              <div class="icon-card__icon icon-card__icon--svg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="var(--color-primary)"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path d="M9.59 4.59A2 2 0 1 1 11 8H2"></path><path
+                    d="M12.59 19.41A2 2 0 1 0 14 16H2"></path><path d="M6.5 11a4 4 0 0 1 7.5 2H2"
+                  ></path></svg
+                >
+              </div>
               <div>
                 <strong>Persistent Odors</strong>
                 <p>
