@@ -179,13 +179,26 @@ li {
   gap: 0.75rem;
   text-decoration: none;
   flex-shrink: 0;
-}
 .logo-img {
   width: 79px;
   height: 65px;
   display: block;
-  /* Prevents any font/layout shift from resizing the logo */
   flex-shrink: 0;
+}
+@media (max-width: 900px) {
+  .logo-img {
+    width: 60px;
+    height: 49px;
+  }
+  .site-header {
+    height: 64px;
+  }
+  .header-inner {
+    height: 64px;
+  }
+  .site-nav {
+    top: 64px;
+  }
 }
 .site-nav {
   display: flex;
@@ -218,21 +231,43 @@ li {
 .nav-cta:hover {
   background-color: var(--color-cta-hover) !important;
 }
+
+/* ============================================
+   NAV TOGGLE — MOBILE MENU BUTTON
+   ============================================ */
+
 .nav-toggle {
   display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
   flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  min-width: 64px;
+  gap: 2px;
 }
-.nav-toggle span {
+.nav-toggle__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.nav-toggle__bars span {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
-  background-color: var(--color-text);
-  transition: all 0.3s;
+  background: #fff;
+  border-radius: 2px;
+}
+.nav-toggle__label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
 }
 
 /* ============================================
@@ -245,21 +280,19 @@ li {
   padding: clamp(20px, 3vw, 40px) 0 clamp(30px, 4vw, 50px);
 }
 
-/* Background image layer — now an <img> for LCP discoverability */
 .hero-simple__bg-img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 80%;
+  object-position: center bottom;
   filter: saturate(0.85) contrast(0.92) brightness(1.04) blur(1px);
-  transform: scale(1.03);
+  transform: scale(1.01);
   z-index: 0;
   pointer-events: none;
 }
 
-/* Background image layer */
 .hero-simple::after {
   content: '';
   position: absolute;
@@ -267,7 +300,6 @@ li {
   z-index: 0;
 }
 
-/* Two-zone overlay — subtle left, strong right */
 .hero-simple::before {
   content: '';
   position: absolute;
@@ -345,7 +377,7 @@ li {
 }
 .trust-pills {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
   margin-top: 10px;
 }
@@ -358,6 +390,17 @@ li {
   padding: 0.3rem 0.75rem;
   border-radius: 20px;
   border: 1px solid rgba(18, 47, 91, 0.18);
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .trust-pills {
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+  .pill {
+    font-size: 0.68rem;
+    padding: 0.25rem 0.55rem;
+  }
 }
 
 /* ============================================
@@ -861,6 +904,7 @@ li {
   margin-bottom: var(--space-sm);
   display: block;
 }
+
 /* ============================================
    IMAGE PLACEHOLDER BOXES
    ============================================ */
@@ -891,47 +935,34 @@ li {
   font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 600;
-  color: #1a2535; /* was #3d4f61 — now 8.9:1 on light bg, passes AA + AAA */
+  color: #1a2535;
   line-height: 1.5;
 }
 
-/* FIXED: <small> caption under/over images — was too light on dark bg */
 .img-box small,
 small {
-  color: #1a2535; /* near-black — 12:1 on white, clearly passes AA */
+  color: #1a2535;
   font-size: 0.78rem;
   display: block;
   line-height: 1.4;
 }
 
-/* FIXED: img-box--tall text overlay — text on dark image overlay */
 .img-box--tall .img-box__text,
 .img-box--tall small,
 .img-box--tall p {
-  color: #ffffff; /* full white on dark overlay — 14.5:1 passes AAA */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); /* extra insurance on varied image bg */
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* FIXED: base img-box text — was #3d4f61 on #e0e4ea (~4.1:1 borderline) */
-.img-box__text {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #1a2535; /* was #3d4f61 — now 8.9:1 on light bg, passes AA + AAA */
-  line-height: 1.5;
-}
-
-/* FIXED: img-box overlay background — ensure dark enough for white text */
 .img-box--tall::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* was likely 0.3-0.4 — not dark enough */
+  background: rgba(0, 0, 0, 0.55);
   border-radius: inherit;
   pointer-events: none;
 }
 
-/* Ensure text inside img-box--tall sits above the overlay */
 .img-box--tall .img-box__text,
 .img-box--tall small {
   position: relative;
@@ -1180,6 +1211,7 @@ small {
   margin-top: 1rem;
   display: block;
 }
+
 /* ============================================
    TWO COLUMN CARDS
    ============================================ */
@@ -1206,6 +1238,7 @@ small {
     grid-template-columns: 1fr;
   }
 }
+
 /* ============================================
    SERVICE PAGE — MOBILE
    ============================================ */
@@ -1218,9 +1251,7 @@ small {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-/* ============================================
-   MOBILE
-   ============================================ */
+
 /* ============================================
    PAGE HERO (interior pages)
    ============================================ */
@@ -1338,6 +1369,10 @@ small {
   border-radius: 0 0 var(--radius-md) var(--radius-md);
 }
 
+/* ============================================
+   MOBILE
+   ============================================ */
+
 @media (max-width: 900px) {
   .hero-simple::after {
     background-position: 25% 40%;
@@ -1453,7 +1488,6 @@ small {
   }
 }
 
-/* Half-screen / medium viewport adjustments */
 @media (max-width: 1100px) {
   .hero-simple::after {
     background-position: 25% 80%;
@@ -1465,14 +1499,22 @@ small {
     padding: 0;
   }
 }
-/* Narrow container */
+
+@media (min-width: 1101px) {
+  .hero-simple {
+    min-height: 460px;
+  }
+}
+
+/* ============================================
+   MISC UTILITIES
+   ============================================ */
+
 .narrow {
   max-width: 780px;
   margin-left: auto;
   margin-right: auto;
 }
-
-/* Proof strip */
 .proof-strip {
   display: flex;
   gap: 1.5rem;
@@ -1483,16 +1525,12 @@ small {
   font-size: 0.85rem;
   color: #374151;
 }
-
-/* Section spacing helpers */
 .section-top {
   margin-top: 1.5rem;
 }
 .section-top-sm {
   margin-top: 1rem;
 }
-
-/* FAQ accordion */
 .faq-item {
   border-bottom: 1px solid var(--color-border);
   padding: 1rem 0;
@@ -1525,19 +1563,14 @@ small {
   color: #374151;
   line-height: 1.7;
 }
-/* Signs grid 2-col override */
 .signs-grid--2col {
   grid-template-columns: repeat(2, 1fr);
 }
-
-/* Hero trust line */
 .hero-trust-line {
   font-size: 0.85rem;
   color: #374151;
   margin-top: 0.75rem;
 }
-
-/* Clarification list */
 .clarification-list {
   padding-left: 1.25rem;
   margin-top: 0.5rem;
@@ -1547,8 +1580,6 @@ small {
   color: #374151;
   margin-bottom: 0.35rem;
 }
-
-/* SVG icon in icon-card */
 .icon-card__icon--svg {
   width: 2.5rem;
   height: 2.5rem;
@@ -1562,6 +1593,7 @@ small {
   width: 1.5rem;
   height: 1.5rem;
 }
+
 /* Accessibility: links must not rely on color alone */
 a {
   text-decoration: underline;
@@ -1583,20 +1615,15 @@ a.site-logo,
   flex-direction: column;
   gap: 1.25rem;
   margin-top: 1.75rem;
-  /* Reserve space so content below doesn't shift on load */
   min-height: 160px;
   contain: layout;
 }
-
 .contact-info-item {
   display: flex;
   align-items: flex-start;
   gap: 0.85rem;
-  /* Lock row height to prevent reflow */
   min-height: 44px;
 }
-
-/* Lock SVG icon dimensions explicitly — unsized SVGs cause CLS */
 .contact-info-icon {
   width: 22px;
   height: 22px;
@@ -1605,10 +1632,8 @@ a.site-logo,
   flex-shrink: 0;
   margin-top: 2px;
   stroke: var(--color-accent);
-  /* Prevent icon from affecting layout flow while loading */
   display: block;
 }
-
 .contact-info-label {
   font-size: 0.78rem;
   font-weight: 700;
@@ -1616,11 +1641,9 @@ a.site-logo,
   letter-spacing: 0.06em;
   color: var(--color-text);
   margin-bottom: 2px;
-  /* Reserve line height so text swap doesn't shift layout */
   line-height: 1.2;
   min-height: 1em;
 }
-
 .contact-info-value {
   font-size: 1rem;
   font-weight: 600;
