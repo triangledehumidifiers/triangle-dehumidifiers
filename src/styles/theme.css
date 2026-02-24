@@ -218,6 +218,9 @@ li {
 .nav-cta:hover {
   background-color: var(--color-cta-hover) !important;
 }
+.nav-home-only {
+  display: none;
+}
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -269,7 +272,7 @@ li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 80%;
+  object-position: center bottom;
   filter: saturate(0.85) contrast(0.92) brightness(1.04) blur(1px);
   transform: scale(1.03);
   z-index: 0;
@@ -1379,6 +1382,9 @@ small {
   .nav-toggle {
     display: flex;
   }
+  .nav-home-only {
+    display: block;
+  }
   .site-nav {
     display: none;
     position: absolute;
@@ -1397,6 +1403,17 @@ small {
   }
   .site-header {
     position: relative;
+    height: 64px;
+  }
+  .header-inner {
+    height: 64px;
+  }
+  .logo-img {
+    width: 52px;
+    height: 43px;
+  }
+  .site-nav {
+    top: 64px;
   }
   .section,
   .section-alt,
