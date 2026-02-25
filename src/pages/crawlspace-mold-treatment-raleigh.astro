@@ -36,6 +36,53 @@ const schema = {
     },
   ],
 };
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What causes mold to grow in crawlspaces in Raleigh, NC?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Crawlspace mold is caused by sustained high Relative Humidity (RH) — typically above 60% for extended periods. In Raleigh and Wake County, the primary drivers are ground moisture evaporating through unprotected soil, humid exterior air entering through open vents, inadequate vapor barrier coverage, and plumbing condensation or leaks. Mold grows on wood framing and subfloor materials when moisture conditions are not controlled.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can crawlspace mold spread into living areas?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. The Stack Effect pulls crawlspace air upward into the living space through subfloor gaps, plumbing penetrations, and HVAC pathways. Mold spores, musty odors, and elevated humidity from an uncontrolled crawlspace can enter and affect the air quality in your home. Correcting crawlspace humidity at the source is the most effective way to prevent this.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does bleach kill crawlspace mold?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Bleach is not recommended for crawlspace mold treatment on wood framing. Bleach does not penetrate porous wood surfaces effectively and can leave behind moisture that promotes regrowth. We use EPA-registered antimicrobial products — including Benefect Botanical Decon 30 and Concrobium Mold Control — which are selected specifically for crawlspace wood applications and professional restoration workflows.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will mold come back after crawlspace treatment?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Mold will return if the underlying humidity is not corrected. Surface treatment removes existing growth, but if crawlspace RH continues to exceed 60%, conditions for regrowth remain. The most effective long-term approach is combining treatment with a dehumidification strategy that maintains crawlspace RH at 45–50% year-round.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does crawlspace mold treatment cost in Raleigh, NC?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Crawlspace mold treatment cost varies based on the size of the affected area, accessibility, and whether moisture correction equipment is needed. An in-person inspection is the best way to determine accurate scope and pricing for your specific crawlspace.',
+      },
+    },
+  ],
+};
 ---
 
 <BaseLayout
@@ -45,6 +92,7 @@ const schema = {
   heroImage="/images/mold-crawlspace-raleigh-nc.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <!-- HERO -->
   <section class="svc-hero">
@@ -454,6 +502,63 @@ const schema = {
           >encapsulated crawlspace dehumidifier installation</a
         > page.
       </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>What causes mold to grow in crawlspaces in Raleigh, NC?</h3>
+          <p>
+            Crawlspace mold is caused by sustained high Relative Humidity (RH) — typically above
+            60% for extended periods. In Raleigh and Wake County, the primary drivers are ground
+            moisture evaporating through unprotected soil, humid exterior air entering through open
+            vents, inadequate vapor barrier coverage, and plumbing condensation or leaks. Mold grows
+            on wood framing and subfloor materials when moisture conditions are not controlled.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Can crawlspace mold spread into living areas?</h3>
+          <p>
+            Yes. The Stack Effect pulls crawlspace air upward into the living space through subfloor
+            gaps, plumbing penetrations, and HVAC pathways. Mold spores, musty odors, and elevated
+            humidity from an uncontrolled crawlspace can enter and affect the air quality in your
+            home. Correcting crawlspace humidity at the source is the most effective way to prevent
+            this.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Does bleach kill crawlspace mold?</h3>
+          <p>
+            Bleach is not recommended for crawlspace mold treatment on wood framing. Bleach does not
+            penetrate porous wood surfaces effectively and can leave behind moisture that promotes
+            regrowth. We use EPA-registered antimicrobial products — including Benefect Botanical
+            Decon 30 and Concrobium Mold Control — which are selected specifically for crawlspace
+            wood applications and professional restoration workflows.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Will mold come back after crawlspace treatment?</h3>
+          <p>
+            Mold will return if the underlying humidity is not corrected. Surface treatment removes
+            existing growth, but if crawlspace RH continues to exceed 60%, conditions for regrowth
+            remain. The most effective long-term approach is combining treatment with a
+            dehumidification strategy that maintains crawlspace RH at 45–50% year-round.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>How much does crawlspace mold treatment cost in Raleigh, NC?</h3>
+          <p>
+            Crawlspace mold treatment cost varies based on the size of the affected area,
+            accessibility, and whether moisture correction equipment is needed. An in-person
+            inspection is the best way to determine accurate scope and pricing for your specific
+            crawlspace.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
