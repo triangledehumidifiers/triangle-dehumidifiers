@@ -1573,7 +1573,7 @@ small {
 /* FAQ accordion */
 .faq-item {
   border-bottom: 1px solid var(--color-border);
-  padding: 1rem 0;
+  padding: 1rem 1.25;
 }
 .faq-item summary {
   font-weight: 700;
