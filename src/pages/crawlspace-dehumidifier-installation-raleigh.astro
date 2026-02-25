@@ -34,6 +34,45 @@ const schema = {
     },
   ],
 };
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What humidity level should a crawlspace be in Raleigh, NC?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'In Raleigh\u2019s climate, crawlspaces should typically be maintained between 45\u201350% Relative Humidity (RH) to prevent mold growth, wood rot, and moisture damage.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do crawlspace vents work in North Carolina?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'In humid climates like Raleigh, traditional crawlspace vents often introduce more moisture. A sealed crawlspace with a properly sized dehumidifier provides more consistent humidity control.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does crawlspace dehumidifier installation take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most installations can be completed in one day depending on accessibility, encapsulation condition, and ducting requirements.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will a dehumidifier eliminate crawlspace mold?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A dehumidifier helps prevent future mold growth by maintaining proper humidity levels, but existing mold may require surface treatment before installation.',
+      },
+    },
+  ],
+};
 ---
 
 <BaseLayout
@@ -43,6 +82,7 @@ const schema = {
   heroImage="/images/vented-crawlspace-open-foundation-vent-raleigh-nc.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <!-- HERO -->
   <section class="svc-hero">
