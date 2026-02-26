@@ -158,7 +158,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               name="redirect"
               value="https://www.triangledehumidifiers.com/thank-you"
             />
-            <input type="hidden" name="replyto" value="info@triangledehumidifiers.com" />
+            <input type="hidden" name="replyto" id="replyto" value="" />
             <input
               type="checkbox"
               name="botcheck"
@@ -286,6 +286,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               &#128274; Your information is private and never shared. We try to respond within 1
               business day.
             </p>
+            <script>
+              document.getElementById('email').addEventListener('change', function () {
+                document.getElementById('replyto').value = this.value;
+              });
+            </script>
           </form>
         </div>
       </div>
