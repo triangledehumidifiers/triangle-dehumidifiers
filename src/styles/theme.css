@@ -1,250 +1,1709 @@
----
-import BaseLayout from '../layouts/BaseLayout.astro';
+/* ============================================
+   THEME.CSS — Triangle Dehumidifiers
+   ============================================ */
 
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Triangle Dehumidifiers, LLC',
-  telephone: '(984) 600-3650',
-  email: 'info@triangledehumidifiers.com',
-  url: 'https://www.triangledehumidifiers.com',
-  address: {
-    '@type': 'PostalAddress',
-    addressRegion: 'NC',
-    addressCountry: 'US',
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Holly Springs' },
-    { '@type': 'City', name: 'Raleigh' },
-    { '@type': 'City', name: 'Cary' },
-    { '@type': 'City', name: 'Apex' },
-    { '@type': 'City', name: 'Fuquay-Varina' },
-  ],
-  serviceType: [
-    'Crawlspace Dehumidifier Installation',
-    'Crawlspace Mold Treatment',
-    'ERV Installation',
-    'Whole-House Dehumidifier Installation',
-  ],
-  description:
-    'Dehumidifier installation and humidity control in the Triangle region, led by a humidity control specialist with over 15 years of experience.',
-};
----
+:root {
+  --color-primary: #122f5b;
+  --color-primary-dark: #122f5b;
+  --color-primary-light: #5a6e8d;
+  --color-accent: #6aa43a;
+  --color-accent-dark: #4f7d2a;
+  --color-accent-light: #82c24e;
+  --color-lightblue: #a8d4f0;
+  --color-bg: #ffffff;
+  --color-bg-white: #ffffff;
+  --color-bg-section: #eaebf0;
+  --color-text: #122f5b;
+  --color-text-light: #4a5a6a;
+  --color-text-inverse: #ffffff;
+  --color-border: #d0d9e4;
+  --color-cta: #4f7d2a;
+  --color-cta-hover: #3d6120;
+  --font-main: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-heading: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.375rem;
+  --font-size-2xl: 1.75rem;
+  --font-size-hero: 2.75rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --max-width: 1100px;
+  --header-height: 80px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
 
-<BaseLayout
-  title="Dehumidifier Installation Raleigh NC | Triangle Dehumidifiers"
-  description="Dehumidifier installation in Raleigh, NC—led by a humidity control specialist with 15+ years of experience. We target 45–50% Relative Humidity (RH) to protect framing, subfloors, and air quality. Serving Holly Springs, Cary, Apex, and Fuquay-Varina."
-  canonical="/"
-  heroImage="/images/hero-livingroom.webp"
->
-  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
-  <!-- HERO -->
-  <section class="hero-simple">
-    <img
-      src="/images/hero-livingroom.webp"
-      fetchpriority="high"
-      alt=""
-      class="hero-simple__bg-img"
-    />
-    <div class="container hero-simple__inner">
-      <div class="hero-simple__content">
-        <div class="hero-brand">Triangle Dehumidifiers</div>
-        <div class="hero-simple__eyebrow">Professional Humidity Control</div>
-        <h1>Dehumidifier<br />Installation in<br />Raleigh, NC</h1>
-        <p>
-          Humidity control for homes across the Triangle region—led by a humidity control specialist with 15+ years of experience.
-          We design systems to maintain 45–50% Relative Humidity (RH) to protect framing, subfloors, and indoor air quality long-term.
-        </p>
-        <div class="hero-simple__actions">
-          <a href="/contact" class="btn btn-green">Request Inspection</a>
-          <a href="/crawlspace-dehumidifier-installation-raleigh" class="btn btn-secondary"
-            >Our Services</a
-          >
-        </div>
-        <div class="trust-pills">
-          <span class="pill">&#10003; Protect Structure</span>
-          <span class="pill">&#10003; Healthier Air</span>
-          <span class="pill">&#10003; Humidity Control</span>
-        </div>
-      </div>
-    </div>
-  </section>
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  line-height: 1.25;
+  font-weight: 700;
+}
+h1 {
+  font-size: var(--font-size-hero);
+}
+h2 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-sm);
+}
+h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-xs);
+}
+p {
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-light);
+  font-size: var(--font-size-lg);
+}
+ul,
+ol {
+  padding-left: 1.5rem;
+  margin-bottom: var(--space-sm);
+}
+li {
+  margin-bottom: 0.4rem;
+  color: var(--color-text-light);
+  font-size: var(--font-size-lg);
+}
 
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="container trust-bar-inner">
-      <div class="trust-bar-item">
-        <span class="trust-icon">&#9679;</span>
-        <span>Fully Insured</span>
-      </div>
-      <div class="trust-bar-item">
-        <span class="trust-icon">&#9679;</span>
-        <span>Led by 15+ Years Experience</span>
-      </div>
-      <div class="trust-bar-item">
-        <span class="trust-icon">&#9679;</span>
-        <span>Wake County-Based</span>
-      </div>
-    </div>
-  </div>
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+.section {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-bg-white);
+}
+.section-alt {
+  background-color: var(--color-bg-section);
+  padding: var(--space-xl) 0;
+}
+.section-dark {
+  background-color: var(--color-primary);
+  padding: var(--space-xl) 0;
+  color: var(--color-text-inverse);
+}
+.section-dark h2,
+.section-dark h3,
+.section-dark p,
+.section-dark li {
+  color: var(--color-text-inverse);
+}
 
-  <!-- STRIPES: Below Trust Bar -->
-  <div class="stripes-below-trust"></div>
+/* ============================================
+   TOP BAR
+   ============================================ */
 
-  <!-- WHY HUMIDITY MATTERS -->
-  <section class="why-section">
-    <div class="container why-inner">
-      <h2>How High Indoor Humidity<br />Affects Your Home</h2>
-      <p class="why-intro">
-        Excess indoor moisture can lead to mold growth, structural wood damage, poor air quality,
-        lower comfort, and increased HVAC strain throughout the home.
-      </p>
-      <div class="why-grid">
-        <div class="why-cards">
-          <div class="why-card">
-            <h3><span class="card-icon">⇑</span> The Stack Effect</h3>
-            <p>
-              As warm air rises and exits your attic, damp crawlspace air is pulled up into your
-              home's living areas.
-            </p>
-          </div>
-          <div class="why-card">
-            <h3><span class="card-icon">≋</span> Musty Odors</h3>
-            <p>
-              Persistent musty smells inside typically indicate high humidity and potential mold
-              growth.
-            </p>
-          </div>
-          <div class="why-card">
-            <h3><span class="card-icon">💧</span> Wood Moisture Concerns</h3>
-            <p>
-              Excessive humidity can cause moisture damage and mold growth in subflooring and
-              structural framing.
-            </p>
-          </div>
-          <div class="why-card">
-            <h3><span class="card-icon">⚡</span> Energy Inefficiency</h3>
-            <p>
-              A damp home increases the load on your HVAC system. Reducing humidity lowers overall
-              moisture and improves efficiency.
-            </p>
-          </div>
-        </div>
-        <div class="why-right">
-          <div class="why-image-box">
-            <img
-              src="/images/wet-window.webp"
-              alt="Professional dehumidifier installation"
-              class="why-photo"
-              width="546"
-              height="364"
-              loading="lazy"
-            />
-          </div>
-          <div class="why-summary">
-            <h3>Professional Humidity Control Systems</h3>
-            <p class="summary-sub">
-              Properly designed and installed dehumidification systems maintain stable Relative
-              Humidity (RH) levels to protect your home and improve indoor comfort.
-            </p>
-            <ul class="summary-list">
-              <li>
-                <span class="check">&#10004;</span> Prevent wood rot, mold, and musty odors
-              </li>
-              <li>
-                <span class="check">&#10004;</span> Improve indoor air quality throughout your home
-              </li>
-              <li>
-                <span class="check">&#10004;</span> Increase energy efficiency and improve home comfort
-              </li>
-            </ul>
-            <a href="/contact" class="btn btn-green">Request Inspection</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+.topbar {
+  background-color: #122f5b;
+  padding: 0.4rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 101;
+}
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar-left,
+.topbar-right {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
 
-  <!-- STRIPES: Middle -->
-  <div class="stripes-mid"></div>
+/* ============================================
+   HEADER
+   ============================================ */
 
-  <!-- OUR APPROACH -->
-  <section class="approach-section">
-    <div class="container approach-inner">
-      <h2>Our Approach to Home Dehumidification</h2>
-      <div class="approach-grid">
-        <div class="approach-card">
-          <div class="step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-              ><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"
-              ></path><rect x="9" y="3" width="6" height="4" rx="1"></rect><path d="m9 12 2 2 4-4"
-              ></path></svg
-            >
-          </div>
-          <h3>Assess &amp; Plan</h3>
-          <p>
-            We inspect your home and identify humidity sources to design a system that fits your
-            specific needs.
-          </p>
-        </div>
-        <div class="approach-card">
-          <div class="step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-              ><path
-                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
-              ></path></svg
-            >
-          </div>
-          <h3>Install Dehumidifiers</h3>
-          <p>
-            We install high-performance dehumidifiers calibrated to maintain ~50% RH throughout your
-            home.
-          </p>
-        </div>
-        <div class="approach-card">
-          <div class="step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-              ><path d="M12 2a10 10 0 0 1 7.38 16.75"></path><path d="M12 2a10 10 0 0 0-7.38 16.75"
-              ></path><path d="M12 12 8.5 8.5"></path><circle cx="12" cy="12" r="1.5"></circle><path
-                d="M12 17a2 2 0 0 1-2-2c0-.55.22-1.05.59-1.41L12 12"></path><path
-                d="M10.5 19.5c.5.3 1 .5 1.5.5s1-.2 1.5-.5"></path></svg
-            >
-          </div>
-          <h3>Monitor &amp; Optimize</h3>
-          <p>
-            We verify humidity levels after installation and ensure your system maintains stable
-            Relative Humidity (RH) for long-term moisture control.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+.site-header {
+  position: sticky;
+  top: 32px;
+  z-index: 100;
+  background-color: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  height: var(--header-height);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo-img {
+  width: 79px;
+  height: 65px;
+  display: block;
+  /* Prevents any font/layout shift from resizing the logo */
+  flex-shrink: 0;
+}
+.site-nav {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-nav a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.site-nav a:hover {
+  color: var(--color-accent-dark);
+  text-decoration: none;
+}
+.nav-cta {
+  background-color: var(--color-cta);
+  color: var(--color-text-inverse) !important;
+  padding: 0.55rem 1.2rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s !important;
+}
+.nav-cta:hover {
+  background-color: var(--color-cta-hover) !important;
+}
+.nav-home-only {
+  display: none;
+}
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  min-width: 64px;
+  gap: 2px;
+}
+.nav-toggle__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.nav-toggle__bars span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+.nav-toggle__label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
 
-  <!-- STRIPES: Above CTA -->
-  <div class="stripes-above-cta"></div>
+/* ============================================
+   HERO
+   ============================================ */
 
-  <!-- BOTTOM CTA BAR -->
-  <section class="cta-bottom">
-    <div class="container cta-bottom-inner">
-      <div class="cta-bottom-left">
-        <img
-          src="/logo.webp"
-          alt="Triangle Dehumidifiers"
-          class="cta-logo"
-          width="79"
-          height="65"
-          loading="lazy"
-        />
-        <div>
-          <strong>Schedule Your Free Inspection Today</strong>
-          <p>Protect your home with professional dehumidifier installation.</p>
-        </div>
-      </div>
-      <div class="cta-bottom-right">
-        <span class="cta-phone">(984) 600-3650</span>
-        <a href="/contact" class="btn btn-green">Request Inspection</a>
-      </div>
-    </div>
-  </section>
-</BaseLayout>
+.hero-simple {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(20px, 3vw, 40px) 0 clamp(30px, 4vw, 50px);
+}
+
+/* Background image layer — now an <img> for LCP discoverability */
+.hero-simple__bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  filter: saturate(0.85) contrast(0.92) brightness(1.04) blur(1px);
+  transform: scale(1.03);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Background image layer */
+.hero-simple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Two-zone overlay — subtle left, strong right */
+.hero-simple::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(255, 255, 255, 0.25) 30%,
+      rgba(255, 255, 255, 0) 52%
+    ),
+    linear-gradient(
+      to left,
+      rgba(245, 247, 250, 0.84) 0%,
+      rgba(245, 247, 250, 0.4) 25%,
+      rgba(245, 247, 250, 0) 52%
+    );
+}
+
+.hero-simple__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.hero-simple__content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  padding: 0;
+  margin-left: 0;
+  margin-right: auto;
+}
+.hero-brand {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.hero-simple__eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-accent-dark);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.hero-simple h1 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+.hero-simple p {
+  color: #374151;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  max-width: 38ch;
+}
+.hero-simple__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.trust-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.pill {
+  background: rgba(18, 47, 91, 0.07);
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(18, 47, 91, 0.18);
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .trust-pills {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .pill {
+    font-size: 0.68rem;
+    padding: 0.25rem 0.55rem;
+  }
+}
+
+/* ============================================
+   TRUST BAR
+   ============================================ */
+
+.trust-bar {
+  background-color: #122f5b;
+  padding: 1.5rem 0;
+}
+.trust-bar-inner {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+}
+.trust-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.trust-icon {
+  color: var(--color-accent-dark);
+  font-size: 0.7rem;
+}
+
+/* ============================================
+   STRIPES — 3 Variants
+   ============================================ */
+
+.stripes-below-trust {
+  display: block;
+  height: 50px;
+  background: linear-gradient(
+    to bottom,
+    #6aa43a 0px,
+    #6aa43a 20px,
+    #a8d4f0 20px,
+    #a8d4f0 35px,
+    #ffffff 50px
+  );
+}
+
+.stripes-mid {
+  display: block;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0px,
+    #a8d4f0 12px,
+    #a8d4f0 27px,
+    #6aa43a 27px,
+    #6aa43a 42px,
+    #122f5b 42px,
+    #122f5b 80px
+  );
+}
+
+.stripes-above-cta {
+  display: block;
+  height: 50px;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0px,
+    #a8d4f0 15px,
+    #a8d4f0 30px,
+    #6aa43a 30px,
+    #6aa43a 50px
+  );
+}
+
+/* ============================================
+   WHY SECTION
+   ============================================ */
+
+.why-section {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-bg-white);
+}
+.why-inner h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.why-intro {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+  max-width: 520px;
+  line-height: 1.6;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+.why-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+.why-card {
+  background: #f7f9fc;
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  flex: 1;
+}
+.why-right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.why-image-box {
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  line-height: 0;
+}
+.why-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 800 / 533;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+.why-summary {
+  background: #ffffff;
+  padding: 1.75rem;
+  border-radius: 0 0 12px 12px;
+  border: 2px solid var(--color-border);
+  border-top: 3px solid var(--color-accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.why-summary h3 {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.why-summary .summary-sub {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.summary-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+.summary-list li {
+  color: #333;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.check {
+  color: var(--color-accent-dark);
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   APPROACH SECTION
+   ============================================ */
+
+.approach-section {
+  background-color: var(--color-bg-white);
+  padding: var(--space-xl) 0;
+}
+.approach-inner {
+  text-align: center;
+}
+.approach-inner h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: 2.5rem;
+  font-weight: 800;
+}
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+.approach-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  text-align: left;
+  box-shadow: var(--shadow-md);
+  border-top: 4px solid var(--color-accent);
+  display: flex;
+  flex-direction: column;
+}
+.step-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.step-icon svg {
+  width: 40px;
+  height: 40px;
+  stroke: var(--color-primary);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.approach-card h3 {
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+.approach-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+  margin-bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+  border: none;
+}
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.btn-green {
+  background-color: var(--color-cta);
+  color: #ffffff !important;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+  border: none;
+  cursor: pointer;
+}
+.btn-green:hover {
+  background-color: var(--color-cta-hover);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary);
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background: rgba(18, 47, 91, 0.08);
+  text-decoration: none;
+}
+
+/* ============================================
+   CARDS (legacy)
+   ============================================ */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+.card {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-sm);
+}
+.card h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+/* ============================================
+   FAQ
+   ============================================ */
+
+.faq-list {
+  margin-top: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.faq-item {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+.faq-item h3 {
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-xs);
+}
+
+/* ============================================
+   CONTACT FORM
+   ============================================ */
+
+.contact-form {
+  max-width: 640px;
+  margin: var(--space-lg) auto 0;
+}
+.form-group {
+  margin-bottom: var(--space-md);
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--color-text);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-base);
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: var(--color-bg-white);
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+.form-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* ============================================
+   BOTTOM CTA BAR
+   ============================================ */
+
+.cta-bottom {
+  background-color: #122f5b;
+  padding: 2.5rem 0;
+}
+.cta-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.cta-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cta-bottom-left strong {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: #ffffff;
+  display: block;
+}
+.cta-bottom-left p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  margin: 0;
+}
+.cta-logo {
+  height: 52px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+.cta-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.cta-phone {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+  background-color: #122f5b;
+  color: #ffffff;
+  padding: 1.5rem 0 1.25rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.site-footer a {
+  color: #ffffff;
+}
+.site-footer a:hover {
+  color: #ffffff;
+}
+.footer-nap {
+  margin-bottom: 1rem;
+}
+.footer-nap p {
+  margin: 0.15rem 0;
+  color: #ffffff;
+}
+.footer-nap strong {
+  color: #ffffff;
+}
+.site-footer p {
+  color: #ffffff;
+}
+.site-footer strong {
+  color: #ffffff;
+}
+.site-footer > .container > p {
+  margin: 0.75rem 0 0;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-sm) 0;
+  flex-wrap: wrap;
+}
+.footer-links li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li a {
+  white-space: nowrap;
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+.answer-first {
+  font-weight: 700;
+  color: var(--color-text) !important;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+/* ============================================
+   IMAGE PLACEHOLDER BOXES
+   ============================================ */
+
+.img-box {
+  width: 100%;
+  height: 260px;
+  background: #e0e4ea;
+  border: 2px dashed #b0bac7;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  color: #3d4f61;
+  text-align: center;
+}
+.img-box--tall {
+  height: 320px;
+}
+.img-box__icon {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+.img-box__text {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a2535; /* was #3d4f61 — now 8.9:1 on light bg, passes AA + AAA */
+  line-height: 1.5;
+}
+
+/* FIXED: <small> caption under/over images — was too light on dark bg */
+.img-box small,
+small {
+  color: #1a2535; /* near-black — 12:1 on white, clearly passes AA */
+  font-size: 0.78rem;
+  display: block;
+  line-height: 1.4;
+}
+
+/* FIXED: img-box--tall text overlay — text on dark image overlay */
+.img-box--tall .img-box__text,
+.img-box--tall small,
+.img-box--tall p {
+  color: #ffffff; /* full white on dark overlay — 14.5:1 passes AAA */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); /* extra insurance on varied image bg */
+}
+
+/* FIXED: base img-box text — was #3d4f61 on #e0e4ea (~4.1:1 borderline) */
+.img-box__text {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a2535; /* was #3d4f61 — now 8.9:1 on light bg, passes AA + AAA */
+  line-height: 1.5;
+}
+
+/* FIXED: img-box overlay background — ensure dark enough for white text */
+.img-box--tall::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* was likely 0.3-0.4 — not dark enough */
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Ensure text inside img-box--tall sits above the overlay */
+.img-box--tall .img-box__text,
+.img-box--tall small {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   SERVICE PAGE — HERO
+   ============================================ */
+
+.svc-hero {
+  background: #ffffff;
+  padding: clamp(40px, 6vw, 80px) 0 clamp(40px, 5vw, 70px);
+}
+.svc-hero__bar {
+  height: 5px;
+  background: var(--color-primary);
+  margin-bottom: 2.5rem;
+}
+.svc-hero h1 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  color: var(--color-primary);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+.svc-hero__direct {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  display: block;
+  margin-bottom: 1rem;
+  max-width: 680px;
+}
+.svc-hero__sub {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  max-width: 680px;
+  line-height: 1.75;
+  margin-bottom: 1.75rem;
+}
+.svc-hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 540px) {
+  .svc-hero__actions {
+    flex-direction: column;
+  }
+  .svc-hero__actions .btn,
+  .svc-hero__actions .btn-green,
+  .svc-hero__actions .btn-secondary {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+/* ============================================
+   SERVICE PAGE — LAYOUT
+   ============================================ */
+
+.svc-content {
+  max-width: 780px;
+}
+.svc-divider {
+  height: 1px;
+  background: var(--color-border);
+}
+.svc-split {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+.svc-split__image {
+  padding-top: 0.5rem;
+}
+
+/* ============================================
+   SERVICE PAGE — STEPS
+   ============================================ */
+
+.svc-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  margin-top: 1.25rem;
+}
+.svc-step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.svc-step__num {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  background: var(--color-primary);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+.svc-step__body h3 {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+.svc-step__body p {
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+/* ============================================
+   SERVICE PAGE — ICON CARDS
+   ============================================ */
+
+.icon-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+.icon-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  border-left: 3px solid var(--color-accent);
+  padding: 0.75rem 1rem;
+}
+.icon-card__icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+.icon-card__icon svg {
+  width: 36px;
+  height: 36px;
+}
+.icon-card__icon--green svg {
+  stroke: #4a7c3f;
+}
+.icon-card__icon--brown svg {
+  stroke: #7a4a1a;
+}
+.icon-card__icon--purple svg {
+  stroke: #7b5ea7;
+}
+.icon-card__icon--blue svg {
+  stroke: #1a6fa8;
+}
+.icon-card strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  margin-bottom: 2px;
+}
+.icon-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ============================================
+   SERVICE PAGE — FEATURE LIST
+   ============================================ */
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+.feature-check {
+  color: var(--color-accent-dark);
+  font-weight: 800;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   SERVICE PAGE — SIGNS GRID
+   ============================================ */
+
+.signs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.sign-card {
+  border-top: 3px solid var(--color-accent);
+  padding: 1.25rem 0.5rem;
+  text-align: center;
+}
+.sign-card__icon {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+.sign-card__icon svg {
+  width: 36px;
+  height: 36px;
+}
+.sign-card p {
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ============================================
+   SERVICE PAGE — CTA
+   ============================================ */
+
+.svc-cta {
+  background: var(--color-primary);
+  padding: clamp(50px, 6vw, 80px) 0;
+  text-align: center;
+}
+.svc-cta__inner h2 {
+  color: #ffffff;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: 0.75rem;
+}
+.svc-cta__inner p {
+  color: #ffffff;
+  margin-bottom: 1.75rem;
+  font-size: 1rem;
+}
+.svc-cta__trust {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 1rem;
+  display: block;
+}
+/* ============================================
+   TWO COLUMN CARDS
+   ============================================ */
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.two-col-card {
+  border-left: 3px solid var(--color-accent);
+  padding: 1.25rem 1.5rem;
+}
+.two-col-card h3 {
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  .site-header {
+    height: 64px;
+    top: 0;
+  }
+  .header-inner {
+    height: 64px;
+  }
+  .logo-img {
+    width: 63px;
+    height: 52px;
+  }
+  .site-nav {
+    gap: 0.75rem;
+  }
+  .site-nav a {
+    font-size: 0.78rem;
+  }
+}
+/* ============================================
+   SERVICE PAGE — MOBILE
+   ============================================ */
+
+@media (max-width: 900px) {
+  .svc-split {
+    grid-template-columns: 1fr;
+  }
+  .signs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ============================================
+   MOBILE
+   ============================================ */
+/* ============================================
+   PAGE HERO (interior pages)
+   ============================================ */
+
+.page-hero {
+  background: linear-gradient(135deg, #122f5b 0%, #0d6b6b 100%);
+}
+.page-hero--green {
+  background: linear-gradient(135deg, #122f5b 0%, #2d6a1f 100%);
+}
+.page-hero__eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-accent-light);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.page-hero h1 {
+  color: #ffffff;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.15;
+  margin-bottom: 16px;
+  font-weight: 800;
+  max-width: 700px;
+}
+.page-hero p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 620px;
+}
+.page-hero__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.btn-secondary-white {
+  background: transparent;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+.btn-secondary-white:hover {
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+.page-hero__stats {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 2rem;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stat__number {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-accent-light);
+}
+.stat__label {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================
+   VAPOR SECTION
+   ============================================ */
+
+.vapor-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.vapor-img {
+  width: 100%;
+  border-radius: 12px;
+  height: 300px;
+  object-fit: cover;
+}
+.section-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  display: block;
+  background-color: #eaebf0;
+}
+.img-placeholder__label {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 0.4rem;
+  background: #f0f0f0;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+@media (max-width: 900px) {
+  .hero-simple::after {
+    background-position: 25% 40%;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  .topbar-left {
+    display: none;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-home-only {
+    display: block;
+  }
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg-white);
+    flex-direction: column;
+    padding: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    gap: var(--space-sm);
+  }
+  .site-nav.open {
+    display: flex;
+  }
+  .site-header {
+    position: relative;
+    height: 64px;
+    top: 0;
+  }
+  .header-inner {
+    height: 64px;
+  }
+  .logo-img {
+    width: 63px;
+    height: 52px;
+  }
+  .site-nav {
+    top: 64px;
+  }
+  .section,
+  .section-alt,
+  .section-dark {
+    padding: var(--space-lg) 0;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-simple {
+    padding: 35px 0 40px;
+  }
+  .hero-simple__content {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-simple h1 {
+    font-size: 1.8rem;
+  }
+  .hero-simple__actions {
+    flex-direction: column;
+  }
+  .trust-bar-inner {
+    gap: 1.5rem;
+  }
+  .trust-bar-item {
+    font-size: 0.9rem;
+  }
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-bottom-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cta-bottom-left {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cta-bottom-right {
+    justify-content: center;
+  }
+  .stripes-below-trust {
+    height: 32px;
+    background: linear-gradient(
+      to bottom,
+      #6aa43a 0px,
+      #6aa43a 14px,
+      #a8d4f0 14px,
+      #a8d4f0 23px,
+      #ffffff 32px
+    );
+  }
+  .stripes-mid {
+    height: 54px;
+    background: linear-gradient(
+      to bottom,
+      #ffffff 0px,
+      #a8d4f0 8px,
+      #a8d4f0 19px,
+      #6aa43a 19px,
+      #6aa43a 30px,
+      #122f5b 30px,
+      #122f5b 54px
+    );
+  }
+  .stripes-above-cta {
+    height: 32px;
+    background: linear-gradient(
+      to bottom,
+      #ffffff 0px,
+      #a8d4f0 10px,
+      #a8d4f0 18px,
+      #6aa43a 18px,
+      #6aa43a 32px
+    );
+  }
+}
+
+/* Half-screen / medium viewport adjustments */
+@media (max-width: 1100px) {
+  .hero-simple::after {
+    background-position: 25% 80%;
+  }
+  .hero-simple__content {
+    max-width: 460px;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 0;
+  }
+}
+/* Narrow container */
+.narrow {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Proof strip */
+.proof-strip {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+.proof-strip span {
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+/* Section spacing helpers */
+.section-top {
+  margin-top: 1.5rem;
+}
+.section-top-sm {
+  margin-top: 1rem;
+}
+
+/* FAQ accordion */
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 1.25rem;
+}
+.faq-item summary {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.25rem;
+  color: var(--color-accent-dark);
+  flex-shrink: 0;
+}
+.faq-item[open] summary::after {
+  content: '−';
+}
+.faq-item p {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.7;
+}
+/* Signs grid 2-col override */
+.signs-grid--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Hero trust line */
+.hero-trust-line {
+  font-size: 0.85rem;
+  color: #374151;
+  margin-top: 0.75rem;
+}
+
+/* Clarification list */
+.clarification-list {
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+.clarification-list li {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 0.35rem;
+}
+
+/* SVG icon in icon-card */
+.icon-card__icon--svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent-dark);
+  flex-shrink: 0;
+}
+.icon-card__icon--svg svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+/* Accessibility: links must not rely on color alone */
+a {
+  text-decoration: underline;
+}
+a.btn,
+a.nav-cta,
+a.site-logo,
+.site-nav a,
+.footer-links a {
+  text-decoration: none;
+}
+
+/* ============================================
+   CONTACT INFO BLOCK
+   ============================================ */
+
+.contact-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+  /* Reserve space so content below doesn't shift on load */
+  min-height: 160px;
+  contain: layout;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  /* Lock row height to prevent reflow */
+  min-height: 44px;
+}
+
+/* Lock SVG icon dimensions explicitly — unsized SVGs cause CLS */
+.contact-info-icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  stroke: var(--color-accent);
+  /* Prevent icon from affecting layout flow while loading */
+  display: block;
+}
+
+.contact-info-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  margin-bottom: 2px;
+  /* Reserve line height so text swap doesn't shift layout */
+  line-height: 1.2;
+  min-height: 1em;
+}
+
+.contact-info-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  line-height: 1.4;
+  display: block;
+}
