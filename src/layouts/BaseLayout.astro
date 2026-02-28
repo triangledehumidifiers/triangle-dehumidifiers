@@ -39,52 +39,53 @@ const canonicalURL = canonical ? `https://www.triangledehumidifiers.com${canonic
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
 
-  <body>
-    <!-- TOP BAR -->
-    <div class="topbar">
-      <div class="container topbar-inner">
-        <span class="topbar-left">Serving Raleigh, Wake County &amp; the Triangle Region</span>
-        <span class="topbar-right">(984) 600-3650</span>
+  <body
+    ><!-- TOP BAR + HEADER: sticky wrapper -->
+    <div class="sticky-header">
+      <div class="topbar">
+        <div class="container topbar-inner">
+          <span class="topbar-left">Serving Raleigh, Wake County &amp; the Triangle Region</span>
+          <span class="topbar-right">(984) 600-3650</span>
+        </div>
       </div>
+
+      <header class="site-header">
+        <div class="container header-inner">
+          <a href="/" class="site-logo">
+            <img
+              src="/logo.webp"
+              alt="Triangle Dehumidifiers LLC"
+              class="logo-img"
+              width="79"
+              height="65"
+              fetchpriority="high"
+            />
+          </a>
+          <nav aria-label="Primary Navigation">
+            <ul class="site-nav" id="site-nav">
+              <li class="nav-home-only"><a href="/">Home</a></li>
+              <li><a href="/crawlspace-dehumidifier-installation-raleigh">Vented Crawlspace</a></li>
+              <li>
+                <a href="/encapsulated-crawlspace-dehumidifier-raleigh-nc"
+                  >Encapsulated Crawlspace</a>
+              </li>
+              <li><a href="/whole-house-dehumidifier-raleigh">Whole-Home</a></li>
+              <li><a href="/erv-installation-raleigh-nc">Ventilation</a></li>
+              <li><a href="/crawlspace-mold-treatment-raleigh">Mold Treatment</a></li>
+              <li><a href="/service-areas">Service Areas</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/contact" class="nav-cta">Get Inspection</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+              <span class="nav-toggle__bars">
+                <span></span><span></span><span></span>
+              </span>
+              <span class="nav-toggle__label" id="nav-toggle-label">Menu</span>
+            </button>
+          </nav>
+        </div>
+      </header>
     </div>
-
-    <!-- HEADER -->
-    <header class="site-header">
-      <div class="container header-inner">
-        <a href="/" class="site-logo">
-          <img
-            src="/logo.webp"
-            alt="Triangle Dehumidifiers LLC"
-            class="logo-img"
-            width="79"
-            height="65"
-            fetchpriority="high"
-          />
-        </a>
-        <nav aria-label="Primary Navigation">
-          <ul class="site-nav" id="site-nav">
-            <li class="nav-home-only"><a href="/">Home</a></li>
-            <li><a href="/crawlspace-dehumidifier-installation-raleigh">Vented Crawlspace</a></li>
-            <li>
-              <a href="/encapsulated-crawlspace-dehumidifier-raleigh-nc">Encapsulated Crawlspace</a>
-            </li>
-            <li><a href="/whole-house-dehumidifier-raleigh">Whole-Home</a></li>
-            <li><a href="/erv-installation-raleigh-nc">Ventilation</a></li>
-            <li><a href="/crawlspace-mold-treatment-raleigh">Mold Treatment</a></li>
-            <li><a href="/service-areas">Service Areas</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/contact" class="nav-cta">Get Inspection</a></li>
-          </ul>
-          <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-            <span class="nav-toggle__bars">
-              <span></span><span></span><span></span>
-            </span>
-            <span class="nav-toggle__label" id="nav-toggle-label">Menu</span>
-          </button>
-        </nav>
-      </div>
-    </header>
-
     <!-- PAGE CONTENT -->
     <main>
       <slot />

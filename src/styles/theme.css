@@ -158,11 +158,15 @@ li {
 /* ============================================
    HEADER
    ============================================ */
-
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 .site-header {
   position: sticky;
-  top: 32px;
-  z-index: 100;
+  top: 0px;
+  z-index: 1000;
   background-color: var(--color-bg-white);
   border-bottom: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
