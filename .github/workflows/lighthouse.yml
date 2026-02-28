@@ -32,4 +32,3 @@ jobs:
             https://www.triangledehumidifiers.com/contact
           uploadArtifacts: true
           temporaryPublicStorage: true
-```
