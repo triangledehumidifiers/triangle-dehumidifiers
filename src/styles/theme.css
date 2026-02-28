@@ -1302,6 +1302,7 @@ small {
   border-radius: var(--radius-md);
   overflow: hidden;
   text-decoration: none;
+  color: #122f5b;
   transition:
     box-shadow 0.2s ease,
     transform 0.2s ease;
@@ -1337,7 +1338,7 @@ small {
 }
 .blog-read-more {
   font-weight: 600;
-  color: var(--color-accent);
+  color: #3d6120;
   font-size: 0.95rem;
   margin-top: var(--space-sm);
 }
