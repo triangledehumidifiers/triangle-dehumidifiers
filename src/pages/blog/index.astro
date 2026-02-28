@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Triangle Dehumidifiers Blog',
+  description: 'Expert advice on humidity control, crawlspace maintenance, and indoor air quality for Triangle, NC homeowners.',
+  url: 'https://www.triangledehumidifiers.com/blog',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Triangle Dehumidifiers, LLC',
+  },
+};
+---
+
+<BaseLayout
+  title="Humidity Control Blog | Triangle Dehumidifiers"
+  description="Expert advice on crawlspace humidity, dehumidifier installation, mold prevention, and indoor air quality for Raleigh and Triangle area homeowners."
+  canonical="/blog"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
+
+  <!-- HERO -->
+  <section class="hero-simple">
+    <div class="container hero-simple__inner">
+      <div class="hero-simple__content">
+        <div class="hero-simple__eyebrow">Expert Advice</div>
+        <h1>Humidity Control Blog</h1>
+        <p>Practical tips on crawlspace moisture, dehumidifiers, mold prevention, and indoor air quality for Triangle-area homeowners.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG LISTING -->
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+        {posts.map((post) => {
+          const formattedDate = new Date(post.data.date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          });
+          return (
+            <a href={`/blog/${post.id}`} class="blog-card">
+              <div class="blog-card-body">
+                <time datetime={post.data.date}>{formattedDate}</time>
+                <h2>{post.data.title}</h2>
+                <p>{post.data.description}</p>
+                <span class="blog-read-more">Read article &rarr;</span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

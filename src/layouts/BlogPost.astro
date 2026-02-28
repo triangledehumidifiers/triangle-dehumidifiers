@@ -1,0 +1,91 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  author: string;
+  tags?: string[];
+  image?: string;
+  imageAlt?: string;
+}
+
+const { title, description, date, author, tags, image, imageAlt } = Astro.props;
+
+const formattedDate = new Date(date).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  datePublished: date,
+  author: {
+    '@type': 'Organization',
+    name: 'Triangle Dehumidifiers, LLC',
+    url: 'https://www.triangledehumidifiers.com',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Triangle Dehumidifiers, LLC',
+    url: 'https://www.triangledehumidifiers.com',
+  },
+};
+---
+
+<BaseLayout
+  title={`${title} | Triangle Dehumidifiers Blog`}
+  description={description}
+  canonical={`/blog/${Astro.params.slug}`}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+  <!-- HERO -->
+  <section class="hero-simple hero-simple--blog">
+    <div class="container hero-simple__inner">
+      <div class="hero-simple__content">
+        <a href="/blog" class="blog-back-link">&larr; Back to Blog</a>
+        <h1>{title}</h1>
+        <div class="blog-meta">
+          <time datetime={date}>{formattedDate}</time>
+          <span class="blog-meta-sep">•</span>
+          <span>{author}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="section">
+    <div class="container blog-article">
+      <div class="blog-content">
+        <slot />
+      </div>
+
+      <!-- SIDEBAR CTA -->
+      <aside class="blog-sidebar">
+        <div class="blog-cta-box">
+          <h3>Need Humidity Help?</h3>
+          <p>We inspect crawlspaces and install dehumidifiers across the Triangle region.</p>
+          <a href="/contact" class="btn btn-green">Request Inspection</a>
+          <a href="tel:9846003650" class="blog-cta-phone">(984) 600-3650</a>
+        </div>
+        {tags && tags.length > 0 && (
+          <div class="blog-tags">
+            <h4>Topics</h4>
+            <div class="blog-tag-list">
+              {tags.map((tag) => (
+                <span class="blog-tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+        )}
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
