@@ -40,7 +40,7 @@ Wood absorbs moisture from the air. When crawlspace humidity is high, that moist
 
 > **Concerned your crawlspace may be causing these issues?** We measure crawlspace relative humidity (RH) and inspect for moisture sources across Raleigh and Wake County.
 >
-> [Request a Crawlspace Inspection](/contact) &nbsp;&nbsp; (984) 600-3650
+> [Request a Crawlspace Inspection](/contact) &nbsp;&nbsp; [(984) 600-3650](tel:9846003650)
 
 ---
 
@@ -78,6 +78,6 @@ Homes with encapsulated crawlspaces still need monitoring — [sealed spaces wit
 
 We'll measure your RH levels, identify moisture sources, and recommend the right fix — no pressure, no upsell.
 
-[Schedule Inspection](/contact) &nbsp;&nbsp; **(984) 600-3650**
+[Schedule Inspection](/contact) &nbsp;&nbsp; [(984) 600-3650](tel:9846003650)
 
 _Serving Raleigh, Holly Springs, Cary, Apex, Fuquay-Varina, and Wake County._

@@ -97,6 +97,6 @@ If your home was built with a vented crawlspace and you're noticing musty odors,
 
 We inspect crawlspaces and measure whole-home humidity conditions across Raleigh, Cary, Apex, Holly Springs, and Fuquay-Varina.
 
-[Schedule a Crawlspace Inspection](/contact) &nbsp;&nbsp; **(984) 600-3650**
+[Schedule a Crawlspace Inspection](/contact) &nbsp;&nbsp; [(984) 600-3650](tel:9846003650)
 
 _Straight answers. Clear measurements. A practical plan to fix it._
