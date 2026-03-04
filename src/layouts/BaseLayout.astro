@@ -6,11 +6,24 @@ interface Props {
   description: string;
   canonical?: string;
   heroImage?: string;
+  noindex?: boolean;
+  breadcrumbs?: { name: string; url: string }[];
 }
 
-const { title, description, canonical, heroImage } = Astro.props;
+const { title, description, canonical, heroImage, noindex, breadcrumbs } = Astro.props;
 const canonicalURL = canonical ? `https://www.triangledehumidifiers.com${canonical}` : undefined;
 const ogImage = `https://www.triangledehumidifiers.com${heroImage ?? '/images/hero-livingroom.webp'}`;
+
+const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbs.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: `https://www.triangledehumidifiers.com${item.url}`,
+  })),
+} : null;
 ---
 
 <!doctype html>
@@ -20,7 +33,11 @@ const ogImage = `https://www.triangledehumidifiers.com${heroImage ?? '/images/he
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     {canonicalURL && <link rel="canonical" href={canonicalURL} />}
+
+    <!-- Breadcrumb Schema -->
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />

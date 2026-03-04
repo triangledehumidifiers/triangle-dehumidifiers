@@ -16,11 +16,11 @@ const schema = {
         { '@type': 'City', name: 'Apex' },
         { '@type': 'City', name: 'Fuquay-Varina' },
       ],
-      serviceType: 'Crawlspace Mold Treatment',
+      serviceType: 'Crawlspace Mold Removal and Treatment',
     },
     {
       '@type': 'Service',
-      name: 'Crawlspace Mold Treatment',
+      name: 'Crawlspace Mold Removal and Treatment',
       url: 'https://www.triangledehumidifiers.com/crawlspace-mold-treatment-raleigh',
       telephone: '(919) 867-0580',
       provider: { '@type': 'HomeAndConstructionBusiness', name: 'Triangle Dehumidifiers, LLC' },
@@ -32,7 +32,7 @@ const schema = {
         { '@type': 'City', name: 'Fuquay-Varina' },
       ],
       description:
-        'Crawlspace mold treatment in Raleigh, NC. EPA-registered products. Moisture correction first, then surface treatment.',
+        'Crawlspace mold removal and treatment in Raleigh, NC. EPA-registered products. Moisture correction first, then surface mold remediation.',
     },
   ],
 };
@@ -86,8 +86,9 @@ const faqSchema = {
 ---
 
 <BaseLayout
-  title="Crawlspace Mold Treatment Raleigh NC | Triangle Dehumidifiers"
-  description="Professional crawlspace mold treatment in Raleigh, NC. EPA-registered products. Moisture correction first, then surface treatment. Serving Wake County and the Triangle region."
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Crawlspace Mold Removal', url: '/crawlspace-mold-treatment-raleigh' }]}
+  title="Crawlspace Mold Removal &amp; Treatment Raleigh NC | Triangle Dehumidifiers"
+  description="Professional crawlspace mold removal and treatment in Raleigh, NC. EPA-registered products. Moisture correction first, then surface mold remediation. Serving Wake County."
   canonical="/crawlspace-mold-treatment-raleigh"
   heroImage="/images/mold-crawlspace-raleigh-nc.webp"
 >
@@ -97,10 +98,10 @@ const faqSchema = {
   <!-- HERO -->
   <section class="svc-hero">
     <div class="container">
-      <h1>Crawlspace Mold Treatment<br />in Raleigh, NC</h1>
+      <h1>Crawlspace Mold Removal &amp; Treatment<br />in Raleigh, NC</h1>
       <span class="svc-hero__direct"
-        >Mold is a symptom of a moisture problem. We correct the humidity source first — then treat
-        existing surface growth to prevent recurrence.</span
+        >Mold is a symptom of a moisture problem. We correct the humidity source first — then perform
+        surface mold remediation to remove existing growth and prevent recurrence.</span
       >
       <p class="svc-hero__sub">
         Mold risk increases when crawlspace Relative Humidity (RH) stays above ~65% for extended
@@ -239,7 +240,7 @@ const faqSchema = {
     <div class="container">
       <div class="svc-split">
         <div>
-          <h2>Our Mold Treatment Process</h2>
+          <h2>Our Mold Removal &amp; Treatment Process</h2>
           <span class="answer-first"
             >After moisture sources are identified, surface mold on crawlspace framing is treated
             with EPA-registered antimicrobial solutions applied directly to affected wood surfaces.</span
