@@ -10,6 +10,7 @@ interface Props {
 
 const { title, description, canonical, heroImage } = Astro.props;
 const canonicalURL = canonical ? `https://www.triangledehumidifiers.com${canonical}` : undefined;
+const ogImage = `https://www.triangledehumidifiers.com${heroImage ?? '/images/hero-livingroom.webp'}`;
 ---
 
 <!doctype html>
@@ -27,11 +28,13 @@ const canonicalURL = canonical ? `https://www.triangledehumidifiers.com${canonic
     <meta property="og:type" content="website" />
     {canonicalURL && <meta property="og:url" content={canonicalURL} />}
     <meta property="og:site_name" content="Triangle Dehumidifiers, LLC" />
+    <meta property="og:image" content={ogImage} />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <!-- Performance -->
     <link rel="preload" as="image" href="/logo.webp" />
