@@ -1,0 +1,276 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'HomeAndConstructionBusiness',
+      name: 'Triangle Dehumidifiers, LLC',
+      telephone: '(919) 867-0580',
+      url: 'https://www.triangledehumidifiers.com',
+      areaServed: { '@type': 'City', name: 'Raleigh', containedInPlace: { '@type': 'State', name: 'North Carolina' } },
+      serviceType: 'Crawl Space Dehumidifier Installation',
+    },
+    {
+      '@type': 'Service',
+      name: 'Crawl Space Dehumidifier Installation in Raleigh NC',
+      provider: { '@type': 'HomeAndConstructionBusiness', name: 'Triangle Dehumidifiers, LLC' },
+      areaServed: { '@type': 'City', name: 'Raleigh', containedInPlace: { '@type': 'State', name: 'North Carolina' } },
+      description:
+        'Professional crawl space dehumidifier installation for homes in Raleigh, NC. Maintains 45–50% RH to prevent mold, wood rot, and musty odors in both older and newer construction.',
+    },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What humidity level should a crawl space maintain in Raleigh, NC?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Crawl spaces in Raleigh should be maintained between 45–50% Relative Humidity (RH). Outdoor humidity in the Triangle exceeds 75% for much of the summer, and without active dehumidification, crawl space RH can sustain 70–85% — conditions that promote mold growth and wood deterioration.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do newer Raleigh homes still need crawl space dehumidifiers?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Newer homes are built with tighter construction — better insulation, house wrap, and sealed windows — which traps moisture indoors with limited natural ventilation. Modern HVAC systems are sized for temperature control, not humidity removal, so they often don\'t run long enough to pull adequate moisture from indoor air. Green lumber and fresh concrete also release moisture for one to two years after construction. Many homeowners in newer Raleigh neighborhoods see indoor humidity above 60% even with the AC running.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do encapsulated crawl spaces still need dehumidifiers in Raleigh?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Encapsulation seals the crawl space from outside air and ground moisture, but it does not remove humidity already trapped inside the sealed environment. A properly sized dehumidifier is required to maintain 45–50% RH in any encapsulated crawl space.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can crawl space humidity affect indoor air quality in my Raleigh home?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Up to 50% of the air circulating on your first floor rises from the crawl space through a process called the stack effect. High crawl space humidity pushes mold spores, musty odors, and excess moisture upward into living areas through floor penetrations, plumbing chases, and duct systems.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does crawl space dehumidifier installation take in Raleigh?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most installations are completed in a single day. The process includes a crawl space evaluation, equipment sizing, unit installation, condensate drain line routing, and RH verification. Homes with existing mold may require additional surface treatment before or alongside installation.',
+      },
+    },
+  ],
+};
+---
+
+<BaseLayout
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Service Areas', url: '/service-areas' },
+    { name: 'Raleigh NC', url: '/crawl-space-dehumidifier-raleigh-nc' },
+  ]}
+  title="Crawl Space Dehumidifier Raleigh NC | Triangle Dehumidifiers"
+  description="Professional crawl space dehumidifier installation in Raleigh, NC. Controls humidity to 45–50% RH in older and newer homes. Free inspection available."
+  canonical="/crawl-space-dehumidifier-raleigh-nc"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- HERO -->
+  <section class="svc-hero">
+    <div class="container">
+      <h1>Crawl Space Dehumidifier Installation in Raleigh, NC</h1>
+      <span class="svc-hero__direct"
+        >Professional crawl space humidity control for Raleigh homeowners — from established neighborhoods with vented crawl spaces to newer communities where tight construction traps moisture indoors. We install properly sized dehumidifiers to maintain 45–50% Relative Humidity year-round.</span
+      >
+      <div class="svc-hero__actions">
+        <a href="/contact" class="btn btn-green">Request Free Inspection</a>
+        <a href="tel:9198670580" class="btn btn-secondary" aria-label="Call Triangle Dehumidifiers at (919) 867-0580">Call (919) 867-0580</a>
+        <a href="sms:9198670580" class="btn btn-secondary" aria-label="Text Triangle Dehumidifiers at (919) 867-0580">Text (919) 867-0580</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY RALEIGH HOMES HAVE HUMIDITY PROBLEMS -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Why Raleigh Homes Face Crawl Space Humidity Problems</h2>
+      <p>
+        Raleigh is Wake County's largest city and one of the fastest-growing metro areas in the Southeast. Decades of residential development — from the ranch homes and split-levels of the 1970s and 1980s through the subdivisions built during the 1990s–2010s housing boom — have left the city with a wide range of home ages and foundation types. What nearly all of them share is exposure to the same challenging humidity environment.
+      </p>
+      <p>
+        Older Raleigh homes were commonly built on vented crawl space foundations over Wake County's Piedmont red clay soil. That clay holds water long after rain events and drains poorly, continuously pushing ground moisture upward into the crawl space. Open foundation vents compound the problem by pulling in warm, humid outdoor air — exactly the opposite of what they were designed to do. The result is Relative Humidity levels above 70% for months at a time, which drives mold growth, wood decay, and subfloor deterioration.
+      </p>
+      <p>
+        Raleigh's humid subtropical climate makes this worse. From May through September, outdoor humidity regularly exceeds 75%, and afternoon dew points routinely climb into the low-to-mid 70s. Under these conditions, a vented crawl space becomes a moisture trap that feeds humidity into your living space above.
+      </p>
+    </div>
+  </section>
+
+  <!-- NEW CONSTRUCTION ANGLE -->
+  <section class="section-alt">
+    <div class="container" style="max-width:780px;">
+      <h2>Why Newer Raleigh Homes Need Humidity Control Too</h2>
+      <p>
+        Many homeowners assume a new home means no moisture problems. In reality, newer construction often creates a different humidity challenge that catches people off guard.
+      </p>
+      <p>
+        Modern homes are built significantly tighter than older ones — with continuous house wrap, sealed windows, spray foam insulation, and fewer air leaks. While this improves energy efficiency, it also traps moisture inside with limited natural ventilation to carry it out. At the same time, modern HVAC systems are sized for temperature control, not dehumidification. During mild spring and fall weather, the AC doesn't run long enough to pull adequate moisture from indoor air, leaving humidity elevated even when the thermostat reads a comfortable temperature.
+      </p>
+      <p>
+        Fresh construction materials add to the load. Green lumber used for framing continues to dry and release moisture for months after the home is built. Concrete foundations and slabs off-gas water vapor for one to two years. If the crawl space was <a href="/encapsulated-crawlspace-dehumidifier-raleigh-nc">encapsulated</a> during construction, that moisture is sealed inside with nowhere to go unless a dehumidifier actively removes it.
+      </p>
+      <p>
+        Homeowners in newer Raleigh neighborhoods frequently report indoor humidity readings above 60% even with the AC running, along with condensation on windows, musty closets, and that persistent clammy feeling that tight construction and passive HVAC can't resolve. A <a href="/crawlspace-dehumidifier-installation-raleigh">crawl space dehumidifier</a> or <a href="/whole-house-dehumidifier-raleigh">whole-house dehumidifier</a> addresses the problem directly.
+      </p>
+    </div>
+  </section>
+
+  <!-- SIGNS YOUR CRAWL SPACE NEEDS A DEHUMIDIFIER -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Signs Your Crawl Space Needs a Dehumidifier</h2>
+      <p>
+        Whether your Raleigh home was built in 1985 or 2020, the warning signs of uncontrolled crawl space humidity are similar — and they often show up inside the living space first:
+      </p>
+      <div class="feature-list" style="margin-top:1.25rem;">
+        <div class="feature-item">
+          <span class="feature-check">✓</span><span>Musty or damp odors on the main level that intensify during warmer months</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span><span>Mold or dark discoloration on crawl space joists, subfloor, or band board</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span><span>Condensation collecting on crawl space ductwork, water lines, or the vapor barrier</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span><span>Hardwood floors cupping, swelling, or feeling soft underfoot</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span><span>Persistent indoor humidity above 55–60% despite the air conditioning running</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span><span>Window condensation, clammy air, or worsening allergy symptoms indoors</span>
+        </div>
+      </div>
+      <p style="margin-top:1.25rem;">
+        If mold has already formed on wood surfaces, <a href="/crawlspace-mold-treatment-raleigh">professional crawl space mold treatment</a> should be completed alongside dehumidifier installation for lasting results.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL INSTALLATION -->
+  <section class="section-alt">
+    <div class="container" style="max-width:780px;">
+      <h2>Professional Crawl Space Dehumidifier Installation</h2>
+      <p>
+        We begin with a thorough on-site evaluation — measuring current Relative Humidity, identifying moisture sources, inspecting wood framing for damage, and confirming your crawl space configuration. Whether your home has an open vented foundation, a partially sealed space, or a fully <a href="/encapsulated-crawlspace-dehumidifier-raleigh-nc">encapsulated crawl space</a>, we determine the right approach for your situation.
+      </p>
+      <p>
+        The dehumidifier is sized to match your crawl space square footage, air volume, and real-world moisture load. Oversized units short-cycle without maintaining consistent humidity. Undersized units run continuously and never reach target levels. Proper sizing is what separates a system that works from one that wastes energy.
+      </p>
+      <p>
+        Every installation uses Energy Star certified, commercial-grade equipment built for continuous crawl space operation. We route a permanent condensate drain line — fully automatic, no buckets, no manual emptying — and verify the system holds 45–50% RH before we leave.
+      </p>
+      <p>
+        For homes where humidity affects the entire living space — upstairs rooms, window condensation, whole-home discomfort — a <a href="/whole-house-dehumidifier-raleigh">whole-house dehumidifier</a> integrated with your HVAC ductwork may be the more effective solution. This is especially common in newer Raleigh homes where tight construction traps moisture throughout the house, not just beneath it.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVING RALEIGH HOMEOWNERS -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Serving Homeowners Across Raleigh, NC</h2>
+      <p>
+        We install crawl space and whole-house dehumidifiers throughout Raleigh — including North Raleigh, East Raleigh, Midtown, and Inside the Beltline, as well as neighborhoods like North Hills, Millbrook, Brookhaven, Brier Creek, Wakefield, and communities along the 540 corridor.
+      </p>
+      <p>
+        Triangle Dehumidifiers is based in Holly Springs and serves all of Wake County. Whether you're in an established Raleigh neighborhood with a 30-year-old vented crawl space or a newer subdivision where tight construction is trapping humidity indoors, we have the experience and equipment to solve it. View our full <a href="/service-areas">service area</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section-alt">
+    <div class="container" style="max-width:780px;">
+      <h2>Why Choose Triangle Dehumidifiers</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-check">✓</span><span>Locally owned — based in Holly Springs, serving Raleigh and all of Wake County</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span><span>Specialized exclusively in humidity control for crawl spaces and whole homes</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span><span>Solutions for both older vented crawl spaces and modern tight-construction homes</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span><span>Equipment properly sized to your space — not one-size-fits-all</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span><span>Fully insured with transparent, straightforward pricing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container" style="max-width:780px;">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What humidity level should a crawl space maintain in Raleigh, NC?</summary>
+          <p>
+            Crawl spaces in Raleigh should be maintained between 45–50% Relative Humidity (RH). Outdoor humidity in the Triangle exceeds 75% for much of the summer, and without active dehumidification, crawl space RH can sustain 70–85% — conditions that promote mold growth and wood deterioration.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>Do newer Raleigh homes still need crawl space dehumidifiers?</summary>
+          <p>
+            Yes. Tighter construction traps moisture indoors, and modern HVAC systems are sized for temperature, not humidity removal. Green lumber and fresh concrete also release moisture for one to two years after construction. Many homeowners in newer Raleigh neighborhoods see indoor humidity above 60% even with the AC running.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>Do encapsulated crawl spaces still need dehumidifiers?</summary>
+          <p>
+            Yes. Encapsulation seals the crawl space from outside air and ground moisture, but it does not remove humidity already trapped inside the sealed environment. A properly sized dehumidifier is required to maintain 45–50% RH in any encapsulated crawl space.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>Can crawl space humidity affect indoor air quality?</summary>
+          <p>
+            Up to 50% of the air circulating on your first floor rises from the crawl space through a process called the stack effect. High crawl space humidity pushes mold spores, musty odors, and excess moisture upward into living areas through floor penetrations, plumbing chases, and duct systems.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does crawl space dehumidifier installation take?</summary>
+          <p>
+            Most installations are completed in a single day. The process includes a crawl space evaluation, equipment sizing, unit installation, condensate drain line routing, and RH verification. Homes with existing mold may require additional <a href="/crawlspace-mold-treatment-raleigh">surface treatment</a> before installation.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="svc-cta">
+    <div class="container svc-cta__inner">
+      <h2>Schedule a Free Crawl Space Humidity Inspection in Raleigh</h2>
+      <p>
+        Whether your home is five years old or fifty, we'll measure your crawl space humidity, check for moisture damage, and recommend the right system.
+      </p>
+      <a href="/contact" class="btn btn-green">Request Inspection</a>
+      <span class="svc-cta__trust">Fully Insured. Locally Owned. Serving Raleigh &amp; Wake County.</span>
+    </div>
+  </section>
+</BaseLayout>
