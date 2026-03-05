@@ -8,6 +8,8 @@ imageAlt: 'New construction home in Raleigh NC subdivision with fresh sod and yo
 tags: ['humidity', 'new construction', 'raleigh', 'dehumidifier']
 ---
 
+<img src="/images/blog/new-construction-home-raleigh-nc.webp" alt="New construction home in Raleigh NC subdivision with fresh sod and young landscaping" width="1200" height="675" loading="eager">
+
 You just moved into a brand-new home in the Raleigh area. Everything is clean, modern, and under warranty. So why does the air feel damp, the windows fog up, and the AC never seems to dry things out?
 
 ## Why New Homes Have Humidity Problems
