@@ -10,23 +10,34 @@ const schema = {
   url: 'https://www.triangledehumidifiers.com',
   address: {
     '@type': 'PostalAddress',
+    addressLocality: 'Holly Springs',
     addressRegion: 'NC',
     addressCountry: 'US',
   },
   areaServed: [
-    { '@type': 'City', name: 'Holly Springs' },
     { '@type': 'City', name: 'Raleigh' },
     { '@type': 'City', name: 'Cary' },
     { '@type': 'City', name: 'Apex' },
+    { '@type': 'City', name: 'Holly Springs' },
     { '@type': 'City', name: 'Fuquay-Varina' },
+    { '@type': 'City', name: 'Morrisville' },
+    { '@type': 'City', name: 'Garner' },
+    { '@type': 'City', name: 'Wake Forest' },
+    { '@type': 'City', name: 'Knightdale' },
+    { '@type': 'City', name: 'Durham' },
+    { '@type': 'City', name: 'Chapel Hill' },
   ],
   serviceType: [
     'Crawlspace Dehumidifier Installation',
+    'Whole-Home Dehumidifier Installation',
     'Crawlspace Encapsulation',
-    'Mold Treatment',
+    'Crawlspace Mold Treatment',
+    'ERV Ventilation Installation',
   ],
   description:
-    'Dehumidifier installation and humidity control in the Triangle region, led by a humidity control specialist with over 15 years of experience.',
+    'Professional crawl space dehumidifier installation, whole-home dehumidifiers, ERV ventilation, and crawlspace mold treatment serving Wake County and the Triangle region of NC.',
+  priceRange: '$$',
+  openingHours: 'Mo-Fr 08:00-17:00',
 };
 ---
 
@@ -44,7 +55,7 @@ const schema = {
     <img
       src="/images/hero-livingroom.webp"
       fetchpriority="high"
-      alt="Modern living room with comfortable humidity-controlled air"
+      alt="Comfortable Raleigh NC living room with professionally controlled indoor humidity"
       class="hero-simple__bg-img"
       srcset="/images/hero-livingroom-800.webp 800w, /images/hero-livingroom.webp 1400w"
       sizes="100vw"
@@ -138,7 +149,7 @@ const schema = {
           <div class="why-image-box">
             <img
               src="/images/wet-window.webp"
-              alt="Professional dehumidifier installation"
+              alt="Condensation on window caused by high indoor humidity in a Raleigh NC home"
               class="why-photo"
               width="546"
               height="364"

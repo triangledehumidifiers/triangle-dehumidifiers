@@ -5,12 +5,20 @@ const schema = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'HomeAndConstructionBusiness',
+      '@type': 'LocalBusiness',
       name: 'Triangle Dehumidifiers, LLC',
       telephone: '(919) 867-0580',
       url: 'https://www.triangledehumidifiers.com',
-      areaServed: { '@type': 'City', name: 'Raleigh', containedInPlace: { '@type': 'State', name: 'North Carolina' } },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Holly Springs',
+        addressRegion: 'NC',
+        addressCountry: 'US',
+      },
+      areaServed: 'Raleigh, NC',
       serviceType: 'Crawl Space Dehumidifier Installation',
+      priceRange: '$$',
+      openingHours: 'Mo-Fr 08:00-17:00',
     },
     {
       '@type': 'Service',
