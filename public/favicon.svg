@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Dark navy triangle -->
-  <polygon points="50,4 97,90 3,90" fill="#1B3A6B" />
-  <!-- Blue water droplet -->
-  <path d="M50,22 C50,22 39,44 39,56 C39,63.3 43.9,69 50,69 C56.1,69 61,63.3 61,56 C61,44 50,22 50,22Z" fill="#4AADDE" />
-  <!-- Green wave across bottom of triangle -->
-  <path d="M17,84 C30,72 44,80 50,77 C56,74 68,66 83,76 L84,90 L16,90 Z" fill="#5B8C3A" />
+  <!-- Triangle outline only, no fill -->
+  <polygon points="50,6 94,88 6,88" fill="none" stroke="#1B3A6B" stroke-width="7" stroke-linejoin="round" />
+  <!-- Blue raindrop (left of center) -->
+  <path d="M40,24 C40,24 28,48 28,60 C28,67.7 33.4,74 40,74 C46.6,74 52,67.7 52,60 C52,48 40,24 40,24Z" fill="#2EA8DC" />
+  <!-- Green leaf (right of center) -->
+  <path d="M62,34 C78,34 82,58 66,72 C58,58 56,44 62,34Z" fill="#4DB655" />
 </svg>
