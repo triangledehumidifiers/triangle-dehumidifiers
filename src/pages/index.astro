@@ -355,7 +355,7 @@ const schema = {
         if (animate === false) {
           track.style.transition = 'none';
         } else {
-          track.style.transition = 'transform 0.6s ease';
+          track.style.transition = 'transform 1.4s cubic-bezier(0.25, 0.1, 0.25, 1)';
         }
         track.style.transform = 'translateX(-' + idx * getStep() + 'px)';
         if (animate === false) {
@@ -404,7 +404,7 @@ const schema = {
 
       function resetTimer() {
         clearInterval(timer);
-        timer = setInterval(goNext, 7000);
+        timer = setInterval(goNext, 6000);
       }
 
       prevBtn.addEventListener('click', function () { goPrev(); resetTimer(); });
