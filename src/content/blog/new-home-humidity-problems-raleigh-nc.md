@@ -75,7 +75,7 @@ Running the AC colder is not the answer — you will waste energy and still have
 
 The most effective solution for new construction humidity in the Raleigh area is a [whole-home dehumidifier](/whole-house-dehumidifier-raleigh) installed directly into your HVAC ductwork. These units work independently of your AC, pulling moisture out of the air whether the system is actively cooling or not. They drain automatically and keep your entire home between 45 and 55 percent relative humidity without overcooling.
 
-If your home has a vented or encapsulated crawl space, that is often the single biggest source of moisture entering the living space. A [crawl space dehumidifier](/crawlspace-dehumidifier-installation-raleigh) paired with proper vapor barriers and sealing can eliminate the problem at its source.
+If your home has a vented or encapsulated crawl space, that is often the single biggest source of moisture entering the living space. A [crawl space dehumidifier](/crawl-space-dehumidifier-installation-raleigh) paired with proper vapor barriers and sealing can eliminate the problem at its source.
 
 In many cases, the right approach is both — address the crawl space and control whole-home humidity through the duct system. The result is lower energy bills, better air quality, and a home that actually feels comfortable at 72 degrees.
 

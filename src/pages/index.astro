@@ -1,6 +1,35 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+const googleSvg = `<svg class="review-card__g" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>`;
+
+const reviews = [
+  // 1. Local Guides with real profile photos
+  { name: 'James Cooper', img: '/images/reviews/james-cooper.jpg', localGuide: true, text: 'I recently had a great experience with Triangle Dehumidifier, and I highly recommend them. Nathan and Luke went above and beyond in both their service and their professionalism. Not only were they extremely knowledgeable and helpful, but they were also genuinely pleasant to work with throughout the entire process. Excellent service, great attitude, and people who clearly care about doing the job right.' },
+  { name: 'Pamela Swanson', img: '/images/reviews/pamela-swanson.jpg', localGuide: true, text: "For several years, we've had Nathan Ryder provide us with a great dehumidifier in our crawl space! He's conscientious, kind, arrives when he says he will and does a great job. Our crawl space has a lot of moisture and has been kept well by this dehumidification! I highly recommend his company!" },
+  // 2. Local Guides (initial avatars)
+  { name: 'Mr. Keever', img: '/images/reviews/mr-keever.png', localGuide: true, text: 'Nathan (a licensed NC Contractor and local NCSU grad) and his team encapsulated our crawl space as well as our neighbors. We have had several technicians in there over the last few years, such as the annual Termite inspection and HVAC repair person, who both noted how quality the encapsulation was. Additionally, Mr. Rider did not try to oversell. He was professional and was able to guarantee his work.' },
+  { name: 'William Griner', img: '/images/reviews/william-griner.png', localGuide: true, text: 'Nate and his crew are outstanding to work with, very timely, stayed on schedule, and the quality of their work was excellent, not to mention courteous and friendly.' },
+  { name: 'Stacey Ohm', img: '/images/reviews/stacey-ohm.png', localGuide: true, text: 'Nathan is first class. We had a huge humidity problem in our crawl space. Nathan enclosed our crawl space and installed a dehumidifier to keep our crawl space dry. They also wiped our joists to rid of any mold growth. We could not be happier. Our crawl space is dry and clean. We have recommended him many times and he has done a great job each time.' },
+  // 3. Reviewers with real profile photos
+  { name: 'Ed Lallo', img: '/images/reviews/ed-lallo.jpg', text: 'Nathan personally handled the crawl space humidity control work at our home. The work was done promptly and at a cost that I felt was affordable. Good Job!!!' },
+  { name: 'Simon Desouza', img: '/images/reviews/simon-desouza.jpg', text: 'Nathan did a fantastic job with my crawl space. The insulation and mold prevention issues were handled very professionally. His recommendations on dehumidifiers were spot on. I really likes that he follows up with us every year.' },
+  { name: 'Kimberly Rumfelt', img: '/images/reviews/kimberly-rumfelt.jpg', text: 'Nathan and his team completed extensive work under our home last year. The excess water and humidity were putting it at risk for some many problems. Nathan and his team had to clean out and regrade, fix the drainage and sump pump as well as add a new vapor barrier. We are so grateful! They did such an amazing job, were transparent and reliable throughout the entire process!' },
+  // 4. Reviewers with city
+  { name: 'K Edwards', img: '/images/reviews/k-edwards.png', loc: 'Fuquay-Varina, NC', text: "You can count on Triangle Dehumidifiers to recommend exactly what's needed and complete the job as agreed upon to resolve any crawl space mold or humidity issues. Our space in Fuquay Varina was treated for existing mold and a dehumidifier installed. The space is much drier now and no more musty smells in the crawl space or inside the home. Thanks Nathan! Highly recommended!" },
+  { name: 'GregB', img: '/images/reviews/gregb.png', loc: 'Raleigh, NC', text: 'We had crawl space encapsulation, mold treatment and dehumidifier installation performed and are extremely satisfied with the work that was done. Our house is much more comfortable now. We are located in Raleigh NC.' },
+  { name: 'Philip Stephenson', img: '/images/reviews/philip-stephenson.png', loc: 'Angier, NC', text: 'I have known Nathan many years and consider him a friend, but most of all a very professional representative of his dehumidifier company. Even though Nathan worked on the new homes that I built with my son over a period of years, He also worked on my personal home. I had Moisture issues and Nathan installed a dehumidifier in my crawl space, as well as resealed my vapor barrier, cleaned and treated my floor joist for mold issues. He also installed a sump pump for any moisture that may condensate in the future. I would recommend Nathan and his company to be anyone that needs professional and honest advice.' },
+  { name: 'Peak Energy', img: '/images/reviews/peak-energy.png', loc: 'Cary, NC', text: 'Triangle Dehumidifiers is installing dehumidifiers and spraying mold for our crawl space improvements business around the Raleigh area. Recently completed two dehumidifier installs and a mold treatment in Cary.' },
+  // 5. Regular reviewers
+  { name: 'Ann Schulte', img: '/images/reviews/ann-schulte.png', text: 'We had Nathan Rider and his company encapsulate our crawl space in 2020. He installed a dehumidifier and drainage system. He guided us toward a system that was simple, to save costs, yet worked quite well. Still working great!' },
+  { name: 'Erin Yost', img: '/images/reviews/erin-yost.png', text: 'Nathan installed French drains, a sump pump, new insulation, and a dehumidifier on my crawl space in 2020 and I have had no issues since then. So glad I went with him over the larger more expensive companies.' },
+  { name: 'Preston', img: '/images/reviews/preston.png', text: 'We have had Nathan Rider seal our crawl space and install a dehumidifier at our last two homes. He is top notch. He is knowledgeable, a great communicator, and most importantly we could trust him. A healthy home is really important to us and Nathan gets it.' },
+  { name: 'Hunter Grove', img: '/images/reviews/hunter-grove.png', text: "Nathan and his crew were awesome! I had three quotes and chose him because he only provided me what I needed, didn't oversell me on items that weren't necessary like the others, and did the work quickly and neatly. I had him treat for mold, encapsulate the crawl space, and install a dehumidifier. What a difference he made and I would recommend him to anyone." },
+  { name: 'Ken Ast', img: '/images/reviews/ken-ast.png', text: "Just over a year ago I engaged Nathan Rider to help me address some serious humidity numbers in my crawl space. My experience with Nathan was outstanding; highly competent, great to work with, and reasonably priced solution options. My system now maintains a humidity level of no more than 45-56% at all times. I HIGHLY RECOMMEND Nathan's services to all homeowners wrestling with similar problems!" },
+  // 5. N Rider last
+  { name: 'N Rider', img: '/images/reviews/n-rider.png', loc: 'Holly Springs, NC', text: 'Nathan and helpers installed an AprilAire dehumidifier in our previously encapsulated crawl space and a whole house filter on our hvac system at our home in Holly Springs, NC. Our crawl space stays drier without condensation on air handler and the air in our house is better.' },
+];
+
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
@@ -28,14 +57,14 @@ const schema = {
     { '@type': 'City', name: 'Chapel Hill' },
   ],
   serviceType: [
-    'Crawlspace Dehumidifier Installation',
+    'Crawl Space Dehumidifier Installation',
     'Whole-Home Dehumidifier Installation',
-    'Crawlspace Encapsulation',
-    'Crawlspace Mold Treatment',
+    'Crawl Space Encapsulation',
+    'Crawl Space Mold Treatment',
     'ERV Ventilation Installation',
   ],
   description:
-    'Professional crawl space dehumidifier installation, whole-home dehumidifiers, ERV ventilation, and crawlspace mold treatment serving Wake County and the Triangle region of NC.',
+    'Professional crawl space dehumidifier installation, whole-home dehumidifiers, ERV ventilation, and crawl space mold treatment serving Wake County and the Triangle region of NC.',
   priceRange: '$$',
   openingHours: 'Mo-Fr 08:00-17:00',
 };
@@ -72,7 +101,7 @@ const schema = {
         </p>
         <div class="hero-simple__actions">
           <a href="/contact" class="btn btn-green">Request Inspection</a>
-          <a href="/crawlspace-dehumidifier-installation-raleigh" class="btn btn-secondary"
+          <a href="/crawl-space-dehumidifier-installation-raleigh" class="btn btn-secondary"
             >Our Services</a
           >
         </div>
@@ -119,7 +148,7 @@ const schema = {
           <div class="why-card">
             <h3><span class="card-icon">⇑</span> The Stack Effect</h3>
             <p>
-              As warm air rises and exits your attic, damp crawlspace air is pulled up into your
+              As warm air rises and exits your attic, damp crawl space air is pulled up into your
               home's living areas.
             </p>
           </div>
@@ -252,96 +281,21 @@ const schema = {
         </button>
         <div class="reviews-carousel__viewport" id="reviews-viewport">
           <div class="reviews-carousel__track" id="reviews-track">
-            <div class="review-card">
-              <div class="review-card__head">
-                <div class="review-card__avatar">N</div>
-                <div class="review-card__info">
-                  <strong>N Rider</strong>
-                  <span class="review-card__loc">Holly Springs, NC</span>
+            {reviews.map((r) => (
+              <div class="review-card">
+                <div class="review-card__head">
+                  <img class="review-card__avatar" src={r.img} alt={r.name} width="40" height="40" loading="lazy" />
+                  <div class="review-card__info">
+                    <strong>{r.name}</strong>
+                    {r.localGuide && <span class="review-card__local-guide">&#9733; Local Guide</span>}
+                    {r.loc && <span class="review-card__loc">{r.loc}</span>}
+                  </div>
+                  <Fragment set:html={googleSvg} />
                 </div>
-                <svg class="review-card__g" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p>{r.text}</p>
               </div>
-              <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>Nathan and helpers installed an AprilAire dehumidifier in our previously encapsulated crawl space and a whole house filter on our hvac system. Our crawlspace stays drier without condensation on air handler and the air in our house is better.</p>
-            </div>
-            <div class="review-card">
-              <div class="review-card__head">
-                <div class="review-card__avatar">J</div>
-                <div class="review-card__info">
-                  <strong>James Cooper</strong>
-                </div>
-                <svg class="review-card__g" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-              </div>
-              <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>I recently had a great experience with Triangle Dehumidifier, and I highly recommend them. Nathan and Luke went above and beyond in both their service and their professionalism.</p>
-            </div>
-            <div class="review-card">
-              <div class="review-card__head">
-                <div class="review-card__avatar">A</div>
-                <div class="review-card__info">
-                  <strong>Ann Schulte</strong>
-                </div>
-                <svg class="review-card__g" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-              </div>
-              <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>We had Nathan Rider and his company encapsulate our crawlspace in 2020. He installed a dehumidifier and drainage system. He guided us toward a system that was simple, to save costs, yet worked quite well. Still working great!</p>
-            </div>
-            <div class="review-card">
-              <div class="review-card__head">
-                <div class="review-card__avatar">M</div>
-                <div class="review-card__info">
-                  <strong>Mr. Keever</strong>
-                </div>
-                <svg class="review-card__g" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-              </div>
-              <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>Nathan and his team encapsulated our crawlspace as well as our neighbors. Every technician who has been in there since has complimented the quality of the work.</p>
-            </div>
-            <div class="review-card">
-              <div class="review-card__head">
-                <div class="review-card__avatar">E</div>
-                <div class="review-card__info">
-                  <strong>Erin Yost</strong>
-                </div>
-                <svg class="review-card__g" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-              </div>
-              <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>Nathan installed French drains, a sump pump, new insulation, and a dehumidifier on my crawl space in 2020 and I have had no issues since then. So glad I went with him over the larger more expensive companies.</p>
-            </div>
-            <div class="review-card">
-              <div class="review-card__head">
-                <div class="review-card__avatar">K</div>
-                <div class="review-card__info">
-                  <strong>K Edwards</strong>
-                  <span class="review-card__loc">Fuquay-Varina, NC</span>
-                </div>
-                <svg class="review-card__g" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-              </div>
-              <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>You can count on Triangle Dehumidifiers to recommend exactly what's needed and complete the job as agreed upon to resolve any crawlspace mold or humidity issues. Very pleased with the results.</p>
-            </div>
-            <div class="review-card">
-              <div class="review-card__head">
-                <div class="review-card__avatar">W</div>
-                <div class="review-card__info">
-                  <strong>William Griner</strong>
-                </div>
-                <svg class="review-card__g" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-              </div>
-              <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>Nate and his crew are outstanding to work with, very timely, stayed on schedule, and the quality of their work was excellent, not to mention courteous and friendly.</p>
-            </div>
-            <div class="review-card">
-              <div class="review-card__head">
-                <div class="review-card__avatar">S</div>
-                <div class="review-card__info">
-                  <strong>Stacey Ohm</strong>
-                </div>
-                <svg class="review-card__g" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-              </div>
-              <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p>Nathan is first class. We had a huge humidity problem in our crawlspace. Nathan enclosed our crawlspace and installed a dehumidifier to keep it dry. They also wiped our joists to rid of any mold growth. We could not be happier.</p>
-            </div>
+            ))}
           </div>
         </div>
         <button class="reviews-arrow reviews-arrow--next" id="reviews-next" aria-label="Next reviews">
@@ -364,13 +318,13 @@ const schema = {
       const viewport = document.getElementById('reviews-viewport');
       const prevBtn = document.getElementById('reviews-prev');
       const nextBtn = document.getElementById('reviews-next');
-      const dotsBox = document.getElementById('reviews-dots');
       if (!track || !viewport) return;
 
-      const cards = Array.from(track.children);
-      const total = cards.length;
+      const origCards = Array.from(track.children);
+      const total = origCards.length;
       let idx = 0;
       let timer;
+      let isTransitioning = false;
 
       function visibleCount() {
         const w = window.innerWidth;
@@ -379,56 +333,78 @@ const schema = {
         return 3;
       }
 
-      function maxIdx() {
-        return Math.max(0, total - visibleCount());
-      }
-
-      function slide() {
-        const gap = parseFloat(getComputedStyle(track).gap) || 0;
-        const cardW = cards[0].offsetWidth;
-        track.style.transform = 'translateX(-' + idx * (cardW + gap) + 'px)';
-        updateDots();
-      }
-
-      function buildDots() {
-        const v = visibleCount();
-        const pages = Math.ceil(total / v);
-        dotsBox.innerHTML = '';
-        for (let i = 0; i < pages; i++) {
-          const d = document.createElement('button');
-          d.className = 'rc-dot';
-          d.setAttribute('aria-label', 'Page ' + (i + 1));
-          d.addEventListener('click', function () {
-            idx = Math.min(i * v, maxIdx());
-            slide();
-            resetTimer();
-          });
-          dotsBox.appendChild(d);
+      /* Clone enough cards at the end so the wrap is seamless */
+      function buildClones() {
+        track.querySelectorAll('.review-card--clone').forEach(function (c) { c.remove(); });
+        var vc = visibleCount();
+        for (var i = 0; i < vc; i++) {
+          var clone = origCards[i % total].cloneNode(true);
+          clone.classList.add('review-card--clone');
+          clone.setAttribute('aria-hidden', 'true');
+          track.appendChild(clone);
         }
-        updateDots();
       }
 
-      function updateDots() {
-        const v = visibleCount();
-        const active = Math.floor(idx / v);
-        dotsBox.querySelectorAll('.rc-dot').forEach(function (d, i) {
-          d.classList.toggle('active', i === active);
-        });
+      function getStep() {
+        var gap = parseFloat(getComputedStyle(track).gap) || 0;
+        var cardW = origCards[0].offsetWidth;
+        return cardW + gap;
       }
+
+      function slide(animate) {
+        if (animate === false) {
+          track.style.transition = 'none';
+        } else {
+          track.style.transition = 'transform 0.6s ease';
+        }
+        track.style.transform = 'translateX(-' + idx * getStep() + 'px)';
+        if (animate === false) {
+          /* Force reflow so the instant jump is applied */
+          track.offsetHeight;
+        }
+      }
+
+      /* When the transition ends at the clone zone, silently jump back */
+      track.addEventListener('transitionend', function () {
+        isTransitioning = false;
+        if (idx >= total) {
+          idx = idx - total;
+          slide(false);
+        }
+        if (idx < 0) {
+          idx = idx + total;
+          slide(false);
+        }
+      });
 
       function goNext() {
-        idx = idx >= maxIdx() ? 0 : Math.min(idx + visibleCount(), maxIdx());
-        slide();
+        if (isTransitioning) return;
+        isTransitioning = true;
+        idx++;
+        slide(true);
       }
 
       function goPrev() {
-        idx = idx <= 0 ? maxIdx() : Math.max(idx - visibleCount(), 0);
-        slide();
+        if (isTransitioning) return;
+        if (idx === 0) {
+          /* Jump to the end instantly, then animate one step back */
+          idx = total;
+          slide(false);
+          requestAnimationFrame(function () {
+            isTransitioning = true;
+            idx--;
+            slide(true);
+          });
+        } else {
+          isTransitioning = true;
+          idx--;
+          slide(true);
+        }
       }
 
       function resetTimer() {
         clearInterval(timer);
-        timer = setInterval(goNext, 4000);
+        timer = setInterval(goNext, 7000);
       }
 
       prevBtn.addEventListener('click', function () { goPrev(); resetTimer(); });
@@ -439,17 +415,17 @@ const schema = {
       });
       track.closest('.reviews-carousel__stage').addEventListener('mouseleave', resetTimer);
 
-      buildDots();
-      slide();
+      buildClones();
+      slide(false);
       resetTimer();
 
       var rTimer;
       window.addEventListener('resize', function () {
         clearTimeout(rTimer);
         rTimer = setTimeout(function () {
-          idx = Math.min(idx, maxIdx());
-          buildDots();
-          slide();
+          buildClones();
+          if (idx >= total) idx = 0;
+          slide(false);
         }, 200);
       });
 
