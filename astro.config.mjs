@@ -3,7 +3,14 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://www.triangledehumidifiers.com',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      serialize(item) {
+        item.lastmod = new Date();
+        return item;
+      },
+    }),
+  ],
   build: {
     inlineStylesheets: 'always',
   },

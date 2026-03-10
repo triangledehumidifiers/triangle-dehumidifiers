@@ -1,8 +1,10 @@
 ---
 title: 'Why Raleigh Homes Have Humidity Problems'
-description: "Raleigh's humid subtropical climate, clay soil, and vented crawl space construction create ideal conditions for chronic indoor humidity. Here's why Triangle homes struggle — and what actually fixes it."
+description: "Raleigh's humid climate, clay soil, and vented crawl spaces create chronic indoor humidity. Here's why Triangle homes struggle — and what fixes it."
 date: '2026-03-01'
 author: 'Triangle Dehumidifiers'
+image: '/images/blog/raleigh-neighborhood.webp'
+imageAlt: 'Raleigh NC neighborhood homes typical of Wake County construction'
 tags: ['humidity', 'raleigh', 'crawl space', 'home maintenance']
 ---
 
