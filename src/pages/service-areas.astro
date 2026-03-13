@@ -1,5 +1,45 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Triangle Dehumidifiers, LLC',
+  telephone: '(919) 867-0580',
+  email: 'info@triangledehumidifiers.com',
+  url: 'https://www.triangledehumidifiers.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Holly Springs',
+    addressRegion: 'NC',
+    addressCountry: 'US',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Raleigh' },
+    { '@type': 'City', name: 'Cary' },
+    { '@type': 'City', name: 'Apex' },
+    { '@type': 'City', name: 'Holly Springs' },
+    { '@type': 'City', name: 'Fuquay-Varina' },
+    { '@type': 'City', name: 'Morrisville' },
+    { '@type': 'City', name: 'Garner' },
+    { '@type': 'City', name: 'Wake Forest' },
+    { '@type': 'City', name: 'Knightdale' },
+    { '@type': 'City', name: 'Durham' },
+    { '@type': 'City', name: 'Chapel Hill' },
+    { '@type': 'City', name: 'Pittsboro' },
+    { '@type': 'City', name: 'Clayton' },
+  ],
+  serviceType: [
+    'Crawl Space Dehumidifier Installation',
+    'Whole-Home Dehumidifier Installation',
+    'Crawl Space Encapsulation',
+    'Crawl Space Mold Treatment',
+    'ERV Ventilation Installation',
+  ],
+  priceRange: '$$',
+  openingHours: 'Mo-Fr 08:00-17:00',
+  sameAs: 'https://www.google.com/maps/place/Triangle+Dehumidifiers,+LLC/@35.8406256,-78.8216915,13z',
+};
 ---
 
 <BaseLayout
@@ -8,6 +48,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Triangle Dehumidifiers serves Raleigh, Cary, Apex, Holly Springs & Wake County NC with crawl space dehumidifier, mold treatment, and ERV installation."
   canonical="/service-areas"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <!-- HERO -->
   <section class="svc-hero">
     <div class="container">
@@ -59,6 +100,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div id="map-frame" style="display:none;"></div>
         </div>
+        <p style="margin-top:0.75rem; font-size:0.85rem; color:#4a5a6a;">
+          <a
+            href="https://www.google.com/maps/place/Triangle+Dehumidifiers,+LLC/@35.8406256,-78.8216915,13z"
+            target="_blank"
+            rel="noopener"
+            style="color:#1e6b3c;"
+          >View Triangle Dehumidifiers on Google Maps</a>
+        </p>
         <script>
           (function () {
             var mapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d541213.1673605165!2d-78.82169149999999!3d35.84062555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2126c9cf824e241d%3A0x883595d6b0c9b047!2sTriangle%20Dehumidifiers%2C%20LLC!5e1!3m2!1sen!2sus!4v1773372401756!5m2!1sen!2sus";
