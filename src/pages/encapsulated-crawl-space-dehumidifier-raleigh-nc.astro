@@ -3,97 +3,87 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const schema = {
   '@context': 'https://schema.org',
-  '@graph': [
+  '@type': 'HomeAndConstructionBusiness',
+  name: 'Triangle Dehumidifiers, LLC',
+  telephone: '(919) 867-0580',
+  url: 'https://www.triangledehumidifiers.com',
+  image: 'https://www.triangledehumidifiers.com/images/hero-livingroom.webp',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://www.triangledehumidifiers.com/logo.webp',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Holly Springs',
+    addressRegion: 'NC',
+    postalCode: '27540',
+    addressCountry: 'US',
+  },
+  hasMap: 'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '19',
+  },
+  sameAs: [
+    'https://www.google.com/maps/place/Triangle+Dehumidifiers,+LLC/',
+    'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
+  ],
+  areaServed: [
+    { '@type': 'City', name: 'Raleigh' },
+    { '@type': 'City', name: 'Holly Springs' },
+    { '@type': 'City', name: 'Cary' },
+    { '@type': 'City', name: 'Apex' },
+    { '@type': 'City', name: 'Fuquay-Varina' },
+    { '@type': 'City', name: 'Morrisville' },
+  ],
+  serviceType: 'Encapsulated Crawl Space Dehumidifier Installation',
+};
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
     {
-      '@type': 'HomeAndConstructionBusiness',
-      name: 'Triangle Dehumidifiers, LLC',
-      telephone: '(919) 867-0580',
-      url: 'https://www.triangledehumidifiers.com',
-      image: 'https://www.triangledehumidifiers.com/images/hero-livingroom.webp',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.triangledehumidifiers.com/logo.webp',
+      '@type': 'Question',
+      name: 'Do encapsulated crawl spaces need ventilation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sealed crawl spaces do not use traditional vents. Instead, they rely on a dehumidifier to control humidity and maintain 45–50% RH. Some sealed systems also incorporate a small supply of conditioned air from the HVAC system.',
       },
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Holly Springs',
-        addressRegion: 'NC',
-        postalCode: '27540',
-        addressCountry: 'US',
-      },
-      hasMap: 'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        reviewCount: '19',
-      },
-      sameAs: [
-        'https://www.google.com/maps/place/Triangle+Dehumidifiers,+LLC/',
-        'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
-      ],
-      areaServed: [
-        { '@type': 'City', name: 'Raleigh' },
-        { '@type': 'City', name: 'Holly Springs' },
-        { '@type': 'City', name: 'Cary' },
-        { '@type': 'City', name: 'Apex' },
-        { '@type': 'City', name: 'Fuquay-Varina' },
-        { '@type': 'City', name: 'Morrisville' },
-      ],
-      serviceType: 'Encapsulated Crawl Space Dehumidifier Installation',
     },
     {
-      '@type': 'Service',
-      name: 'Encapsulated Crawl Space Dehumidifier Installation',
-      provider: { '@type': 'HomeAndConstructionBusiness', name: 'Triangle Dehumidifiers, LLC' },
-      areaServed: 'Raleigh, NC and Wake County',
-      description:
-        'Professional dehumidifier installation for sealed crawl spaces. Maintains 45–50% RH to prevent mold and structural damage.',
+      '@type': 'Question',
+      name: 'Can I use a store-bought dehumidifier in my crawl space?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Typical retail dehumidifiers are not always designed for continuous crawl space operation. They sometimes require manual bucket emptying or lack continuous drainage, have insufficient blowers, and may not be rated for the low clearance and high humidity conditions typical of crawl spaces.',
+      },
     },
     {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Do encapsulated crawl spaces need ventilation?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sealed crawl spaces do not use traditional vents. Instead, they rely on a dehumidifier to control humidity and maintain 45–50% RH. Some sealed systems also incorporate a small supply of conditioned air from the HVAC system.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I use a store-bought dehumidifier in my crawl space?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Typical retail dehumidifiers are not always designed for continuous crawl space operation. They sometimes require manual bucket emptying or lack continuous drainage, have insufficient blowers, and may not be rated for the low clearance and high humidity conditions typical of crawl spaces.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What happens if RH stays above 60%?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Mold becomes active above 60% RH on wood framing and subfloor materials. Prolonged exposure above 60% RH can lead to wood deterioration, mold growth, and structural damage over time.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do I need encapsulation before installing a crawl space dehumidifier?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Not always. We install humidity control in both vented and sealed crawl spaces. Encapsulation improves performance by reducing ground moisture and outside air infiltration, but it is not always a prerequisite. During an inspection, we confirm your crawl space configuration and recommend the most effective path to maintaining 45–50% Relative Humidity (RH).',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do you service Holly Springs, Cary, and Apex?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. We serve all of Wake County including Raleigh, Holly Springs, Cary, Apex, Fuquay-Varina, Morrisville, and surrounding Triangle communities.',
-          },
-        },
-      ],
+      '@type': 'Question',
+      name: 'What happens if RH stays above 60%?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Mold becomes active above 60% RH on wood framing and subfloor materials. Prolonged exposure above 60% RH can lead to wood deterioration, mold growth, and structural damage over time.',
+      },
     },
+    {
+      '@type': 'Question',
+      name: 'Do I need encapsulation before installing a crawl space dehumidifier?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Not always. We install humidity control in both vented and sealed crawl spaces. Encapsulation improves performance by reducing ground moisture and outside air infiltration, but it is not always a prerequisite. During an inspection, we confirm your crawl space configuration and recommend the most effective path to maintaining 45–50% Relative Humidity (RH).',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you service Holly Springs, Cary, and Apex?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We serve all of Wake County including Raleigh, Holly Springs, Cary, Apex, Fuquay-Varina, Morrisville, and surrounding Triangle communities.',
+      },
+    },
+  
   ],
 };
 ---
@@ -106,6 +96,7 @@ const schema = {
   heroImage="/images/encapsulated-crawl-space-raleigh-nc.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <!-- HERO -->
   <section class="svc-hero">

@@ -3,102 +3,86 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const schema = {
   '@context': 'https://schema.org',
-  '@graph': [
+  '@type': 'HomeAndConstructionBusiness',
+  name: 'Triangle Dehumidifiers, LLC',
+  telephone: '(919) 867-0580',
+  url: 'https://www.triangledehumidifiers.com',
+  image: 'https://www.triangledehumidifiers.com/images/hero-livingroom.webp',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://www.triangledehumidifiers.com/logo.webp',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Holly Springs',
+    addressRegion: 'NC',
+    postalCode: '27540',
+    addressCountry: 'US',
+  },
+  hasMap: 'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '19',
+  },
+  sameAs: [
+    'https://www.google.com/maps/place/Triangle+Dehumidifiers,+LLC/',
+    'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
+  ],
+  areaServed: [
+    { '@type': 'City', name: 'Raleigh' },
+    { '@type': 'City', name: 'Holly Springs' },
+    { '@type': 'City', name: 'Cary' },
+    { '@type': 'City', name: 'Apex' },
+    { '@type': 'City', name: 'Fuquay-Varina' },
+  ],
+  serviceType: 'Whole-House Dehumidifier Installation Raleigh NC',
+};
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
     {
-      '@type': 'HomeAndConstructionBusiness',
-      name: 'Triangle Dehumidifiers, LLC',
-      telephone: '(919) 867-0580',
-      url: 'https://www.triangledehumidifiers.com',
-      image: 'https://www.triangledehumidifiers.com/images/hero-livingroom.webp',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.triangledehumidifiers.com/logo.webp',
+      '@type': 'Question',
+      name: 'What is the ideal indoor humidity level for a home in Raleigh, NC?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "For Raleigh-area homes, we target 45–50% Relative Humidity (RH). Industry guidance cites 40–60% RH as acceptable, but tighter control at 45–50% provides better mold prevention and comfort in North Carolina's humid climate.",
       },
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Holly Springs',
-        addressRegion: 'NC',
-        postalCode: '27540',
-        addressCountry: 'US',
-      },
-      hasMap: 'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        reviewCount: '19',
-      },
-      sameAs: [
-        'https://www.google.com/maps/place/Triangle+Dehumidifiers,+LLC/',
-        'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
-      ],
-      areaServed: [
-        { '@type': 'City', name: 'Raleigh' },
-        { '@type': 'City', name: 'Holly Springs' },
-        { '@type': 'City', name: 'Cary' },
-        { '@type': 'City', name: 'Apex' },
-        { '@type': 'City', name: 'Fuquay-Varina' },
-      ],
-      serviceType: 'Whole-House Dehumidifier Installation Raleigh NC',
     },
     {
-      '@type': 'Service',
-      name: 'Whole-House Dehumidifier Installation',
-      provider: { '@type': 'HomeAndConstructionBusiness', name: 'Triangle Dehumidifiers, LLC' },
-      areaServed: [
-        { '@type': 'City', name: 'Raleigh' },
-        { '@type': 'City', name: 'Holly Springs' },
-        { '@type': 'City', name: 'Cary' },
-        { '@type': 'City', name: 'Apex' },
-        { '@type': 'City', name: 'Fuquay-Varina' },
-      ],
-      description:
-        'Ducted and independent whole-house dehumidifier installation. Maintains 45–50% RH year-round.',
+      '@type': 'Question',
+      name: 'Can a whole-house dehumidifier run without the AC?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Whole-house dehumidifiers operate independently of cooling, maintaining stable RH even when the AC is off during mild weather.',
+      },
     },
     {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the ideal indoor humidity level for a home in Raleigh, NC?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "For Raleigh-area homes, we target 45–50% Relative Humidity (RH). Industry guidance cites 40–60% RH as acceptable, but tighter control at 45–50% provides better mold prevention and comfort in North Carolina's humid climate.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can a whole-house dehumidifier run without the AC?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Whole-house dehumidifiers operate independently of cooling, maintaining stable RH even when the AC is off during mild weather.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'HVAC integrated vs. independent — which is better?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Both work well. HVAC integrated systems use existing ductwork for distribution. Independent systems have their own dedicated ductwork and airflow, making them suitable when HVAC duct access is limited.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do whole-house dehumidifiers need a drain?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Continuous drainage is standard — gravity drain or condensate pump. No manual emptying required.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How long do whole-house dehumidifiers last?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Properly installed and maintained whole-house dehumidifiers typically last 8–12 years.',
-          },
-        },
-      ],
+      '@type': 'Question',
+      name: 'HVAC integrated vs. independent — which is better?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Both work well. HVAC integrated systems use existing ductwork for distribution. Independent systems have their own dedicated ductwork and airflow, making them suitable when HVAC duct access is limited.',
+      },
     },
+    {
+      '@type': 'Question',
+      name: 'Do whole-house dehumidifiers need a drain?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Continuous drainage is standard — gravity drain or condensate pump. No manual emptying required.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long do whole-house dehumidifiers last?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Properly installed and maintained whole-house dehumidifiers typically last 8–12 years.',
+      },
+    },
+  
   ],
 };
 ---
@@ -111,6 +95,7 @@ const schema = {
   heroImage="/images/whole-house-dehumidifier-installation-raleigh-nc.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <!-- HERO -->
   <section class="svc-hero">

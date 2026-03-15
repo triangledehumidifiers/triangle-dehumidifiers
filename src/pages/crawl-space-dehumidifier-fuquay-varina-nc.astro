@@ -3,50 +3,38 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const schema = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'HomeAndConstructionBusiness',
-      name: 'Triangle Dehumidifiers, LLC',
-      telephone: '(919) 867-0580',
-      url: 'https://www.triangledehumidifiers.com',
-      image: 'https://www.triangledehumidifiers.com/images/hero-livingroom.webp',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.triangledehumidifiers.com/logo.webp',
-      },
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Holly Springs',
-        addressRegion: 'NC',
-        postalCode: '27540',
-        addressCountry: 'US',
-      },
-      hasMap: 'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        reviewCount: '19',
-      },
-      sameAs: [
-        'https://www.google.com/maps/place/Triangle+Dehumidifiers,+LLC/',
-        'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
-      ],
-      areaServed: 'Fuquay-Varina, NC',
-      serviceType: 'Crawl Space Dehumidifier Installation',
-      description:
-        'Professional crawl space dehumidifier installation for homes in Fuquay-Varina, NC. Maintains 45–50% RH to prevent mold, wood rot, and musty odors.',
-      priceRange: '$$',
-      openingHours: 'Mo-Fr 08:00-17:00',
-    },
-    {
-      '@type': 'Service',
-      name: 'Crawl Space Dehumidifier Installation in Fuquay-Varina NC',
-      provider: { '@type': 'LocalBusiness', name: 'Triangle Dehumidifiers, LLC' },
-      areaServed: { '@type': 'City', name: 'Fuquay-Varina', containedInPlace: { '@type': 'State', name: 'North Carolina' } },
-      description:
-        'Professional crawl space dehumidifier installation for homes in Fuquay-Varina, NC. Maintains 45–50% RH to prevent mold, wood rot, and musty odors.',
-    },
+  '@type': 'HomeAndConstructionBusiness',
+  name: 'Triangle Dehumidifiers, LLC',
+  telephone: '(919) 867-0580',
+  url: 'https://www.triangledehumidifiers.com',
+  image: 'https://www.triangledehumidifiers.com/images/hero-livingroom.webp',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://www.triangledehumidifiers.com/logo.webp',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Holly Springs',
+    addressRegion: 'NC',
+    postalCode: '27540',
+    addressCountry: 'US',
+  },
+  hasMap: 'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '19',
+  },
+  sameAs: [
+    'https://www.google.com/maps/place/Triangle+Dehumidifiers,+LLC/',
+    'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
   ],
+  areaServed: 'Fuquay-Varina, NC',
+  serviceType: 'Crawl Space Dehumidifier Installation',
+  description:
+    'Professional crawl space dehumidifier installation for homes in Fuquay-Varina, NC. Maintains 45–50% RH to prevent mold, wood rot, and musty odors.',
+  priceRange: '$$',
+  openingHours: 'Mo-Fr 08:00-17:00',
 };
 
 const faqSchema = {

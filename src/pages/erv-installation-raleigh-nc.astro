@@ -3,119 +3,103 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const schema = {
   '@context': 'https://schema.org',
-  '@graph': [
+  '@type': 'HomeAndConstructionBusiness',
+  name: 'Triangle Dehumidifiers, LLC',
+  telephone: '(919) 867-0580',
+  url: 'https://www.triangledehumidifiers.com',
+  image: 'https://www.triangledehumidifiers.com/images/hero-livingroom.webp',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://www.triangledehumidifiers.com/logo.webp',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Holly Springs',
+    addressRegion: 'NC',
+    postalCode: '27540',
+    addressCountry: 'US',
+  },
+  hasMap: 'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '19',
+  },
+  sameAs: [
+    'https://www.google.com/maps/place/Triangle+Dehumidifiers,+LLC/',
+    'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
+  ],
+  areaServed: [
+    { '@type': 'City', name: 'Raleigh' },
+    { '@type': 'City', name: 'Holly Springs' },
+    { '@type': 'City', name: 'Cary' },
+    { '@type': 'City', name: 'Apex' },
+    { '@type': 'City', name: 'Fuquay-Varina' },
+    { '@type': 'City', name: 'Morrisville' },
+  ],
+  serviceType: 'ERV Installation Raleigh NC',
+};
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
     {
-      '@type': 'HomeAndConstructionBusiness',
-      name: 'Triangle Dehumidifiers, LLC',
-      telephone: '(919) 867-0580',
-      url: 'https://www.triangledehumidifiers.com',
-      image: 'https://www.triangledehumidifiers.com/images/hero-livingroom.webp',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.triangledehumidifiers.com/logo.webp',
+      '@type': 'Question',
+      name: 'Will an ERV lower humidity?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'An ERV reduces humidity load compared to straight outside-air ventilation, but it is not a dehumidifier. In most Triangle-area homes, dedicated dehumidification is still needed alongside an ERV.',
       },
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Holly Springs',
-        addressRegion: 'NC',
-        postalCode: '27540',
-        addressCountry: 'US',
-      },
-      hasMap: 'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        reviewCount: '19',
-      },
-      sameAs: [
-        'https://www.google.com/maps/place/Triangle+Dehumidifiers,+LLC/',
-        'https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9',
-      ],
-      areaServed: [
-        { '@type': 'City', name: 'Raleigh' },
-        { '@type': 'City', name: 'Holly Springs' },
-        { '@type': 'City', name: 'Cary' },
-        { '@type': 'City', name: 'Apex' },
-        { '@type': 'City', name: 'Fuquay-Varina' },
-        { '@type': 'City', name: 'Morrisville' },
-      ],
-      serviceType: 'ERV Installation Raleigh NC',
     },
     {
-      '@type': 'Service',
-      name: 'Energy Recovery Ventilator (ERV) Installation',
-      provider: { '@type': 'HomeAndConstructionBusiness', name: 'Triangle Dehumidifiers, LLC' },
-      areaServed: [
-        { '@type': 'City', name: 'Raleigh' },
-        { '@type': 'City', name: 'Holly Springs' },
-        { '@type': 'City', name: 'Cary' },
-        { '@type': 'City', name: 'Apex' },
-        { '@type': 'City', name: 'Fuquay-Varina' },
-      ],
-      description:
-        "Professional ERV installation in Raleigh, NC. Balanced fresh-air ventilation designed for Wake County's humid climate.",
+      '@type': 'Question',
+      name: 'Does an ERV replace a dehumidifier?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. In humid climates like North Carolina, ERVs and dedicated dehumidification often work together. An ERV manages fresh air. A dehumidifier controls RH. Both serve different functions.',
+      },
     },
     {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Will an ERV lower humidity?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'An ERV reduces humidity load compared to straight outside-air ventilation, but it is not a dehumidifier. In most Triangle-area homes, dedicated dehumidification is still needed alongside an ERV.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does an ERV replace a dehumidifier?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. In humid climates like North Carolina, ERVs and dedicated dehumidification often work together. An ERV manages fresh air. A dehumidifier controls RH. Both serve different functions.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Do I need an ERV or an HRV?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'In humid climates, ERVs are generally preferred because they transfer some moisture between airstreams, helping temper incoming air. Final choice depends on the home, the HVAC system, and your specific goals.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Will an ERV make my house more humid?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'In humid climates, unmanaged ventilation can increase indoor RH. Proper ERV design, sizing, and integration with a dehumidification strategy prevents this.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does ERV installation cost in Raleigh?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ERV installation cost in Raleigh varies based on duct routing, attic or crawl space access, existing HVAC configuration, and integration complexity. An in-person evaluation is the best way to determine accurate pricing for your specific home.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How does an ERV improve indoor air quality in Raleigh, NC?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'An ERV continuously replaces stale indoor air with fresh outdoor air while recovering energy from the exhaust stream. This reduces CO2 buildup, allergens, and household odors while minimizing humidity and energy impact — improving air quality without significantly increasing energy costs.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How often do ERV filters need changing?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ERV filters typically need inspection every 3–6 months and replacement annually, depending on local air quality and usage. We design every installation with accessible filter locations to make routine maintenance straightforward.',
-          },
-        },
-      ],
+      '@type': 'Question',
+      name: 'Do I need an ERV or an HRV?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'In humid climates, ERVs are generally preferred because they transfer some moisture between airstreams, helping temper incoming air. Final choice depends on the home, the HVAC system, and your specific goals.',
+      },
     },
+    {
+      '@type': 'Question',
+      name: 'Will an ERV make my house more humid?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'In humid climates, unmanaged ventilation can increase indoor RH. Proper ERV design, sizing, and integration with a dehumidification strategy prevents this.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does ERV installation cost in Raleigh?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'ERV installation cost in Raleigh varies based on duct routing, attic or crawl space access, existing HVAC configuration, and integration complexity. An in-person evaluation is the best way to determine accurate pricing for your specific home.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does an ERV improve indoor air quality in Raleigh, NC?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'An ERV continuously replaces stale indoor air with fresh outdoor air while recovering energy from the exhaust stream. This reduces CO2 buildup, allergens, and household odors while minimizing humidity and energy impact — improving air quality without significantly increasing energy costs.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How often do ERV filters need changing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'ERV filters typically need inspection every 3–6 months and replacement annually, depending on local air quality and usage. We design every installation with accessible filter locations to make routine maintenance straightforward.',
+      },
+    },
+  
   ],
 };
 ---
@@ -128,6 +112,7 @@ const schema = {
   heroImage="/images/erv-installation-raleigh-nc.webp"
 >
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <!-- HERO -->
   <section class="svc-hero">
