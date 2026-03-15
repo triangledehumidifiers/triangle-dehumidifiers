@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'HomeAndConstructionBusiness',
+  '@id': 'https://www.triangledehumidifiers.com/#business',
   name: 'Triangle Dehumidifiers, LLC',
   telephone: '(919) 867-0580',
   url: 'https://www.triangledehumidifiers.com',
@@ -76,7 +77,7 @@ const faqSchema = {
       name: 'Why does Holly Springs have so many crawl space moisture problems?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Holly Springs grew rapidly from the late 1990s through the 2010s, with homes built primarily on vented crawl space foundations over Wake County red clay soil. The clay retains water and drains poorly. Combined with Middle Creek running through the area and the Triangle\'s humid subtropical climate, most Holly Springs homes face ongoing crawl space moisture challenges.',
+        text: "Holly Springs grew rapidly from the late 1990s through the 2010s, with homes built primarily on vented crawl space foundations over Wake County red clay soil. The clay retains water and drains poorly. Combined with Middle Creek running through the area and the Triangle's humid subtropical climate, most Holly Springs homes face ongoing crawl space moisture challenges.",
       },
     },
   ],
@@ -107,8 +108,16 @@ const faqSchema = {
       >
       <div class="svc-hero__actions">
         <a href="/contact" class="btn btn-green">Request Free Inspection</a>
-        <a href="tel:9198670580" class="btn btn-secondary" aria-label="Call Triangle Dehumidifiers at (919) 867-0580">Call (919) 867-0580</a>
-        <a href="sms:9198670580" class="btn btn-secondary" aria-label="Text Triangle Dehumidifiers at (919) 867-0580">Text (919) 867-0580</a>
+        <a
+          href="tel:9198670580"
+          class="btn btn-secondary"
+          aria-label="Call Triangle Dehumidifiers at (919) 867-0580">Call (919) 867-0580</a
+        >
+        <a
+          href="sms:9198670580"
+          class="btn btn-secondary"
+          aria-label="Text Triangle Dehumidifiers at (919) 867-0580">Text (919) 867-0580</a
+        >
       </div>
     </div>
   </section>
@@ -118,13 +127,27 @@ const faqSchema = {
     <div class="container" style="max-width:780px;">
       <h2>Why Homes in Holly Springs Experience Crawl Space Humidity Problems</h2>
       <p>
-        Holly Springs transformed from a quiet rural community to one of Wake County's fastest-growing towns in just two decades. Most of that residential construction occurred between the late 1990s and mid-2010s, when vented crawl space foundations were the standard approach for new homes in the Triangle. These vented designs were intended to promote air circulation, but in our humid subtropical climate, they do the opposite — drawing in warm, moisture-heavy air that gets trapped beneath the house.
+        Holly Springs transformed from a quiet rural community to one of Wake County's
+        fastest-growing towns in just two decades. Most of that residential construction occurred
+        between the late 1990s and mid-2010s, when vented crawl space foundations were the standard
+        approach for new homes in the Triangle. These vented designs were intended to promote air
+        circulation, but in our humid subtropical climate, they do the opposite — drawing in warm,
+        moisture-heavy air that gets trapped beneath the house.
       </p>
       <p>
-        The soil beneath Holly Springs neighborhoods is typical Wake County Piedmont red clay — a dense, heavy soil that absorbs water readily and releases it slowly. After rain events, this clay remains saturated near the surface for days, continuously pushing ground moisture upward into crawl spaces through exposed soil and concrete block foundations. Middle Creek and its tributaries run directly through Holly Springs, contributing to elevated water tables in many residential areas along the southern and eastern parts of town.
+        The soil beneath Holly Springs neighborhoods is typical Wake County Piedmont red clay — a
+        dense, heavy soil that absorbs water readily and releases it slowly. After rain events, this
+        clay remains saturated near the surface for days, continuously pushing ground moisture
+        upward into crawl spaces through exposed soil and concrete block foundations. Middle Creek
+        and its tributaries run directly through Holly Springs, contributing to elevated water
+        tables in many residential areas along the southern and eastern parts of town.
       </p>
       <p>
-        From late spring through early fall, average outdoor humidity in the Holly Springs area regularly exceeds 75%. Dew points climb into the low-to-mid 70s on summer afternoons. Inside a vented crawl space, these conditions drive Relative Humidity above 70% for extended stretches — sustained conditions that promote mold colonization on wood framing, subfloor deterioration, and insulation failure.
+        From late spring through early fall, average outdoor humidity in the Holly Springs area
+        regularly exceeds 75%. Dew points climb into the low-to-mid 70s on summer afternoons. Inside
+        a vented crawl space, these conditions drive Relative Humidity above 70% for extended
+        stretches — sustained conditions that promote mold colonization on wood framing, subfloor
+        deterioration, and insulation failure.
       </p>
     </div>
   </section>
@@ -134,30 +157,120 @@ const faqSchema = {
     <div class="container" style="max-width:780px;">
       <h2>Signs Your Crawl Space Needs a Dehumidifier</h2>
       <p>
-        Because most Holly Springs homes were built with living space above the crawl space, moisture problems beneath the house often show up first inside the home. Common warning signs include:
+        Because most Holly Springs homes were built with living space above the crawl space,
+        moisture problems beneath the house often show up first inside the home. Common warning
+        signs include:
       </p>
       <div class="feature-list" style="margin-top:1.25rem;">
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span>Musty or damp smell on the first floor that worsens during summer</span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          ><span>Musty or damp smell on the first floor that worsens during summer</span>
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span>Visible mold or dark staining on crawl space wood framing and subfloor</span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          ><span>Visible mold or dark staining on crawl space wood framing and subfloor</span>
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span>Water droplets or condensation collecting on crawl space ductwork and pipes</span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          ><span>Water droplets or condensation collecting on crawl space ductwork and pipes</span>
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span>Hardwood floors that are cupping, swelling, or feel soft when you walk on them</span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          ><span
+            >Hardwood floors that are cupping, swelling, or feel soft when you walk on them</span
+          >
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span>Indoor humidity staying above 55% despite air conditioning running normally</span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          ><span>Indoor humidity staying above 55% despite air conditioning running normally</span>
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span>Worsening allergy or respiratory symptoms when spending time indoors</span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          ><span>Worsening allergy or respiratory symptoms when spending time indoors</span>
         </div>
       </div>
       <p style="margin-top:1.25rem;">
-        If mold has already formed on framing or subfloor surfaces, <a href="/crawl-space-mold-treatment-raleigh">professional crawl space mold treatment</a> should be addressed alongside humidity control to achieve lasting results.
+        If mold has already formed on framing or subfloor surfaces, <a
+          href="/crawl-space-mold-treatment-raleigh">professional crawl space mold treatment</a
+        > should be addressed alongside humidity control to achieve lasting results.
       </p>
     </div>
   </section>
@@ -167,19 +280,39 @@ const faqSchema = {
     <div class="container" style="max-width:780px;">
       <h2>Professional Crawl Space Dehumidifier Installation</h2>
       <p>
-        We start every project with a thorough crawl space inspection. We measure current Relative Humidity levels, check for active moisture damage on wood framing, evaluate the ventilation setup, and determine whether your crawl space is vented, partially sealed, or fully <a href="/encapsulated-crawl-space-dehumidifier-raleigh-nc">encapsulated</a>.
+        We start every project with a thorough crawl space inspection. We measure current Relative
+        Humidity levels, check for active moisture damage on wood framing, evaluate the ventilation
+        setup, and determine whether your crawl space is vented, partially sealed, or fully <a
+          href="/encapsulated-crawl-space-dehumidifier-raleigh-nc">encapsulated</a
+        >.
       </p>
       <p>
-        From there, we size the dehumidifier to match your crawl space — accounting for square footage, cubic air volume, and the specific moisture load from soil conditions and ventilation type. Proper sizing is critical. An undersized dehumidifier runs nonstop without reaching target humidity. An oversized unit cycles on and off too quickly to maintain stable conditions. Either scenario wastes energy and leaves your home unprotected.
+        From there, we size the dehumidifier to match your crawl space — accounting for square
+        footage, cubic air volume, and the specific moisture load from soil conditions and
+        ventilation type. Proper sizing is critical. An undersized dehumidifier runs nonstop without
+        reaching target humidity. An oversized unit cycles on and off too quickly to maintain stable
+        conditions. Either scenario wastes energy and leaves your home unprotected.
       </p>
       <p>
-        We install Energy Star certified, commercial-grade dehumidifiers built for continuous crawl space operation. Each installation includes a permanent condensate drain line — fully automatic, no buckets, no manual emptying. The system is set to maintain 45–50% RH and verified on-site before we finish.
+        We install Energy Star certified, commercial-grade dehumidifiers built for continuous crawl
+        space operation. Each installation includes a permanent condensate drain line — fully
+        automatic, no buckets, no manual emptying. The system is set to maintain 45–50% RH and
+        verified on-site before we finish.
       </p>
       <p>
-        Even if your crawl space has been encapsulated with a vapor barrier, a dehumidifier is still essential. Encapsulation blocks new moisture from entering, but any humidity sealed inside the space has no way to escape without active removal. The dehumidifier is what keeps the encapsulated environment at target humidity. Learn more about <a href="/encapsulated-crawl-space-dehumidifier-raleigh-nc">dehumidifiers for encapsulated crawl spaces</a>.
+        Even if your crawl space has been encapsulated with a vapor barrier, a dehumidifier is still
+        essential. Encapsulation blocks new moisture from entering, but any humidity sealed inside
+        the space has no way to escape without active removal. The dehumidifier is what keeps the
+        encapsulated environment at target humidity. Learn more about <a
+          href="/encapsulated-crawl-space-dehumidifier-raleigh-nc"
+          >dehumidifiers for encapsulated crawl spaces</a
+        >.
       </p>
       <p>
-        For homes where humidity affects the entire living space — upstairs rooms feeling clammy, window condensation, or whole-home discomfort — a <a href="/whole-house-dehumidifier-raleigh">whole-house dehumidifier</a> integrated with your HVAC system may be the more effective solution.
+        For homes where humidity affects the entire living space — upstairs rooms feeling clammy,
+        window condensation, or whole-home discomfort — a <a
+          href="/whole-house-dehumidifier-raleigh">whole-house dehumidifier</a
+        > integrated with your HVAC system may be the more effective solution.
       </p>
     </div>
   </section>
@@ -189,10 +322,15 @@ const faqSchema = {
     <div class="container" style="max-width:780px;">
       <h2>Serving Homeowners Across Holly Springs, NC</h2>
       <p>
-        As a Holly Springs–based company, we serve every part of our hometown — including 12 Oaks, Sunset Ridge, and Woodcreek, as well as homes near Hwy 55, near downtown Holly Springs, and throughout the surrounding area.
+        As a Holly Springs–based company, we serve every part of our hometown — including 12 Oaks,
+        Sunset Ridge, and Woodcreek, as well as homes near Hwy 55, near downtown Holly Springs, and
+        throughout the surrounding area.
       </p>
       <p>
-        Being locally based means we understand the construction patterns, soil conditions, and humidity challenges specific to Holly Springs homes. Most inspection requests are scheduled within the same week. View our complete <a href="/service-areas">service area</a> to see all the communities we serve across Wake County.
+        Being locally based means we understand the construction patterns, soil conditions, and
+        humidity challenges specific to Holly Springs homes. Most inspection requests are scheduled
+        within the same week. View our complete <a href="/service-areas">service area</a> to see all the
+        communities we serve across Wake County.
       </p>
     </div>
   </section>
@@ -203,19 +341,89 @@ const faqSchema = {
       <h2>Why Choose Triangle Dehumidifiers</h2>
       <div class="feature-list">
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span>Locally owned and based right here in Holly Springs, NC</span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          ><span>Locally owned and based right here in Holly Springs, NC</span>
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span>Focused exclusively on humidity control and crawl space moisture solutions</span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          ><span>Focused exclusively on humidity control and crawl space moisture solutions</span>
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span>Equipment properly sized to your crawl space dimensions and moisture load</span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          ><span>Equipment properly sized to your crawl space dimensions and moisture load</span>
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span>Permanent condensate drainage — no buckets, no manual maintenance</span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          ><span>Permanent condensate drainage — no buckets, no manual maintenance</span>
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span>Fully insured with transparent, straightforward pricing</span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          ><span>Fully insured with transparent, straightforward pricing</span>
         </div>
       </div>
     </div>
@@ -229,31 +437,48 @@ const faqSchema = {
         <details class="faq-item">
           <summary>What humidity level should a crawl space maintain in Holly Springs, NC?</summary>
           <p>
-            Crawl spaces in Holly Springs should be maintained between 45–50% Relative Humidity (RH). With summer outdoor humidity in the Triangle regularly exceeding 75% and heavy clay soil holding moisture below the surface, uncontrolled crawl spaces in Holly Springs commonly reach 70–85% RH.
+            Crawl spaces in Holly Springs should be maintained between 45–50% Relative Humidity
+            (RH). With summer outdoor humidity in the Triangle regularly exceeding 75% and heavy
+            clay soil holding moisture below the surface, uncontrolled crawl spaces in Holly Springs
+            commonly reach 70–85% RH.
           </p>
         </details>
         <details class="faq-item">
           <summary>Do encapsulated crawl spaces still need dehumidifiers?</summary>
           <p>
-            Yes. Encapsulation is an effective moisture barrier, but it only prevents new moisture from entering the space. It does not remove humidity already present inside the sealed crawl space. A properly sized dehumidifier is essential to maintain 45–50% RH in any encapsulated crawl space.
+            Yes. Encapsulation is an effective moisture barrier, but it only prevents new moisture
+            from entering the space. It does not remove humidity already present inside the sealed
+            crawl space. A properly sized dehumidifier is essential to maintain 45–50% RH in any
+            encapsulated crawl space.
           </p>
         </details>
         <details class="faq-item">
           <summary>Can crawl space humidity affect the air quality inside my home?</summary>
           <p>
-            Yes. The stack effect draws air upward through your home, meaning a significant portion of the air on your first floor originates from the crawl space. If that space is humid, mold spores, musty odors, and excess moisture migrate into your living areas through floor penetrations and ductwork.
+            Yes. The stack effect draws air upward through your home, meaning a significant portion
+            of the air on your first floor originates from the crawl space. If that space is humid,
+            mold spores, musty odors, and excess moisture migrate into your living areas through
+            floor penetrations and ductwork.
           </p>
         </details>
         <details class="faq-item">
           <summary>How long does crawl space dehumidifier installation take?</summary>
           <p>
-            Most installations in Holly Springs are completed in a single day. We evaluate the crawl space, size the equipment, install the unit with a permanent condensate drain line, and verify RH levels before finishing. Homes requiring <a href="/crawl-space-mold-treatment-raleigh">mold treatment</a> may need additional preparation time.
+            Most installations in Holly Springs are completed in a single day. We evaluate the crawl
+            space, size the equipment, install the unit with a permanent condensate drain line, and
+            verify RH levels before finishing. Homes requiring <a
+              href="/crawl-space-mold-treatment-raleigh">mold treatment</a
+            > may need additional preparation time.
           </p>
         </details>
         <details class="faq-item">
           <summary>Why does Holly Springs have so many crawl space moisture problems?</summary>
           <p>
-            Holly Springs grew rapidly from the late 1990s through the 2010s, with homes built primarily on vented crawl space foundations over Wake County red clay soil. The clay retains water and drains poorly. Combined with Middle Creek running through the area and the Triangle's humid subtropical climate, most Holly Springs homes face ongoing crawl space moisture challenges.
+            Holly Springs grew rapidly from the late 1990s through the 2010s, with homes built
+            primarily on vented crawl space foundations over Wake County red clay soil. The clay
+            retains water and drains poorly. Combined with Middle Creek running through the area and
+            the Triangle's humid subtropical climate, most Holly Springs homes face ongoing crawl
+            space moisture challenges.
           </p>
         </details>
       </div>
@@ -265,10 +490,13 @@ const faqSchema = {
     <div class="container svc-cta__inner">
       <h2>Schedule a Free Crawl Space Humidity Inspection in Holly Springs</h2>
       <p>
-        As your locally based humidity control specialists, we'll inspect your crawl space, measure moisture levels, and recommend the right system for your home.
+        As your locally based humidity control specialists, we'll inspect your crawl space, measure
+        moisture levels, and recommend the right system for your home.
       </p>
       <a href="/contact" class="btn btn-green">Request Inspection</a>
-      <span class="svc-cta__trust">Fully Insured. Locally Owned &amp; Based in Holly Springs, NC.</span>
+      <span class="svc-cta__trust"
+        >Fully Insured. Locally Owned &amp; Based in Holly Springs, NC.</span
+      >
     </div>
   </section>
 </BaseLayout>

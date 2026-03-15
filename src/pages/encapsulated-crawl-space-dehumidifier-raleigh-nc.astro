@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'HomeAndConstructionBusiness',
+  '@id': 'https://www.triangledehumidifiers.com/#business',
   name: 'Triangle Dehumidifiers, LLC',
   telephone: '(919) 867-0580',
   url: 'https://www.triangledehumidifiers.com',
@@ -83,13 +84,18 @@ const faqSchema = {
         text: 'Yes. We serve all of Wake County including Raleigh, Holly Springs, Cary, Apex, Fuquay-Varina, Morrisville, and surrounding Triangle communities.',
       },
     },
-  
   ],
 };
 ---
 
 <BaseLayout
-  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Encapsulated Crawl Space Dehumidifier', url: '/encapsulated-crawl-space-dehumidifier-raleigh-nc' }]}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    {
+      name: 'Encapsulated Crawl Space Dehumidifier',
+      url: '/encapsulated-crawl-space-dehumidifier-raleigh-nc',
+    },
+  ]}
   title="Encapsulated Crawl Space Dehumidifier Raleigh NC"
   description="Encapsulation alone doesn't control humidity. We install sealed crawl space dehumidifiers in Raleigh, NC to maintain ~50% Relative Humidity (RH) and help prevent mold."
   canonical="/encapsulated-crawl-space-dehumidifier-raleigh-nc"
@@ -115,8 +121,16 @@ const faqSchema = {
       </p>
       <div class="svc-hero__actions">
         <a href="/contact" class="btn btn-green">Request Crawl Space Inspection</a>
-        <a href="tel:9198670580" class="btn btn-secondary" aria-label="Call Triangle Dehumidifiers at (919) 867-0580">Call (919) 867-0580</a>
-        <a href="sms:9198670580" class="btn btn-secondary" aria-label="Text Triangle Dehumidifiers at (919) 867-0580">Text (919) 867-0580</a>
+        <a
+          href="tel:9198670580"
+          class="btn btn-secondary"
+          aria-label="Call Triangle Dehumidifiers at (919) 867-0580">Call (919) 867-0580</a
+        >
+        <a
+          href="sms:9198670580"
+          class="btn btn-secondary"
+          aria-label="Text Triangle Dehumidifiers at (919) 867-0580">Text (919) 867-0580</a
+        >
       </div>
       <p style="font-size:0.85rem; color:#4a5a6a; margin-top:0.75rem;">
         Serving Raleigh, Holly Springs, Cary, Apex, Fuquay-Varina, and the surrounding Triangle
@@ -150,12 +164,30 @@ const faqSchema = {
             and under a clean vapor barrier.
           </p>
           <p>
-            Mold activates above 65% RH. The target range for a sealed crawl space is 45–50% Relative
-            Humidity (RH) — maintained continuously by a properly sized dehumidifier.
+            Mold activates above 65% RH. The target range for a sealed crawl space is 45–50%
+            Relative Humidity (RH) — maintained continuously by a properly sized dehumidifier.
           </p>
           <div class="icon-cards">
             <div class="icon-card">
-              <span class="icon-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1a6fa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg></span>
+              <span class="icon-card__icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#1a6fa8"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  ><path
+                    d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"
+                  ></path><path
+                    d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"
+                  ></path></svg
+                ></span
+              >
               <div>
                 <strong>Moisture Through Foundation Walls</strong>
                 <p>
@@ -165,7 +197,26 @@ const faqSchema = {
               </div>
             </div>
             <div class="icon-card">
-              <span class="icon-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4f7d2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg></span>
+              <span class="icon-card__icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#4f7d2a"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect
+                    width="18"
+                    height="18"
+                    x="3"
+                    y="4"
+                    rx="2"></rect><path d="M3 10h18"></path></svg
+                ></span
+              >
               <div>
                 <strong>Seasonal Humidity Spikes</strong>
                 <p>
@@ -174,7 +225,24 @@ const faqSchema = {
               </div>
             </div>
             <div class="icon-card">
-              <span class="icon-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4f7d2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg></span>
+              <span class="icon-card__icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#4f7d2a"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  ><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path
+                    d="M3 3v5h5"></path><path
+                    d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path><path
+                    d="M16 16h5v5"></path></svg
+                ></span
+              >
               <div>
                 <strong>Air Leakage & Stack Effect Pressure</strong>
                 <p>
@@ -205,8 +273,8 @@ const faqSchema = {
     <div class="container" style="max-width:780px;">
       <h2>What Is the Ideal Relative Humidity (RH) for a Sealed Crawl Space?</h2>
       <span class="answer-first"
-        >Most encapsulated crawl spaces should be maintained between 45–50% Relative Humidity (RH) to
-        reduce mold risk and protect wood framing.</span
+        >Most encapsulated crawl spaces should be maintained between 45–50% Relative Humidity (RH)
+        to reduce mold risk and protect wood framing.</span
       >
       <p>
         At 45–50% RH, mold cannot sustain growth on wood surfaces — even if spores are present. Mold
@@ -327,32 +395,106 @@ const faqSchema = {
           </p>
           <div class="feature-list">
             <div class="feature-item">
-              <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span
-                >Built for low-clearance encapsulated crawl space environments</span
-              >
+              <span class="feature-check"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+                ></span
+              ><span>Built for low-clearance encapsulated crawl space environments</span>
             </div>
             <div class="feature-item">
-              <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span
-                >Continuous drainage — integrated pump or gravity drain</span
-              >
+              <span class="feature-check"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+                ></span
+              ><span>Continuous drainage — integrated pump or gravity drain</span>
             </div>
             <div class="feature-item">
-              <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span
-                >MERV filtration to protect internal coils</span
-              >
+              <span class="feature-check"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+                ></span
+              ><span>MERV filtration to protect internal coils</span>
             </div>
             <div class="feature-item">
-              <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span>Optional WiFi humidity monitoring</span>
+              <span class="feature-check"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+                ></span
+              ><span>Optional WiFi humidity monitoring</span>
             </div>
             <div class="feature-item">
-              <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span
-                >Compatible with 6–20 mil vapor barrier systems</span
-              >
+              <span class="feature-check"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+                ></span
+              ><span>Compatible with 6–20 mil vapor barrier systems</span>
             </div>
             <div class="feature-item">
-              <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span
-                >Calibrated to maintain 45–50% RH target range</span
-              >
+              <span class="feature-check"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+                ></span
+              ><span>Calibrated to maintain 45–50% RH target range</span>
             </div>
           </div>
         </div>
@@ -375,8 +517,8 @@ const faqSchema = {
     <div class="container">
       <h2>Signs Your Encapsulated Crawl Space Has High Humidity</h2>
       <span class="answer-first"
-        >If RH rises above 60%, mold growth and moisture damage can begin — even in sealed
-        crawl spaces.</span
+        >If RH rises above 60%, mold growth and moisture damage can begin — even in sealed crawl
+        spaces.</span
       >
       <div class="signs-grid">
         <div class="sign-card">
@@ -387,7 +529,8 @@ const faqSchema = {
               fill="none"
               stroke-linecap="round"
               stroke-linejoin="round"
-             aria-hidden="true">
+              aria-hidden="true"
+            >
               <path d="M6 5c1 1 1 2 0 3s-1 2 0 3" stroke="#7b5ea7" stroke-width="1.5"></path>
               <path d="M10 4c1 1.5 1 3 0 4.5s-1 3 0 4.5" stroke="#7b5ea7" stroke-width="1.5"></path>
               <path d="M14 5c1 1 1 2 0 3s-1 2 0 3" stroke="#7b5ea7" stroke-width="1.5"></path>
@@ -403,7 +546,12 @@ const faqSchema = {
         </div>
         <div class="sign-card">
           <span class="sign-card__icon"
-            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
               <!-- Left drop (small) -->
               <path
                 d="M5 5C3 7.5 3 11 5 12.5C7 11 7 7.5 5 5Z"
@@ -458,23 +606,67 @@ const faqSchema = {
           ><p>Visible mold on floor joists or subfloor above the barrier</p>
         </div>
         <div class="sign-card">
-          <span class="sign-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4f7d2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span><p>
-            Warped or cupped subflooring above the crawl space
-          </p>
-        </div>
-        <div class="sign-card">
-          <span class="sign-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg></span><p>
-            Elevated indoor humidity your HVAC cannot reduce
-          </p>
-        </div>
-        <div class="sign-card">
-          <span class="sign-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span><p>
-            Dehumidifier running constantly or failing prematurely
-          </p>
+          <span class="sign-card__icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#4f7d2a"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path
+                d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+              ></path></svg
+            ></span
+          ><p>Warped or cupped subflooring above the crawl space</p>
         </div>
         <div class="sign-card">
           <span class="sign-card__icon"
-            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#c0392b"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path></svg
+            ></span
+          ><p>Elevated indoor humidity your HVAC cannot reduce</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#b45309"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><path
+                d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+              ></path></svg
+            ></span
+          ><p>Dehumidifier running constantly or failing prematurely</p>
+        </div>
+        <div class="sign-card">
+          <span class="sign-card__icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
               <path
                 d="M3 7c3-3 6-3 9 0s6 3 9 0"
                 stroke="#4a7c3f"
@@ -494,7 +686,12 @@ const faqSchema = {
         </div>
         <div class="sign-card">
           <span class="sign-card__icon"
-            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
               <rect
                 x="10.5"
                 y="3"
@@ -562,7 +759,8 @@ const faqSchema = {
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                 aria-hidden="true">
+                  aria-hidden="true"
+                >
                   <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"></path>
                   <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
                   <line x1="9" y1="9" x2="9.01" y2="9"></line>
@@ -587,7 +785,8 @@ const faqSchema = {
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                 aria-hidden="true">
+                  aria-hidden="true"
+                >
                   <path d="M17 2.1l4 4-4 4"></path>
                   <path d="M3 12.2v-2a4 4 0 0 1 4-4h12.8"></path>
                   <path d="M7 21.9l-4-4 4-4"></path>
@@ -612,7 +811,8 @@ const faqSchema = {
                   stroke-width="1.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                 aria-hidden="true">
+                  aria-hidden="true"
+                >
                   <path d="M2 12h4"></path>
                   <path d="M18 12h4"></path>
                   <path d="M12 2v4"></path>
@@ -702,8 +902,8 @@ const faqSchema = {
         <details class="faq-item">
           <summary>Do encapsulated crawl spaces need ventilation?</summary>
           <p>
-            Sealed crawl spaces do not use traditional vents. Instead, they rely on a dehumidifier to
-            control humidity and maintain 45–50% RH. Some sealed systems also incorporate a small
+            Sealed crawl spaces do not use traditional vents. Instead, they rely on a dehumidifier
+            to control humidity and maintain 45–50% RH. Some sealed systems also incorporate a small
             supply of conditioned air from the HVAC system.
           </p>
         </details>
@@ -754,7 +954,21 @@ const faqSchema = {
       >
       <div class="feature-list" style="margin-top:1.25rem;">
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          >
           <span
             >Vented crawl space? See our <a href="/crawl-space-dehumidifier-raleigh-nc"
               >crawl space dehumidifier installation in Raleigh</a
@@ -762,7 +976,21 @@ const faqSchema = {
           >
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          >
           <span
             >Humidity affecting your whole home? See <a href="/whole-house-dehumidifier-raleigh"
               >whole-home dehumidifier installation</a
@@ -770,7 +998,21 @@ const faqSchema = {
           >
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          >
           <span
             >Visible mold on framing? See our <a href="/crawl-space-mold-treatment-raleigh"
               >crawl space mold treatment</a
@@ -778,7 +1020,21 @@ const faqSchema = {
           >
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          >
           <span
             >Check our <a href="/service-areas">service areas</a> to confirm we cover your location.</span
           >
@@ -796,7 +1052,8 @@ const faqSchema = {
           We specialize in dehumidifier installation and humidity control for crawl spaces. If your
           crawl space is not yet encapsulated, encapsulation services are available through our
           sister company, <strong
-            ><a href="https://peakenergync.com" target="_blank" rel="noopener noreferrer">Peak Energy, Inc.</a
+            ><a href="https://peakenergync.com" target="_blank" rel="noopener noreferrer"
+              >Peak Energy, Inc.</a
             ></strong
           >.
         </p>

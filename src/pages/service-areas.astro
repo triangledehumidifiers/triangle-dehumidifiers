@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'HomeAndConstructionBusiness',
+  '@id': 'https://www.triangledehumidifiers.com/#business',
   name: 'Triangle Dehumidifiers, LLC',
   telephone: '(919) 867-0580',
   email: 'info@triangledehumidifiers.com',
@@ -58,7 +59,10 @@ const schema = {
 ---
 
 <BaseLayout
-  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Service Areas', url: '/service-areas' }]}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Service Areas', url: '/service-areas' },
+  ]}
   title="Service Areas | Triangle Dehumidifiers | Wake County NC"
   description="Triangle Dehumidifiers serves Raleigh, Cary, Apex, Holly Springs & Wake County NC with crawl space dehumidifier, mold treatment, and ERV installation."
   canonical="/service-areas"
@@ -67,7 +71,9 @@ const schema = {
   <!-- HERO -->
   <section class="svc-hero">
     <div class="container">
-      <h1>Dehumidifier, Crawl Space Mold &amp; Ventilation Services in Wake County &amp; the Triangle</h1>
+      <h1>
+        Dehumidifier, Crawl Space Mold &amp; Ventilation Services in Wake County &amp; the Triangle
+      </h1>
       <span class="svc-hero__direct"
         >Professional humidity control, crawl space mold treatment, and fresh-air ventilation for
         homeowners throughout Wake County and the greater Triangle region of NC.</span
@@ -94,7 +100,9 @@ const schema = {
         >
           Primary &amp; Extended Service Area
         </p>
-        <div style="border-radius:var(--radius-md);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+        <div
+          style="border-radius:var(--radius-md);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);"
+        >
           <div
             id="map-facade"
             role="button"
@@ -102,13 +110,33 @@ const schema = {
             aria-label="Load service area map"
             style="position:relative;width:100%;height:450px;background:linear-gradient(135deg,#e8edf5 0%,#d0dae8 100%);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-direction:column;gap:0.75rem;"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#122f5b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <p style="font-weight:700;font-size:1.1rem;color:#122f5b;margin:0;">Triangle Dehumidifiers Service Area</p>
-            <p style="color:#4a5a6a;font-size:0.9rem;margin:0;">Raleigh, Cary, Apex, Holly Springs &amp; Wake County NC</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#122f5b"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"></path><circle
+                cx="12"
+                cy="10"
+                r="3"></circle></svg
+            >
+            <p style="font-weight:700;font-size:1.1rem;color:#122f5b;margin:0;">
+              Triangle Dehumidifiers Service Area
+            </p>
+            <p style="color:#4a5a6a;font-size:0.9rem;margin:0;">
+              Raleigh, Cary, Apex, Holly Springs &amp; Wake County NC
+            </p>
             <button
               id="map-load-btn"
               style="margin-top:0.5rem;background:#1e6b3c;color:#fff;border:none;border-radius:6px;padding:0.55rem 1.4rem;font-size:0.95rem;font-weight:600;cursor:pointer;"
-            >View Map</button>
+              >View Map</button
+            >
           </div>
           <div id="map-frame" style="display:none;"></div>
         </div>
@@ -117,31 +145,33 @@ const schema = {
             href="https://maps.app.goo.gl/5ZNkdiqdTqKvNqTH9"
             target="_blank"
             rel="noopener"
-            style="color:#1e6b3c;"
-          >View Triangle Dehumidifiers on Google Maps</a>
+            style="color:#1e6b3c;">View Triangle Dehumidifiers on Google Maps</a
+          >
         </p>
         <script>
           (function () {
-            var mapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d541213.1673605165!2d-78.82169149999999!3d35.84062555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2126c9cf824e241d%3A0x883595d6b0c9b047!2sTriangle%20Dehumidifiers%2C%20LLC!5e1!3m2!1sen!2sus!4v1773372401756!5m2!1sen!2sus";
+            var mapSrc =
+              'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d541213.1673605165!2d-78.82169149999999!3d35.84062555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2126c9cf824e241d%3A0x883595d6b0c9b047!2sTriangle%20Dehumidifiers%2C%20LLC!5e1!3m2!1sen!2sus!4v1773372401756!5m2!1sen!2sus';
             function loadMap() {
-              var facade = document.getElementById("map-facade");
-              var frame = document.getElementById("map-frame");
-              var iframe = document.createElement("iframe");
+              var facade = document.getElementById('map-facade');
+              var frame = document.getElementById('map-frame');
+              var iframe = document.createElement('iframe');
               iframe.src = mapSrc;
-              iframe.width = "100%";
-              iframe.height = "450";
-              iframe.style.cssText = "border:0;display:block;";
+              iframe.width = '100%';
+              iframe.height = '450';
+              iframe.style.cssText = 'border:0;display:block;';
               iframe.allowFullscreen = true;
-              iframe.loading = "lazy";
-              iframe.referrerPolicy = "no-referrer-when-downgrade";
-              iframe.title = "Triangle Dehumidifiers service area map — Raleigh, Cary, Apex, Holly Springs, Wake County NC";
+              iframe.loading = 'lazy';
+              iframe.referrerPolicy = 'no-referrer-when-downgrade';
+              iframe.title =
+                'Triangle Dehumidifiers service area map — Raleigh, Cary, Apex, Holly Springs, Wake County NC';
               frame.appendChild(iframe);
-              facade.style.display = "none";
-              frame.style.display = "block";
+              facade.style.display = 'none';
+              frame.style.display = 'block';
             }
-            document.getElementById("map-facade").addEventListener("click", loadMap);
-            document.getElementById("map-facade").addEventListener("keydown", function (e) {
-              if (e.key === "Enter" || e.key === " ") loadMap();
+            document.getElementById('map-facade').addEventListener('click', loadMap);
+            document.getElementById('map-facade').addEventListener('keydown', function (e) {
+              if (e.key === 'Enter' || e.key === ' ') loadMap();
             });
           })();
         </script>
@@ -168,12 +198,18 @@ const schema = {
             <li><a href="/crawl-space-dehumidifier-raleigh-nc">Raleigh</a></li>
             <li><a href="/crawl-space-dehumidifier-cary-nc">Cary</a></li>
             <li><a href="/crawl-space-dehumidifier-apex-nc">Apex</a></li>
-            <li>Morrisville</li><!-- TODO: create /crawl-space-dehumidifier-morrisville-nc and link -->
+            <li>
+              Morrisville
+            </li><!-- TODO: create /crawl-space-dehumidifier-morrisville-nc and link -->
             <li><a href="/crawl-space-dehumidifier-holly-springs-nc">Holly Springs</a></li>
             <li><a href="/crawl-space-dehumidifier-fuquay-varina-nc">Fuquay-Varina</a></li>
             <li>Garner</li><!-- TODO: create /crawl-space-dehumidifier-garner-nc and link -->
-            <li>Knightdale</li><!-- TODO: create /crawl-space-dehumidifier-knightdale-nc and link -->
-            <li>Wake Forest</li><!-- TODO: create /crawl-space-dehumidifier-wake-forest-nc and link -->
+            <li>
+              Knightdale
+            </li><!-- TODO: create /crawl-space-dehumidifier-knightdale-nc and link -->
+            <li>
+              Wake Forest
+            </li><!-- TODO: create /crawl-space-dehumidifier-wake-forest-nc and link -->
           </ul>
         </div>
         <div>
@@ -184,7 +220,9 @@ const schema = {
           >
           <ul class="svc-list" style="margin-top:1.25rem;">
             <li>Durham</li><!-- TODO: create /crawl-space-dehumidifier-durham-nc and link -->
-            <li>Chapel Hill</li><!-- TODO: create /crawl-space-dehumidifier-chapel-hill-nc and link -->
+            <li>
+              Chapel Hill
+            </li><!-- TODO: create /crawl-space-dehumidifier-chapel-hill-nc and link -->
             <li>Pittsboro</li><!-- TODO: create /crawl-space-dehumidifier-pittsboro-nc and link -->
             <li>Clayton</li><!-- TODO: create /crawl-space-dehumidifier-clayton-nc and link -->
           </ul>
@@ -194,7 +232,10 @@ const schema = {
   </section>
 
   <!-- CITY-SPECIFIC CONTENT -->
-  <section class="section" style="background:#f7f9fc; border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0;">
+  <section
+    class="section"
+    style="background:#f7f9fc; border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0;"
+  >
     <div class="container" style="max-width:900px;">
       <h2>Why Humidity Control Matters in These Triangle Communities</h2>
       <span class="answer-first"
@@ -205,19 +246,20 @@ const schema = {
       <div style="margin-top:2rem;">
         <h3>Raleigh</h3>
         <p>
-          Raleigh homes span everything from 1960s ranch-style construction to new subdivisions built
-          in the last five years. Older homes typically have vented crawl spaces with fiberglass
-          insulation stapled to the floor joists — a configuration that draws in humid outdoor air
-          all summer long. We regularly see crawl space RH above 80% in Raleigh homes during June
-          through September. Newer Raleigh construction has its own issues: tightly built homes
-          without mechanical ventilation trap humidity indoors, and energy-efficient HVAC systems
-          that run shorter cycles don't dehumidify as effectively as older systems did.
+          Raleigh homes span everything from 1960s ranch-style construction to new subdivisions
+          built in the last five years. Older homes typically have vented crawl spaces with
+          fiberglass insulation stapled to the floor joists — a configuration that draws in humid
+          outdoor air all summer long. We regularly see crawl space RH above 80% in Raleigh homes
+          during June through September. Newer Raleigh construction has its own issues: tightly
+          built homes without mechanical ventilation trap humidity indoors, and energy-efficient
+          HVAC systems that run shorter cycles don't dehumidify as effectively as older systems did.
         </p>
         <p>
-          Common services in Raleigh: <a href="/crawl-space-dehumidifier-raleigh-nc">crawl space
-          dehumidifier installation</a>, whole-home dehumidifiers tied into existing HVAC systems,
-          and <a href="/erv-installation-raleigh-nc">ERV fresh-air ventilation</a> for newer
-          construction.
+          Common services in Raleigh: <a href="/crawl-space-dehumidifier-raleigh-nc"
+            >crawl space dehumidifier installation</a
+          >, whole-home dehumidifiers tied into existing HVAC systems, and <a
+            href="/erv-installation-raleigh-nc">ERV fresh-air ventilation</a
+          > for newer construction.
         </p>
       </div>
 
@@ -234,9 +276,10 @@ const schema = {
           growth and wood deterioration over time.
         </p>
         <p>
-          Common services: <a href="/crawl-space-dehumidifier-cary-nc">crawl space dehumidifiers
-          in Cary</a>, <a href="/crawl-space-dehumidifier-apex-nc">Apex crawl space humidity
-          control</a>, and encapsulated crawl space dehumidifier installations.
+          Common services: <a href="/crawl-space-dehumidifier-cary-nc"
+            >crawl space dehumidifiers in Cary</a
+          >, <a href="/crawl-space-dehumidifier-apex-nc">Apex crawl space humidity control</a>, and
+          encapsulated crawl space dehumidifier installations.
         </p>
       </div>
 
@@ -246,43 +289,42 @@ const schema = {
           The southern Wake County communities of Holly Springs and Fuquay-Varina have seen
           tremendous growth, with thousands of new homes built in planned developments. Many of
           these homes use sealed or encapsulated crawl spaces — a construction approach that
-          eliminates traditional vents but requires a dedicated dehumidifier to manage humidity
-          in the sealed space. Without proper dehumidification, an encapsulated crawl space can
-          trap moisture just as effectively as a vented one, with no way for it to escape. We
-          frequently service homes in these communities where the builder installed encapsulation
-          without a dehumidifier, leaving the homeowner with a moisture problem they didn't
-          anticipate.
+          eliminates traditional vents but requires a dedicated dehumidifier to manage humidity in
+          the sealed space. Without proper dehumidification, an encapsulated crawl space can trap
+          moisture just as effectively as a vented one, with no way for it to escape. We frequently
+          service homes in these communities where the builder installed encapsulation without a
+          dehumidifier, leaving the homeowner with a moisture problem they didn't anticipate.
         </p>
         <p>
-          Common services: <a href="/crawl-space-dehumidifier-holly-springs-nc">Holly Springs
-          crawl space dehumidifiers</a>, <a href="/crawl-space-dehumidifier-fuquay-varina-nc"
-          >Fuquay-Varina humidity control</a>, and <a href="/crawl-space-mold-treatment-raleigh"
-          >crawl space mold treatment</a> where elevated humidity has already led to surface
-          mold growth on floor joists.
+          Common services: <a href="/crawl-space-dehumidifier-holly-springs-nc"
+            >Holly Springs crawl space dehumidifiers</a
+          >, <a href="/crawl-space-dehumidifier-fuquay-varina-nc">Fuquay-Varina humidity control</a
+          >, and <a href="/crawl-space-mold-treatment-raleigh">crawl space mold treatment</a> where elevated
+          humidity has already led to surface mold growth on floor joists.
         </p>
       </div>
 
       <div style="margin-top:2rem;">
         <h3>Garner, Knightdale, Wake Forest, and Surrounding Wake County</h3>
         <p>
-          Eastern and northern Wake County communities share similar construction profiles — primarily
-          vented crawl spaces in homes built between 1980 and 2010. Garner sits in a low-lying area
-          near the Neuse River corridor, which contributes to higher ambient humidity levels during
-          much of the year. Wake Forest and Knightdale homes frequently show signs of humidity
-          damage during inspections: staining on floor joists, deteriorating fiberglass insulation,
-          and occasionally active mold on wood surfaces. These areas are part of our extended Wake
-          County service territory with standard scheduling.
+          Eastern and northern Wake County communities share similar construction profiles —
+          primarily vented crawl spaces in homes built between 1980 and 2010. Garner sits in a
+          low-lying area near the Neuse River corridor, which contributes to higher ambient humidity
+          levels during much of the year. Wake Forest and Knightdale homes frequently show signs of
+          humidity damage during inspections: staining on floor joists, deteriorating fiberglass
+          insulation, and occasionally active mold on wood surfaces. These areas are part of our
+          extended Wake County service territory with standard scheduling.
         </p>
       </div>
 
       <div style="margin-top:2rem;">
         <h3>Durham, Chapel Hill, Pittsboro, and Clayton</h3>
         <p>
-          Beyond Wake County, we serve homeowners in Durham, Chapel Hill, Pittsboro, and Clayton
-          who need crawl space dehumidification, whole-home humidity control, or ERV installation.
-          These areas share similar climate and soil conditions to Wake County — humid summers, clay
-          soil, and a mix of older and newer construction. Extended-area appointments are scheduled
-          on available days; response times may be slightly longer than our core Wake County service
+          Beyond Wake County, we serve homeowners in Durham, Chapel Hill, Pittsboro, and Clayton who
+          need crawl space dehumidification, whole-home humidity control, or ERV installation. These
+          areas share similar climate and soil conditions to Wake County — humid summers, clay soil,
+          and a mix of older and newer construction. Extended-area appointments are scheduled on
+          available days; response times may be slightly longer than our core Wake County service
           area.
         </p>
       </div>
@@ -299,15 +341,42 @@ const schema = {
       >
       <div class="feature-list" style="margin-top:1.25rem;">
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          >
           <span
-            ><a href="/crawl-space-dehumidifier-raleigh-nc"
-              >Crawl Space dehumidifier installation</a
+            ><a href="/crawl-space-dehumidifier-raleigh-nc">Crawl Space dehumidifier installation</a
             > — vented crawl space systems</span
           >
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          >
           <span
             ><a href="/encapsulated-crawl-space-dehumidifier-raleigh-nc"
               >Encapsulated crawl space dehumidifier systems</a
@@ -315,24 +384,66 @@ const schema = {
           >
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          >
           <span
             ><a href="/whole-house-dehumidifier-raleigh">Whole-home dehumidifiers</a> — HVAC ducted and
             dedicated systems</span
           >
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          >
           <span
             ><a href="/erv-installation-raleigh-nc">ERV / fresh-air ventilation systems</a> — energy recovery
             ventilation installation</span
           >
         </div>
         <div class="feature-item">
-          <span class="feature-check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="feature-check"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+            ></span
+          >
           <span
-            ><a href="/crawl-space-mold-treatment-raleigh">Crawl Space mold treatment</a> — botanical antimicrobial
-            surface treatment</span
+            ><a href="/crawl-space-mold-treatment-raleigh">Crawl Space mold treatment</a> — botanical
+            antimicrobial surface treatment</span
           >
         </div>
       </div>
