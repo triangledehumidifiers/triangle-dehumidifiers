@@ -5,29 +5,111 @@ const googleSvg = `<svg class="review-card__g" viewBox="0 0 24 24" width="20" he
 
 const reviews = [
   // 1. Local Guides with real profile photos
-  { name: 'James Cooper', img: '/images/reviews/james-cooper.jpg', localGuide: true, text: 'I recently had a great experience with Triangle Dehumidifier, and I highly recommend them. Nathan and Luke went above and beyond in both their service and their professionalism. Not only were they extremely knowledgeable and helpful, but they were also genuinely pleasant to work with throughout the entire process. Excellent service, great attitude, and people who clearly care about doing the job right.' },
-  { name: 'Pamela Swanson', img: '/images/reviews/pamela-swanson.jpg', localGuide: true, text: "For several years, we've had Nathan Ryder provide us with a great dehumidifier in our crawl space! He's conscientious, kind, arrives when he says he will and does a great job. Our crawl space has a lot of moisture and has been kept well by this dehumidification! I highly recommend his company!" },
+  {
+    name: 'James Cooper',
+    img: '/images/reviews/james-cooper.jpg',
+    localGuide: true,
+    text: 'I recently had a great experience with Triangle Dehumidifier, and I highly recommend them. Nathan and Luke went above and beyond in both their service and their professionalism. Not only were they extremely knowledgeable and helpful, but they were also genuinely pleasant to work with throughout the entire process. Excellent service, great attitude, and people who clearly care about doing the job right.',
+  },
+  {
+    name: 'Pamela Swanson',
+    img: '/images/reviews/pamela-swanson.jpg',
+    localGuide: true,
+    text: "For several years, we've had Nathan Ryder provide us with a great dehumidifier in our crawl space! He's conscientious, kind, arrives when he says he will and does a great job. Our crawl space has a lot of moisture and has been kept well by this dehumidification! I highly recommend his company!",
+  },
   // 2. Local Guides (initial avatars)
-  { name: 'Mr. Keever', img: '/images/reviews/mr-keever.png', localGuide: true, text: 'Nathan (a licensed NC Contractor and local NCSU grad) and his team encapsulated our crawl space as well as our neighbors. We have had several technicians in there over the last few years, such as the annual Termite inspection and HVAC repair person, who both noted how quality the encapsulation was. Additionally, Mr. Rider did not try to oversell. He was professional and was able to guarantee his work.' },
-  { name: 'William Griner', img: '/images/reviews/william-griner.png', localGuide: true, text: 'Nate and his crew are outstanding to work with, very timely, stayed on schedule, and the quality of their work was excellent, not to mention courteous and friendly.' },
-  { name: 'Stacey Ohm', img: '/images/reviews/stacey-ohm.png', localGuide: true, text: 'Nathan is first class. We had a huge humidity problem in our crawl space. Nathan enclosed our crawl space and installed a dehumidifier to keep our crawl space dry. They also wiped our joists to rid of any mold growth. We could not be happier. Our crawl space is dry and clean. We have recommended him many times and he has done a great job each time.' },
+  {
+    name: 'Mr. Keever',
+    img: '/images/reviews/mr-keever.png',
+    localGuide: true,
+    text: 'Nathan (a licensed NC Contractor and local NCSU grad) and his team encapsulated our crawl space as well as our neighbors. We have had several technicians in there over the last few years, such as the annual Termite inspection and HVAC repair person, who both noted how quality the encapsulation was. Additionally, Mr. Rider did not try to oversell. He was professional and was able to guarantee his work.',
+  },
+  {
+    name: 'William Griner',
+    img: '/images/reviews/william-griner.png',
+    localGuide: true,
+    text: 'Nate and his crew are outstanding to work with, very timely, stayed on schedule, and the quality of their work was excellent, not to mention courteous and friendly.',
+  },
+  {
+    name: 'Stacey Ohm',
+    img: '/images/reviews/stacey-ohm.png',
+    localGuide: true,
+    text: 'Nathan is first class. We had a huge humidity problem in our crawl space. Nathan enclosed our crawl space and installed a dehumidifier to keep our crawl space dry. They also wiped our joists to rid of any mold growth. We could not be happier. Our crawl space is dry and clean. We have recommended him many times and he has done a great job each time.',
+  },
   // 3. Reviewers with real profile photos
-  { name: 'Ed Lallo', img: '/images/reviews/ed-lallo.jpg', text: 'Nathan personally handled the crawl space humidity control work at our home. The work was done promptly and at a cost that I felt was affordable. Good Job!!!' },
-  { name: 'Simon Desouza', img: '/images/reviews/simon-desouza.jpg', text: 'Nathan did a fantastic job with my crawl space. The insulation and mold prevention issues were handled very professionally. His recommendations on dehumidifiers were spot on. I really likes that he follows up with us every year.' },
-  { name: 'Kimberly Rumfelt', img: '/images/reviews/kimberly-rumfelt.jpg', text: 'Nathan and his team completed extensive work under our home last year. The excess water and humidity were putting it at risk for some many problems. Nathan and his team had to clean out and regrade, fix the drainage and sump pump as well as add a new vapor barrier. We are so grateful! They did such an amazing job, were transparent and reliable throughout the entire process!' },
+  {
+    name: 'Ed Lallo',
+    img: '/images/reviews/ed-lallo.jpg',
+    text: 'Nathan personally handled the crawl space humidity control work at our home. The work was done promptly and at a cost that I felt was affordable. Good Job!!!',
+  },
+  {
+    name: 'Simon Desouza',
+    img: '/images/reviews/simon-desouza.jpg',
+    text: 'Nathan did a fantastic job with my crawl space. The insulation and mold prevention issues were handled very professionally. His recommendations on dehumidifiers were spot on. I really likes that he follows up with us every year.',
+  },
+  {
+    name: 'Kimberly Rumfelt',
+    img: '/images/reviews/kimberly-rumfelt.jpg',
+    text: 'Nathan and his team completed extensive work under our home last year. The excess water and humidity were putting it at risk for some many problems. Nathan and his team had to clean out and regrade, fix the drainage and sump pump as well as add a new vapor barrier. We are so grateful! They did such an amazing job, were transparent and reliable throughout the entire process!',
+  },
   // 4. Reviewers with city
-  { name: 'K Edwards', img: '/images/reviews/k-edwards.png', loc: 'Fuquay-Varina, NC', text: "You can count on Triangle Dehumidifiers to recommend exactly what's needed and complete the job as agreed upon to resolve any crawl space mold or humidity issues. Our space in Fuquay Varina was treated for existing mold and a dehumidifier installed. The space is much drier now and no more musty smells in the crawl space or inside the home. Thanks Nathan! Highly recommended!" },
-  { name: 'GregB', img: '/images/reviews/gregb.png', loc: 'Raleigh, NC', text: 'We had crawl space encapsulation, mold treatment and dehumidifier installation performed and are extremely satisfied with the work that was done. Our house is much more comfortable now. We are located in Raleigh NC.' },
-  { name: 'Philip Stephenson', img: '/images/reviews/philip-stephenson.png', loc: 'Angier, NC', text: 'I have known Nathan many years and consider him a friend, but most of all a very professional representative of his dehumidifier company. Even though Nathan worked on the new homes that I built with my son over a period of years, He also worked on my personal home. I had Moisture issues and Nathan installed a dehumidifier in my crawl space, as well as resealed my vapor barrier, cleaned and treated my floor joist for mold issues. He also installed a sump pump for any moisture that may condensate in the future. I would recommend Nathan and his company to be anyone that needs professional and honest advice.' },
-  { name: 'Peak Energy', img: '/images/reviews/peak-energy.png', loc: 'Cary, NC', text: 'Triangle Dehumidifiers is installing dehumidifiers and spraying mold for our crawl space improvements business around the Raleigh area. Recently completed two dehumidifier installs and a mold treatment in Cary.' },
+  {
+    name: 'K Edwards',
+    img: '/images/reviews/k-edwards.png',
+    loc: 'Fuquay-Varina, NC',
+    text: "You can count on Triangle Dehumidifiers to recommend exactly what's needed and complete the job as agreed upon to resolve any crawl space mold or humidity issues. Our space in Fuquay Varina was treated for existing mold and a dehumidifier installed. The space is much drier now and no more musty smells in the crawl space or inside the home. Thanks Nathan! Highly recommended!",
+  },
+  {
+    name: 'GregB',
+    img: '/images/reviews/gregb.png',
+    loc: 'Raleigh, NC',
+    text: 'We had crawl space encapsulation, mold treatment and dehumidifier installation performed and are extremely satisfied with the work that was done. Our house is much more comfortable now. We are located in Raleigh NC.',
+  },
+  {
+    name: 'Philip Stephenson',
+    img: '/images/reviews/philip-stephenson.png',
+    loc: 'Angier, NC',
+    text: 'I have known Nathan many years and consider him a friend, but most of all a very professional representative of his dehumidifier company. Even though Nathan worked on the new homes that I built with my son over a period of years, He also worked on my personal home. I had Moisture issues and Nathan installed a dehumidifier in my crawl space, as well as resealed my vapor barrier, cleaned and treated my floor joist for mold issues. He also installed a sump pump for any moisture that may condensate in the future. I would recommend Nathan and his company to be anyone that needs professional and honest advice.',
+  },
+  {
+    name: 'Peak Energy',
+    img: '/images/reviews/peak-energy.png',
+    loc: 'Cary, NC',
+    text: 'Triangle Dehumidifiers is installing dehumidifiers and spraying mold for our crawl space improvements business around the Raleigh area. Recently completed two dehumidifier installs and a mold treatment in Cary.',
+  },
   // 5. Regular reviewers
-  { name: 'Ann Schulte', img: '/images/reviews/ann-schulte.png', text: 'We had Nathan Rider and his company encapsulate our crawl space in 2020. He installed a dehumidifier and drainage system. He guided us toward a system that was simple, to save costs, yet worked quite well. Still working great!' },
-  { name: 'Erin Yost', img: '/images/reviews/erin-yost.png', text: 'Nathan installed French drains, a sump pump, new insulation, and a dehumidifier on my crawl space in 2020 and I have had no issues since then. So glad I went with him over the larger more expensive companies.' },
-  { name: 'Preston', img: '/images/reviews/preston.png', text: 'We have had Nathan Rider seal our crawl space and install a dehumidifier at our last two homes. He is top notch. He is knowledgeable, a great communicator, and most importantly we could trust him. A healthy home is really important to us and Nathan gets it.' },
-  { name: 'Hunter Grove', img: '/images/reviews/hunter-grove.png', text: "Nathan and his crew were awesome! I had three quotes and chose him because he only provided me what I needed, didn't oversell me on items that weren't necessary like the others, and did the work quickly and neatly. I had him treat for mold, encapsulate the crawl space, and install a dehumidifier. What a difference he made and I would recommend him to anyone." },
-  { name: 'Ken Ast', img: '/images/reviews/ken-ast.png', text: "Just over a year ago I engaged Nathan Rider to help me address some serious humidity numbers in my crawl space. My experience with Nathan was outstanding; highly competent, great to work with, and reasonably priced solution options. My system now maintains a humidity level of no more than 45-56% at all times. I HIGHLY RECOMMEND Nathan's services to all homeowners wrestling with similar problems!" },
+  {
+    name: 'Ann Schulte',
+    img: '/images/reviews/ann-schulte.png',
+    text: 'We had Nathan Rider and his company encapsulate our crawl space in 2020. He installed a dehumidifier and drainage system. He guided us toward a system that was simple, to save costs, yet worked quite well. Still working great!',
+  },
+  {
+    name: 'Erin Yost',
+    img: '/images/reviews/erin-yost.png',
+    text: 'Nathan installed French drains, a sump pump, new insulation, and a dehumidifier on my crawl space in 2020 and I have had no issues since then. So glad I went with him over the larger more expensive companies.',
+  },
+  {
+    name: 'Preston',
+    img: '/images/reviews/preston.png',
+    text: 'We have had Nathan Rider seal our crawl space and install a dehumidifier at our last two homes. He is top notch. He is knowledgeable, a great communicator, and most importantly we could trust him. A healthy home is really important to us and Nathan gets it.',
+  },
+  {
+    name: 'Hunter Grove',
+    img: '/images/reviews/hunter-grove.png',
+    text: "Nathan and his crew were awesome! I had three quotes and chose him because he only provided me what I needed, didn't oversell me on items that weren't necessary like the others, and did the work quickly and neatly. I had him treat for mold, encapsulate the crawl space, and install a dehumidifier. What a difference he made and I would recommend him to anyone.",
+  },
+  {
+    name: 'Ken Ast',
+    img: '/images/reviews/ken-ast.png',
+    text: "Just over a year ago I engaged Nathan Rider to help me address some serious humidity numbers in my crawl space. My experience with Nathan was outstanding; highly competent, great to work with, and reasonably priced solution options. My system now maintains a humidity level of no more than 45-56% at all times. I HIGHLY RECOMMEND Nathan's services to all homeowners wrestling with similar problems!",
+  },
   // 5. N Rider last
-  { name: 'N Rider', img: '/images/reviews/n-rider.png', loc: 'Holly Springs, NC', text: 'Nathan and helpers installed an AprilAire dehumidifier in our previously encapsulated crawl space and a whole house filter on our hvac system at our home in Holly Springs, NC. Our crawl space stays drier without condensation on air handler and the air in our house is better.' },
+  {
+    name: 'N Rider',
+    img: '/images/reviews/n-rider.png',
+    loc: 'Holly Springs, NC',
+    text: 'Nathan and helpers installed an AprilAire dehumidifier in our previously encapsulated crawl space and a whole house filter on our hvac system at our home in Holly Springs, NC. Our crawl space stays drier without condensation on air handler and the air in our house is better.',
+  },
 ];
 
 const schema = {
@@ -136,7 +218,7 @@ const faqSchema = {
 <BaseLayout
   breadcrumbs={[{ name: 'Home', url: '/' }]}
   title="Dehumidifier Installation Raleigh NC | Triangle Dehumidifiers"
-  description="Dehumidifier installation in Raleigh, NC — led by a humidity control specialist with 15+ years experience. Serving Holly Springs, Cary, Apex &amp; Wake County."
+  description="Dehumidifier installation in Raleigh, NC. Humidity control specialist with 15+ years experience. Serving Holly Springs, Cary, Apex and Wake County."
   canonical="/"
   heroImage="/images/hero-livingroom.webp"
 >
@@ -165,14 +247,51 @@ const faqSchema = {
         </p>
         <div class="hero-simple__actions">
           <a href="/contact" class="btn btn-green">Request Inspection</a>
-          <a href="/crawl-space-dehumidifier-raleigh-nc" class="btn btn-secondary"
-            >Our Services</a
-          >
+          <a href="/crawl-space-dehumidifier-raleigh-nc" class="btn btn-secondary">Our Services</a>
         </div>
         <div class="trust-pills">
-          <span class="pill"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Protect Structure</span>
-          <span class="pill"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Healthier Air</span>
-          <span class="pill"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Humidity Control</span>
+          <span class="pill"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg
+            > Protect Structure</span
+          >
+          <span class="pill"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg
+            > Healthier Air</span
+          >
+          <span class="pill"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg
+            > Humidity Control</span
+          >
         </div>
       </div>
     </div>
@@ -182,15 +301,54 @@ const faqSchema = {
   <div class="trust-bar">
     <div class="container trust-bar-inner">
       <div class="trust-bar-item">
-        <span class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <span class="trust-icon"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg
+          ></span
+        >
         <span>Fully Insured</span>
       </div>
       <div class="trust-bar-item">
-        <span class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <span class="trust-icon"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg
+          ></span
+        >
         <span>Led by 15+ Years Experience</span>
       </div>
       <div class="trust-bar-item">
-        <span class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <span class="trust-icon"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg
+          ></span
+        >
         <span>Wake County-Based</span>
       </div>
     </div>
@@ -210,28 +368,98 @@ const faqSchema = {
       <div class="why-grid">
         <div class="why-cards">
           <div class="why-card">
-            <h3><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a6fa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg></span> The Stack Effect</h3>
+            <h3>
+              <span class="card-icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#1a6fa8"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg
+                ></span
+              > The Stack Effect
+            </h3>
             <p>
               As warm air rises and exits your attic, damp crawl space air is pulled up into your
               home's living areas.
             </p>
           </div>
           <div class="why-card">
-            <h3><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7a4a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 21c2-3 2-6 0-9s-2-6 0-9"/><path d="M12 21c2-3 2-6 0-9s-2-6 0-9"/><path d="M17 21c2-3 2-6 0-9s-2-6 0-9"/></svg></span> Musty Odors</h3>
+            <h3>
+              <span class="card-icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#7a4a1a"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  ><path d="M7 21c2-3 2-6 0-9s-2-6 0-9"></path><path d="M12 21c2-3 2-6 0-9s-2-6 0-9"
+                  ></path><path d="M17 21c2-3 2-6 0-9s-2-6 0-9"></path></svg
+                ></span
+              > Musty Odors
+            </h3>
             <p>
               Persistent musty smells inside typically indicate high humidity and potential mold
               growth.
             </p>
           </div>
           <div class="why-card">
-            <h3><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a6fa8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg></span> Wood Moisture Concerns</h3>
+            <h3>
+              <span class="card-icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#1a6fa8"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  ><path
+                    d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"
+                  ></path><path
+                    d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"
+                  ></path></svg
+                ></span
+              > Wood Moisture Concerns
+            </h3>
             <p>
               Excessive humidity can cause moisture damage and mold growth in subflooring and
               structural framing.
             </p>
           </div>
           <div class="why-card">
-            <h3><span class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span> Energy Inefficiency</h3>
+            <h3>
+              <span class="card-icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#b45309"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  ><path
+                    d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                  ></path></svg
+                ></span
+              > Energy Inefficiency
+            </h3>
             <p>
               A damp home increases the load on your HVAC system. Reducing humidity lowers overall
               moisture and improves efficiency.
@@ -257,13 +485,55 @@ const faqSchema = {
             </p>
             <ul class="summary-list">
               <li>
-                <span class="check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span> Prevent wood rot, mold, and musty odors
+                <span class="check"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+                  ></span
+                > Prevent wood rot, mold, and musty odors
               </li>
               <li>
-                <span class="check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span> Improve indoor air quality throughout your home
+                <span class="check"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+                  ></span
+                > Improve indoor air quality throughout your home
               </li>
               <li>
-                <span class="check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span> Increase energy efficiency and improve home comfort
+                <span class="check"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    ><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg
+                  ></span
+                > Increase energy efficiency and improve home comfort
               </li>
             </ul>
             <a href="/contact" class="btn btn-green">Request Inspection</a>
@@ -283,8 +553,8 @@ const faqSchema = {
       <div class="approach-grid">
         <div class="approach-card">
           <div class="step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-               aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
+              ><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"
               ></path><rect x="9" y="3" width="6" height="4" rx="1"></rect><path d="m9 12 2 2 4-4"
               ></path></svg
             >
@@ -297,8 +567,8 @@ const faqSchema = {
         </div>
         <div class="approach-card">
           <div class="step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-               aria-hidden="true"><path
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
+              ><path
                 d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
               ></path></svg
             >
@@ -311,8 +581,8 @@ const faqSchema = {
         </div>
         <div class="approach-card">
           <div class="step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-               aria-hidden="true"><path d="M12 2a10 10 0 0 1 7.38 16.75"></path><path d="M12 2a10 10 0 0 0-7.38 16.75"
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
+              ><path d="M12 2a10 10 0 0 1 7.38 16.75"></path><path d="M12 2a10 10 0 0 0-7.38 16.75"
               ></path><path d="M12 12 8.5 8.5"></path><circle cx="12" cy="12" r="1.5"></circle><path
                 d="M12 17a2 2 0 0 1-2-2c0-.55.22-1.05.59-1.41L12 12"></path><path
                 d="M10.5 19.5c.5.3 1 .5 1.5.5s1-.2 1.5-.5"></path></svg
@@ -333,43 +603,93 @@ const faqSchema = {
     <div class="container">
       <div class="reviews-carousel__header">
         <div class="reviews-carousel__badge">
-          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-          <span class="reviews-carousel__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"
+            ><path
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+              fill="#4285F4"></path><path
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              fill="#34A853"></path><path
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+              fill="#FBBC05"></path><path
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              fill="#EA4335"></path></svg
+          >
+          <span class="reviews-carousel__stars" aria-label="5 out of 5 stars"
+            >&#9733;&#9733;&#9733;&#9733;&#9733;</span
+          >
           <span>5.0</span>
         </div>
         <h2>Hear From Our Customers</h2>
       </div>
       <div class="reviews-carousel__stage">
-        <button class="reviews-arrow reviews-arrow--prev" id="reviews-prev" aria-label="Previous reviews">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        <button
+          class="reviews-arrow reviews-arrow--prev"
+          id="reviews-prev"
+          aria-label="Previous reviews"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"
+            ><polyline points="15 18 9 12 15 6"></polyline></svg
+          >
         </button>
         <div class="reviews-carousel__viewport" id="reviews-viewport">
           <div class="reviews-carousel__track" id="reviews-track">
-            {reviews.map((r) => (
-              <div class="review-card">
-                <div class="review-card__head">
-                  <img class="review-card__avatar" src={r.img} alt={r.name} width="40" height="40" loading="lazy" />
-                  <div class="review-card__info">
-                    <strong>{r.name}</strong>
-                    {r.localGuide && <span class="review-card__local-guide">&#9733; Local Guide</span>}
-                    {r.loc && <span class="review-card__loc">{r.loc}</span>}
+            {
+              reviews.map((r) => (
+                <div class="review-card">
+                  <div class="review-card__head">
+                    <img
+                      class="review-card__avatar"
+                      src={r.img}
+                      alt={r.name}
+                      width="40"
+                      height="40"
+                      loading="lazy"
+                    />
+                    <div class="review-card__info">
+                      <strong>{r.name}</strong>
+                      {r.localGuide && (
+                        <span class="review-card__local-guide">&#9733; Local Guide</span>
+                      )}
+                      {r.loc && <span class="review-card__loc">{r.loc}</span>}
+                    </div>
+                    <Fragment set:html={googleSvg} />
                   </div>
-                  <Fragment set:html={googleSvg} />
+                  <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                  <p>{r.text}</p>
                 </div>
-                <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p>{r.text}</p>
-              </div>
-            ))}
+              ))
+            }
           </div>
         </div>
-        <button class="reviews-arrow reviews-arrow--next" id="reviews-next" aria-label="Next reviews">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <button
+          class="reviews-arrow reviews-arrow--next"
+          id="reviews-next"
+          aria-label="Next reviews"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"
+            ><polyline points="9 18 15 12 9 6"></polyline></svg
+          >
         </button>
       </div>
       <div class="reviews-carousel__footer">
         <div class="reviews-carousel__dots" id="reviews-dots"></div>
-        <a href="https://www.google.com/maps/place/Triangle+Dehumidifiers,+LLC/" class="reviews-carousel__glink" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <a
+          href="https://www.google.com/maps/place/Triangle+Dehumidifiers,+LLC/"
+          class="reviews-carousel__glink"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"
+            ><path
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+              fill="#4285F4"></path><path
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              fill="#34A853"></path><path
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+              fill="#FBBC05"></path><path
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              fill="#EA4335"></path></svg
+          >
           Read all reviews on Google
         </a>
       </div>
@@ -399,7 +719,9 @@ const faqSchema = {
 
       /* Clone enough cards at the end so the wrap is seamless */
       function buildClones() {
-        track.querySelectorAll('.review-card--clone').forEach(function (c) { c.remove(); });
+        track.querySelectorAll('.review-card--clone').forEach(function (c) {
+          c.remove();
+        });
         var vc = visibleCount();
         for (var i = 0; i < vc; i++) {
           var clone = origCards[i % total].cloneNode(true);
@@ -471,8 +793,14 @@ const faqSchema = {
         timer = setInterval(goNext, 6000);
       }
 
-      prevBtn.addEventListener('click', function () { goPrev(); resetTimer(); });
-      nextBtn.addEventListener('click', function () { goNext(); resetTimer(); });
+      prevBtn.addEventListener('click', function () {
+        goPrev();
+        resetTimer();
+      });
+      nextBtn.addEventListener('click', function () {
+        goNext();
+        resetTimer();
+      });
 
       track.closest('.reviews-carousel__stage').addEventListener('mouseenter', function () {
         clearInterval(timer);
@@ -507,31 +835,49 @@ const faqSchema = {
         <details class="faq-item">
           <summary>What does a dehumidifier installation cost in Raleigh, NC?</summary>
           <p>
-            A professionally installed crawl space dehumidifier in the Raleigh area typically costs $3,000–$5,000. Whole-house dehumidifiers integrated with HVAC ductwork run $3,000–$6,000. Final cost depends on crawl space size, configuration, and whether additional work like vapor barrier repair or mold treatment is needed.
+            A professionally installed crawl space dehumidifier in the Raleigh area typically costs
+            $3,000–$5,000. Whole-house dehumidifiers integrated with HVAC ductwork run
+            $3,000–$6,000. Final cost depends on crawl space size, configuration, and whether
+            additional work like vapor barrier repair or mold treatment is needed.
           </p>
         </details>
         <details class="faq-item">
           <summary>What humidity level should I maintain in my home?</summary>
           <p>
-            For homes in Raleigh and Wake County, we recommend maintaining 45–50% Relative Humidity (RH). This range prevents mold growth, wood rot, and musty odors while keeping the home comfortable. Without active dehumidification, crawl spaces in the Triangle regularly exceed 70–80% RH during summer months.
+            For homes in Raleigh and Wake County, we recommend maintaining 45–50% Relative Humidity
+            (RH). This range prevents mold growth, wood rot, and musty odors while keeping the home
+            comfortable. Without active dehumidification, crawl spaces in the Triangle regularly
+            exceed 70–80% RH during summer months.
           </p>
         </details>
         <details class="faq-item">
           <summary>Do I need a crawl space dehumidifier or a whole-house dehumidifier?</summary>
           <p>
-            If your humidity problem originates in the crawl space — musty odors, mold on joists, condensation on ductwork — a <a href="/crawl-space-dehumidifier-raleigh-nc">crawl space dehumidifier</a> is typically the right solution. If you experience high humidity throughout the home — sticky air upstairs, window condensation, clammy bedrooms — a <a href="/whole-house-dehumidifier-raleigh">whole-house dehumidifier</a> tied into your HVAC ductwork may be more effective.
+            If your humidity problem originates in the crawl space — musty odors, mold on joists,
+            condensation on ductwork — a <a href="/crawl-space-dehumidifier-raleigh-nc"
+              >crawl space dehumidifier</a
+            > is typically the right solution. If you experience high humidity throughout the home — sticky
+            air upstairs, window condensation, clammy bedrooms — a <a
+              href="/whole-house-dehumidifier-raleigh">whole-house dehumidifier</a
+            > tied into your HVAC ductwork may be more effective.
           </p>
         </details>
         <details class="faq-item">
           <summary>How long does dehumidifier installation take?</summary>
           <p>
-            Most installations are completed in a single day. The process includes an on-site evaluation, equipment sizing, unit installation, condensate drain line routing, and system verification to confirm humidity levels reach the target range before we leave.
+            Most installations are completed in a single day. The process includes an on-site
+            evaluation, equipment sizing, unit installation, condensate drain line routing, and
+            system verification to confirm humidity levels reach the target range before we leave.
           </p>
         </details>
         <details class="faq-item">
           <summary>What areas does Triangle Dehumidifiers serve?</summary>
           <p>
-            We serve Raleigh, Cary, Apex, Holly Springs, Fuquay-Varina, Morrisville, Garner, Wake Forest, Knightdale, and surrounding Triangle communities. We are based in Holly Springs, NC and most projects are completed within Wake County. See our full <a href="/service-areas">service area</a>.
+            We serve Raleigh, Cary, Apex, Holly Springs, Fuquay-Varina, Morrisville, Garner, Wake
+            Forest, Knightdale, and surrounding Triangle communities. We are based in Holly Springs,
+            NC and most projects are completed within Wake County. See our full <a
+              href="/service-areas">service area</a
+            >.
           </p>
         </details>
       </div>
