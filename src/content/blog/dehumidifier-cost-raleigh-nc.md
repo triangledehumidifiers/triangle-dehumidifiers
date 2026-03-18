@@ -79,8 +79,8 @@ Bigger units cost more — both for the unit itself and the electrical setup, si
 Triangle Dehumidifiers installs AprilAire's professional-grade WiFi dehumidifier line — the E80W, E100W, and E130W models for crawl space and whole-home applications. These aren't the box-store units you'll find at Home Depot. They're built for the conditions that Raleigh area homes actually deal with.
 
 <div style="display:flex;gap:1.5rem;margin:1.5rem 0;flex-wrap:wrap;">
-  <img src="/images/blog/aprilaire-e100w-crawl-space-dehumidifier.webp" alt="AprilAire E100W WiFi crawl space dehumidifier" style="flex:1;min-width:200px;max-width:340px;object-fit:contain;border-radius:6px;">
-  <img src="/images/blog/aprilaire-e130w-crawl-space-dehumidifier.webp" alt="AprilAire E130W WiFi crawl space dehumidifier" style="flex:1;min-width:200px;max-width:340px;object-fit:contain;border-radius:6px;">
+  <img src="/images/blog/aprilaire-e100w-crawl-space-dehumidifier.webp" alt="AprilAire E100W WiFi crawl space dehumidifier" width="600" height="600" style="flex:1;min-width:200px;max-width:340px;object-fit:contain;border-radius:6px;">
+  <img src="/images/blog/aprilaire-e130w-crawl-space-dehumidifier.webp" alt="AprilAire E130W WiFi crawl space dehumidifier" width="600" height="600" style="flex:1;min-width:200px;max-width:340px;object-fit:contain;border-radius:6px;">
 </div>
 
 A few things that set them apart:
@@ -111,11 +111,11 @@ This is one of the most common questions we get — and the honest answer is tha
 
 <div style="display:flex;gap:1.5rem;margin:1.5rem 0;flex-wrap:wrap;">
   <figure style="flex:1;min-width:200px;margin:0;text-align:center;">
-    <img src="/images/blog/vented-crawl-space-humidity-raleigh-nc.webp" alt="Moisture damaged crawl space with fallen insulation in Raleigh NC home" style="width:100%;height:260px;border-radius:6px;object-fit:cover;">
+    <img src="/images/blog/vented-crawl-space-humidity-raleigh-nc.webp" alt="Moisture damaged crawl space with fallen insulation in Raleigh NC home" width="600" height="672" style="width:100%;height:260px;border-radius:6px;object-fit:cover;">
     <figcaption style="font-size:.82rem;color:#666;margin-top:.4rem;">Before: moisture damage in a vented crawl space</figcaption>
   </figure>
   <figure style="flex:1;min-width:200px;margin:0;text-align:center;">
-    <img src="/images/blog/encapsulated-crawl-space-dehumidifier-raleigh-nc.webp" alt="Clean encapsulated crawl space with vapor barrier in Wake County NC home" style="width:100%;height:260px;border-radius:6px;object-fit:cover;">
+    <img src="/images/blog/encapsulated-crawl-space-dehumidifier-raleigh-nc.webp" alt="Clean encapsulated crawl space with vapor barrier in Wake County NC home" width="800" height="600" style="width:100%;height:260px;border-radius:6px;object-fit:cover;">
     <figcaption style="font-size:.82rem;color:#666;margin-top:.4rem;">After: clean encapsulated crawl space</figcaption>
   </figure>
 </div>
@@ -182,7 +182,7 @@ The Piedmont's Cecil and Appling clay soils hold moisture effectively, meaning g
 This is why Triangle Dehumidifiers recommends units rated for the actual humidity load, not the national "average" used by most sizing guides. A unit appropriate for a Denver or Phoenix climate will be undersized here. If you're not sure whether your current setup is working, the signs are usually obvious — our post on [5 signs your home has a humidity problem](/blog/signs-your-home-has-humidity-problem) covers the most common ones.
 
 <div style="margin:1.5rem 0;text-align:center;">
-  <img src="/images/blog/aprilaire-dehumidifier-display-humidity-reading-holly-springs-nc.webp" alt="AprilAire dehumidifier display set to 50 percent relative humidity in Holly Springs NC home" style="max-width:480px;width:100%;border-radius:6px;object-fit:cover;">
+  <img src="/images/blog/aprilaire-dehumidifier-display-humidity-reading-holly-springs-nc.webp" alt="AprilAire dehumidifier display set to 50 percent relative humidity in Holly Springs NC home" width="800" height="600" style="max-width:480px;width:100%;border-radius:6px;object-fit:cover;">
 </div>
 
 ---
