@@ -9,7 +9,7 @@ imageAlt: 'New construction home in Raleigh NC subdivision with fresh sod and yo
 tags: ['humidity', 'new construction', 'raleigh', 'dehumidifier']
 ---
 
-<img src="/images/blog/new-construction-home-raleigh-nc.webp" alt="New construction home in Raleigh NC subdivision with fresh sod and young landscaping" width="1200" height="675" loading="eager">
+<img src="/images/blog/new-construction-home-raleigh-nc.webp" alt="New construction home in Raleigh NC subdivision with fresh sod and young landscaping" width="900" height="506" loading="eager">
 
 You just moved into a brand-new home in the Raleigh area. Everything is clean, modern, and under warranty. So why does the air feel damp, the windows fog up, and the AC never seems to dry things out?
 
@@ -72,7 +72,7 @@ If any of these sound familiar, your home likely has more moisture than your HVA
 
 Running the AC colder is not the answer — you will waste energy and still have humid air. Portable dehumidifiers can help a single room, but they are loud, require constant emptying, and do not solve the whole-house problem.
 
-<img src="/images/blog/crawl-space-dehumidifier-installation.webp" alt="Crawl space dehumidifier installed with vapor barrier in Raleigh NC home" width="800" height="600" loading="lazy">
+<img src="/images/blog/aprilaire-crawl-space-dehumidifier-installed-raleigh-nc.webp" alt="Crawl space dehumidifier installed with vapor barrier in Raleigh NC home" width="800" height="600" loading="lazy">
 
 The most effective solution for new construction humidity in the Raleigh area is a [whole-home dehumidifier](/whole-house-dehumidifier-raleigh) installed directly into your HVAC ductwork. These units work independently of your AC, pulling moisture out of the air whether the system is actively cooling or not. They drain automatically and keep your entire home between 45 and 55 percent relative humidity without overcooling.
 
