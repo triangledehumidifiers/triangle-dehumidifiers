@@ -97,7 +97,7 @@ Crawl space mold is one of the most common and most overlooked indoor air qualit
 
 Here is what you need to know about crawl space mold health risks, why homes in our area are especially vulnerable, and what actually works to fix it.
 
-<img src="/images/blog/wet-crawl-space-moisture-damage-raleigh-nc.webp" alt="Wet crawl space showing moisture damage and mold risk in a Raleigh NC home" width="1200" height="675" loading="eager">
+<img src="/images/blog/crawl-space-dehumidifier-installation-raleigh-nc.webp" alt="Wet crawl space showing moisture damage and mold risk in a Raleigh NC home" width="1200" height="675" loading="eager">
 
 ## How Crawl Space Mold Can Affect Your Health
 
@@ -143,7 +143,7 @@ Even if your crawl space looks relatively dry, duct leaks can introduce enough m
 
 #### What You Can Do About It
 
-**Test your ducts.** A duct leakage test measures exactly how much air your ductwork is losing. A technician pressurizes the duct system to 25 pascals using a calibrated fan and manometer, then measures the airflow escaping through leaks (reported as CFM25). This tells you whether your ducts are reasonably tight or whether they're pulling in a significant amount of crawl space air. [Peak Energy offers duct leakage testing](https://peakenergync.com/duct-leakage-testing) as part of their home performance services — it's one of the most straightforward ways to find out if your ducts are part of the problem.
+**Test your ducts.** A duct leakage test measures exactly how much air your ductwork is losing. A technician pressurizes the duct system to 25 pascals using a calibrated fan and manometer, then measures the airflow escaping through leaks (reported as CFM25). This tells you whether your ducts are reasonably tight or whether they're pulling in a significant amount of crawl space air. [Peak Energy offers duct leakage testing](https://www.peakenergync.com/services/diagnostics-and-testing.html) as part of their home performance services — it's one of the most straightforward ways to find out if your ducts are part of the problem.
 
 **Seal the ducts.** Once leaks are identified, sealing them with mastic or approved tape at joints, boots, and connections can significantly reduce the amount of unfiltered crawl space air entering your HVAC system.
 
@@ -202,9 +202,9 @@ Treating mold without addressing the moisture that caused it is a temporary fix 
 - **Adding a crawl space dehumidifier** to maintain relative humidity below 55% year-round — critical during our humid summers when outdoor humidity regularly exceeds 70%
 - **Full [crawl space encapsulation](/encapsulated-crawlspace-dehumidifier-raleigh-nc)** for comprehensive protection: a sealed vapor barrier on walls and floor, closed vents, air-sealed penetrations, and mechanical dehumidification
 
-In our climate, a [crawl space dehumidifier](/crawl-space-dehumidifier-raleigh) is not optional — it is essential. Even in an encapsulated crawl space, summer humidity in the Triangle can overwhelm passive moisture barriers. A properly sized dehumidifier removes moisture continuously and keeps conditions well below the threshold where mold can grow.
+In our climate, a [crawl space dehumidifier](/crawl-space-dehumidifier-raleigh-nc) is not optional — it is essential. Even in an encapsulated crawl space, summer humidity in the Triangle can overwhelm passive moisture barriers. A properly sized dehumidifier removes moisture continuously and keeps conditions well below the threshold where mold can grow.
 
-<img src="/images/blog/crawl-space-dehumidifier-installation-raleigh-nc.webp" alt="Crawl space dehumidifier installed in an encapsulated crawl space in Raleigh NC" width="1200" height="675" loading="lazy">
+<img src="/images/blog/wet-crawl-space-moisture-damage-raleigh-nc.webp" alt="Crawl space dehumidifier installed in an encapsulated crawl space in Raleigh NC" width="1200" height="675" loading="lazy">
 
 **Typical costs in the Raleigh area:** A professional crawl space dehumidifier, installed and configured, typically runs $3,000–$5,000 depending on the unit and crawl space size. Full encapsulation — which includes the vapor barrier, vent sealing, dehumidifier, and any necessary drainage — generally ranges from $5,000–$15,000 depending on the scope of work. Costs vary based on crawl space size, accessibility, and existing conditions, so a professional assessment is the best way to get an accurate estimate for your home.
 
