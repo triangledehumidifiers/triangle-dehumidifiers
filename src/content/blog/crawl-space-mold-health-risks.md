@@ -4,90 +4,13 @@ description: 'Crawl space mold can cause allergies, respiratory issues, and fati
 date: '2026-03-21'
 dateModified: '2026-03-21'
 author: 'Nathan Rider'
-image: '/images/blog/wet-crawl-space-moisture-damage-raleigh-nc.webp'
+image: '/images/blog/crawl-space-dehumidifier-installation-raleigh-nc.webp'
 imageAlt: 'Wet crawl space showing moisture damage and mold risk in a Raleigh NC home'
-tags: ['crawl space mold', 'mold health risks', 'raleigh', 'indoor air quality', 'crawl space moisture']
+tags:
+  ['crawl space mold', 'mold health risks', 'raleigh', 'indoor air quality', 'crawl space moisture']
 ---
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.triangledehumidifiers.com/#business",
-  "name": "Triangle Dehumidifiers, LLC",
-  "telephone": "(919) 867-0580",
-  "url": "https://www.triangledehumidifiers.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Holly Springs",
-    "addressRegion": "NC",
-    "postalCode": "27540",
-    "addressCountry": "US"
-  },
-  "areaServed": ["Holly Springs", "Apex", "Cary", "Fuquay-Varina", "Raleigh"],
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "35.6513",
-    "longitude": "-78.8342"
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-    "opens": "08:00",
-    "closes": "17:00"
-  },
-  "description": "Triangle Dehumidifiers provides crawl space dehumidifier installation, mold treatment, and encapsulation services for homeowners in the Raleigh and Wake County area."
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Can mold in my crawl space make me sick?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It can, yes. Mold spores from a crawl space can travel into your living space through the stack effect, where rising warm air pulls crawl space air up through gaps in the subfloor. This may cause allergy symptoms, respiratory irritation, headaches, and fatigue — especially for people with asthma or weakened immune systems. The EPA states that mold exposure can irritate the eyes, skin, nose, throat, and lungs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I know if my crawl space has mold?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Common signs include a musty smell in your home (especially on the first floor), visible mold on floor joists or subflooring, increased allergy symptoms when you are home, condensation on windows or ductwork, and warped or soft hardwood floors. A professional crawl space inspection with moisture readings can confirm whether mold is present and how severe the problem is."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What causes mold to grow in crawl spaces in North Carolina?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "North Carolina's Piedmont region has a combination of factors that promote mold growth: summer humidity that frequently exceeds 70%, around 46 inches of annual rainfall, clay-heavy soil that holds moisture against foundations, and older vented crawl space designs that pull humid outdoor air directly into the crawl space. The EPA recommends keeping indoor relative humidity below 60% to discourage mold growth."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does crawl space mold treatment cost in the Raleigh area?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Mold treatment costs vary depending on the severity and size of your crawl space. For most Raleigh-area homes, professional mold treatment combined with moisture control measures like a crawl space dehumidifier ($3,000-$5,000 installed) or full encapsulation (typically $5,000-$15,000 depending on scope) is necessary to prevent mold from returning. A standalone mold treatment without addressing the underlying moisture problem is usually a temporary fix."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Will encapsulating my crawl space stop mold growth?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Encapsulation is one of the most effective ways to stop mold growth in a crawl space. It involves sealing the crawl space with a heavy-duty vapor barrier, closing foundation vents, and installing a dehumidifier to maintain humidity below 55%. This eliminates the moisture source that mold needs to survive. In the humid Raleigh climate, a dehumidifier is an essential part of the system — encapsulation alone without mechanical dehumidification may not keep humidity low enough during summer months."
-      }
-    }
-  ]
-}
-</script>
+<img src="/images/blog/crawl-space-dehumidifier-installation-raleigh-nc.webp" alt="Wet crawl space showing moisture damage and mold risk in a Raleigh NC home" width="1200" height="675" loading="eager">
 
 > **Key takeaway:** Mold in your crawl space can contribute to allergy symptoms, respiratory problems, and chronic fatigue — even if you never go down there. In the Raleigh area, a combination of high summer humidity, clay-heavy soil, and older vented crawl space designs makes mold growth especially common. Controlling moisture at the source is the only lasting solution.
 
@@ -97,7 +20,7 @@ Crawl space mold is one of the most common and most overlooked indoor air qualit
 
 Here is what you need to know about crawl space mold health risks, why homes in our area are especially vulnerable, and what actually works to fix it.
 
-<img src="/images/blog/crawl-space-dehumidifier-installation-raleigh-nc.webp" alt="Wet crawl space showing moisture damage and mold risk in a Raleigh NC home" width="1200" height="675" loading="eager">
+---
 
 ## How Crawl Space Mold Can Affect Your Health
 
@@ -135,7 +58,7 @@ The stack effect is one way crawl space air reaches your living areas — but it
 
 This isn't passive airflow. It's mechanical. When your HVAC system runs, it creates pressure differences inside the ductwork. Small gaps at duct joints, boot connections, or damaged flex duct sections can draw in unfiltered air from the crawl space — air that may carry mold spores, excess moisture, dust, and other contaminants. That air mixes with your conditioned air and gets distributed through every supply register in the home.
 
-A study published in the *Journal of Occupational and Environmental Hygiene* found that in roughly 1 in 5 homes studied, mold from the crawl space was transmitted into the living space — and the HVAC system was identified as one of the conduits for that transmission.
+A study published in the Journal of Occupational and Environmental Hygiene found that in roughly 1 in 5 homes studied, mold from the crawl space was transmitted into the living space — and the HVAC system was identified as one of the conduits for that transmission.
 
 #### Why This Matters for Your Health
 
@@ -187,7 +110,7 @@ You do not need to crawl under your house to get a sense of whether mold might b
 
 ## What Actually Works to Fix Crawl Space Mold
 
-Treating mold without addressing the moisture that caused it is a temporary fix at best. In the Raleigh-area climate, mold can return within months if the underlying moisture source is still present. Effective, lasting [mold treatment](/crawlspace-mold-treatment-raleigh) in this region requires a moisture-first approach.
+Treating mold without addressing the moisture that caused it is a temporary fix at best. In the Raleigh-area climate, mold can return within months if the underlying moisture source is still present. Effective, lasting [mold treatment](/crawl-space-mold-treatment-raleigh/) in this region requires a moisture-first approach.
 
 **Step 1: Professional assessment.** A thorough crawl space inspection should include humidity readings at multiple points, moisture content testing of wood framing, identification of moisture sources (groundwater, condensation, plumbing), and documentation of any existing mold growth. Visual inspection alone is not enough — a moisture meter and hygrometer provide the data you need to understand the severity of the problem.
 
@@ -197,12 +120,12 @@ Treating mold without addressing the moisture that caused it is a temporary fix 
 
 **Step 3: Moisture control.** This is the most important step — and the one that prevents mold from coming back. For most Wake County homes, effective moisture control means:
 
-- **Sealing foundation vents** to stop humid outdoor air from entering the crawl space
-- **Installing a vapor barrier** over exposed soil to block ground moisture from evaporating into the space
-- **Adding a crawl space dehumidifier** to maintain relative humidity below 55% year-round — critical during our humid summers when outdoor humidity regularly exceeds 70%
-- **Full [crawl space encapsulation](/encapsulated-crawlspace-dehumidifier-raleigh-nc)** for comprehensive protection: a sealed vapor barrier on walls and floor, closed vents, air-sealed penetrations, and mechanical dehumidification
+- Sealing foundation vents to stop humid outdoor air from entering the crawl space
+- Installing a vapor barrier over exposed soil to block ground moisture from evaporating into the space
+- Adding a crawl space dehumidifier to maintain relative humidity below 55% year-round — critical during our humid summers when outdoor humidity regularly exceeds 70%
+- Full [crawl space encapsulation](/encapsulated-crawl-space-dehumidifier-raleigh-nc/) for comprehensive protection: a sealed vapor barrier on walls and floor, closed vents, air-sealed penetrations, and mechanical dehumidification
 
-In our climate, a [crawl space dehumidifier](/crawl-space-dehumidifier-raleigh-nc) is not optional — it is essential. Even in an encapsulated crawl space, summer humidity in the Triangle can overwhelm passive moisture barriers. A properly sized dehumidifier removes moisture continuously and keeps conditions well below the threshold where mold can grow.
+In our climate, a [crawl space dehumidifier](/crawl-space-dehumidifier-raleigh-nc/) is not optional — it is essential. Even in an encapsulated crawl space, summer humidity in the Triangle can overwhelm passive moisture barriers. A properly sized dehumidifier removes moisture continuously and keeps conditions well below the threshold where mold can grow.
 
 <img src="/images/blog/wet-crawl-space-moisture-damage-raleigh-nc.webp" alt="Crawl space dehumidifier installed in an encapsulated crawl space in Raleigh NC" width="1200" height="675" loading="lazy">
 
@@ -239,15 +162,3 @@ Costs vary depending on severity and crawl space size. Professional mold treatme
 ### Will encapsulating my crawl space stop mold growth?
 
 Encapsulation is one of the most effective approaches. It involves sealing the crawl space with a heavy-duty vapor barrier, closing foundation vents, and installing a dehumidifier to maintain humidity below 55%. In the humid Triangle climate, a dehumidifier is essential — encapsulation alone without mechanical dehumidification may not keep humidity low enough during summer months.
-
----
-
-<div class="blog-final-cta">
-<h3>Ready to Find Out What Is Going On Under Your Home?</h3>
-<p>If you are in the Raleigh area and concerned about crawl space mold or moisture, we can help you get answers. Triangle Dehumidifiers has been helping Wake County homeowners take control of their crawl space moisture — and their indoor air quality — with professional dehumidifier installation, mold treatment, and encapsulation.</p>
-<div class="blog-final-cta-buttons">
-<a href="/contact/" class="btn btn-green btn-lg">Schedule a Crawl Space Assessment</a>
-<a href="tel:9198670580" class="btn-call btn-call--light" aria-label="Call Triangle Dehumidifiers at (919) 867-0580"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.18 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 5.89 5.89l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> (919) 867-0580</a>
-</div>
-<p class="blog-final-cta-region"><em>Straight answers. Clear measurements. A practical plan to fix it.</em></p>
-</div>
