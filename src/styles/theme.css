@@ -154,6 +154,10 @@ li {
   font-family: var(--font-heading);
   font-weight: 600;
 }
+.topbar-right a {
+  color: inherit;
+  text-decoration: none;
+}
 
 /* ============================================
    HEADER
@@ -902,6 +906,7 @@ li {
 }
 .site-footer a {
   color: #ffffff;
+  text-decoration: none;
 }
 .site-footer a:hover {
   color: #ffffff;
