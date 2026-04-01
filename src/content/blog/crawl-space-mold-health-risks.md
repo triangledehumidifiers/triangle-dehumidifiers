@@ -88,7 +88,7 @@ Not every region has the same mold risk. The Raleigh-area Triangle sits in a nea
 
 **Clay soil.** Unlike sandy soil that drains quickly, the Piedmont red clay holds water like a sponge. After a heavy rain, the ground around your foundation can stay saturated for days. That moisture migrates through the soil and evaporates into your crawl space, keeping humidity levels high even without any plumbing leaks or standing water.
 
-<img src="/images/blog/technician-inspecting-crawl-space-raleigh-nc.webp" alt="Triangle Dehumidifiers technician checking crawl space humidity levels with a moisture meter in a Raleigh NC home" width="1200" height="675" loading="lazy">
+<img src="/images/blog/technician-inspecting-crawl-space-raleigh-nc.webp" alt="Technician checking crawl space humidity with a moisture meter in Raleigh NC" width="1200" height="675" loading="lazy">
 
 ---
 
